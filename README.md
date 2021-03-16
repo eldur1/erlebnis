@@ -19,13 +19,13 @@ An attempt to generate a website to provide a unique experience
 ## To-do
 
 
-– Color generation (50% done)
 - Font generation
 - Layout generation 
 
 
 ## Done
 
+- Color generation (50% done)
 
 
 ## Credits
