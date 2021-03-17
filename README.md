@@ -11,6 +11,10 @@
 - `npm run clean` : clean the `dist` folder.
 
 
+## Syntax & naming convention
+– `Function written in camelCase`
+– `r as beginning of variable mean random`
+
 ## Web project of generative website
 Web experimental art :
 An attempt to generate a website to provide a unique experience

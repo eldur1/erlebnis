@@ -8,21 +8,21 @@ function trueOrFalse() {
 }
 
 // Random Number between min and max
-function RandomNumber(min , max) {
+function randomNumber(min , max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 // Generation a random pallet type
 // Type of pallet
 function typeOfPallet() {
-    let i = RandomNumber(1,6);
+    let i = randomNumber(1,6);
 
-    if (i == 1) { return Analogous()}
-    if (i == 2) { return Monochromatic()}
-    if (i == 3) { return Triad()}
-    if (i == 4) { return Complementary()}
-    if (i == 5) { return Square() }
-    if (i == 6) { return  Shades() }
+    if (i == 1) { return analogous()}
+    if (i == 2) { return monochromatic()}
+    if (i == 3) { return triad()}
+    if (i == 4) { return complementary()}
+    if (i == 5) { return square() }
+    if (i == 6) { return shades() }
 } 
 
 function colorsGeneration() {
@@ -37,124 +37,130 @@ title_h2.innerHTML = `${c[0]} color generation`;
     console.log(element);
     div.style.backgroundColor = element;
     
+
+
 }); 
-
-
+// Find a color in the generate pallet
+let rColorOfPallet1 = randomNumber( 1, c[1].length)
+let rColorOfPallet2 = randomNumber( 1, c[1].length)
+while(rColorOfPallet2 == rColorOfPallet1) {
+    rColorOfPallet2 = randomNumber( 1, c[1].length)
+}
 
 }
 
 colorsGeneration();
 
-function Analogous() {
+function analogous() {
     // Generate between 2 and 5 colors
     // Generate a random Hue and by that, generate other colors close to this hue
     // Analogous must have a short range of hue
-    let rHue = RandomNumber(0,360)
-    let rSaturation = RandomNumber(50,100)
-    let nColor = RandomNumber(2,5)
-    let rLightness = RandomNumber(30,75)
+    let rHue = randomNumber(0,360)
+    let rSaturation = randomNumber(50,100)
+    let nColor = randomNumber(2,5)
+    let rLightness = randomNumber(30,75)
     // Delta is always the same as the number of color 
-    let rDelta = RandomNumber(130,210);
+    let rDelta = randomNumber(130,210);
     let delta = rDelta - ( (rDelta / 5 ) * (5 - nColor) );
     let colors = [
         ["Analogous"],
         []
     ]
     for (let i = 0; i < nColor; i++) {
-        let currentHue = rHue + (i *  (delta/nColor) )
-        colors[1].push(`hsl(${currentHue},${rSaturation}%,${rLightness}%)`)
+        let hue = rHue + (i *  (delta/nColor) )
+        colors[1].push(`hsl(${hue},${rSaturation}%,${rLightness}%)`)
     }
     return colors
 
 }
-function Monochromatic() {
-    let rHue = RandomNumber(0,360)
-    let nColor = RandomNumber(2,5)
+function monochromatic() {
+    let rHue = randomNumber(0,360)
+    let nColor = randomNumber(2,5)
     let colors = [
         ["Monochromatic"],
         []
     ]
 
     for (let i = 0; i < nColor; i++) {
-        let rLightness = RandomNumber(20,85)
-        let rSaturation = RandomNumber(30,100)
+        let rLightness = randomNumber(20,85)
+        let rSaturation = randomNumber(30,100)
         colors[1].push(`hsl(${rHue},${rSaturation}%,${rLightness}%)`)
     }
     return colors
 }
-function Triad() {
+function triad() {
     
-    let nColor = RandomNumber(3,3)
-    let rHue = RandomNumber(0,360)
+    let nColor = randomNumber(3,3)
+    let rHue = randomNumber(0,360)
     let colors = [
         ["Triad"],
         []
     ]
     for (let i = 0; i < nColor; i++) {
-        let rLightness = RandomNumber(20,85)
-        let rSaturation = RandomNumber(30,100)
-        let triadHue = rHue + (i * 120);
-        if(triadHue > 360) {
-            triadHue = triadHue - 360;
+        let rLightness = randomNumber(20,85)
+        let rSaturation = randomNumber(30,100)
+        let hue = rHue + (i * 120);
+        if(hue > 360) {
+            hue = hue - 360;
         }
-        colors[1].push(`hsl(${triadHue},${rSaturation}%,${rLightness}%)`)
+        colors[1].push(`hsl(${hue},${rSaturation}%,${rLightness}%)`)
     }
     return colors
 
 }
-function Complementary() {
+function complementary() {
 
     // Gen a color and became complementary if even 
-    let nColor =  RandomNumber(2,5)
-    let rHue = RandomNumber(0,360)
+    let nColor =  randomNumber(2,5)
+    let rHue = randomNumber(0,360)
     let colors = [
         ["Complementary"],
         []
     ]
     for (let i = 0; i < nColor; i++) {
-        let rLightness = RandomNumber(20,85)
-        let rSaturation = RandomNumber(30,100)
-        let ComplHue = rHue;
+        let rLightness = randomNumber(20,85)
+        let rSaturation = randomNumber(30,100)
+        let hue = rHue;
         if( i % 2 == 0) {
-            ComplHue = rHue + 180
+            hue = rHue + 180
         }
-        colors[1].push(`hsl(${ComplHue},${rSaturation}%,${rLightness}%)`)
+        colors[1].push(`hsl(${hue},${rSaturation}%,${rLightness}%)`)
     }
     return colors
 
 }
-function Square() {
+function square() {
         // Gen a color and became complementary if even 
         let nColor = 4;
-        let rHue = RandomNumber(0,360)
+        let rHue = randomNumber(0,360)
         let colors = [
             ["Square"],
             []
         ]
         for (let i = 0; i < nColor; i++) {
-            let rLightness = RandomNumber(20,85)
-            let rSaturation = RandomNumber(30,100)
-            let SquareHue = rHue + (i * 90)
-            if( SquareHue > 360) {
-                SquareHue = SquareHue - 360;
+            let rLightness = randomNumber(20,85)
+            let rSaturation = randomNumber(30,100)
+            let hue = rHue + (i * 90)
+            if( hue > 360) {
+                hue = hue - 360;
 
             }
-            colors[1].push(`hsl(${SquareHue},${rSaturation}%,${rLightness}%)`)
+            colors[1].push(`hsl(${hue},${rSaturation}%,${rLightness}%)`)
         }
         return colors
 
 }
-function Shades() {
+function shades() {
         // Gen a color and became complementary if even 
-        let nColor = RandomNumber(2,5)
-        let rHue = RandomNumber(0,360)
-        let rSaturation = RandomNumber(30,100)
+        let nColor = randomNumber(2,5)
+        let rHue = randomNumber(0,360)
+        let rSaturation = randomNumber(30,100)
         let colors = [
             ["Shades"],
             []
         ]
         for (let i = 0; i < nColor; i++) {
-            let rLightness = RandomNumber(20,85)
+            let rLightness = randomNumber(20,85)
             let ShadesHue = rHue;
             colors[1].push(`hsl(${ShadesHue},${rSaturation}%,${rLightness}%)`)
         }
