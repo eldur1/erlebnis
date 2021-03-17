@@ -40,53 +40,54 @@ function generateHslColors (hue, saturation, lightness, nColor, pallet) {
 
 // Generation a random pallet type
 // Type of pallet
-function typeOfPallet() {
+function typeOfPallet(name) {
     let i = RandomNumber(1,6);
     if (i == 1) {
+        let name = 'Analogous';
         Analogous();
-        return 'Analogous';
     }
     if (i == 2) {
+        let name =  'Monochromatic';
         Monochromatic();
-        return 'Monochromatic';
     }
     if (i == 3) {
+        let name =  'Triad';
         Triad();
-        return 'Triad';
     }
     if (i == 4) {
+        let name = 'Complementary';
         Complementary();
-        return 'Complementary';
     }
     if (i == 5) {
+        let name = 'Square';
         Square();
-        return 'Square';
     }
     if (i == 6) {
+        let name =  'Shades';
         Shades();
-        return 'Shades';
     }
 } 
 
 
 function colorsGeneration() {
-// Each type of pallet have there own generation particularity
-// IE : Triad must have 3 colors
-let c = Complementary();
+
+
+
+
 let h2 = document.createElement('h2');
-let analogous = document.body.appendChild(h2);
-analogous.innerHTML = "Complementary color generation";
-c.forEach(element => {
+let title_h2 = document.body.appendChild(h2);
+
+
+//title_h2.innerHTML = `${c} color generation`;
+/* colors.forEach(element => {
     let div = document.createElement('div');
     document.body.appendChild(div);
     console.log(element);
     div.style.backgroundColor = element;
     
-});
-
+}); */
 
 }
-
 
 colorsGeneration();
 
@@ -99,7 +100,8 @@ function Analogous() {
     let nColor = RandomNumber(2,5)
     let rLightness = RandomNumber(30,75)
     // Delta is always the same as the number of color 
-    let delta = 120 - ( (120 / 5 ) * (5 - nColor) );
+    let rDelta = RandomNumber(130,210);
+    let delta = rDelta - ( (rDelta / 5 ) * (5 - nColor) );
     let colors = []
     for (let i = 0; i < nColor; i++) {
         let currentHue = rHue + (i *  (delta/nColor) )
@@ -151,7 +153,7 @@ function Complementary() {
         let rSaturation = RandomNumber(30,100)
         let ComplHue = rHue;
         if( i % 2 == 0) {
-            ComplHue = rHue + 180;
+            ComplHue = rHue + 180
         }
         colors.push(`hsl(${ComplHue},${rSaturation}%,${rLightness}%)`)
     }
@@ -159,8 +161,33 @@ function Complementary() {
 
 }
 function Square() {
-    let nColor = 4;
+        // Gen a color and became complementary if even 
+        let nColor = 4;
+        let rHue = RandomNumber(0,360)
+        let colors = []
+        for (let i = 0; i < nColor; i++) {
+            let rLightness = RandomNumber(20,85)
+            let rSaturation = RandomNumber(30,100)
+            let SquareHue = rHue + (i * 90)
+            if( SquareHue > 360) {
+                SquareHue = SquareHue - 360;
+
+            }
+            colors.push(`hsl(${SquareHue},${rSaturation}%,${rLightness}%)`)
+        }
+        return colors
+
 }
 function Shades() {
-    let nColor = 1;
+        // Gen a color and became complementary if even 
+        let nColor = RandomNumber(2,5)
+        let rHue = RandomNumber(0,360)
+        let rSaturation = RandomNumber(30,100)
+        let colors = []
+        for (let i = 0; i < nColor; i++) {
+            let rLightness = RandomNumber(20,85)
+            let ShadesHue = rHue;
+            colors.push(`hsl(${ShadesHue},${rSaturation}%,${rLightness}%)`)
+        }
+        return colors
 }
