@@ -12,8 +12,8 @@
 
 
 ## Syntax & naming conventio
-– Function written in camelCase.
-– r as beginning of variable mean random.
+- Function written in camelCase.
+- r as beginning of variable mean random.
 
 ## Web project of generative website
 Web experimental art :
