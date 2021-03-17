@@ -18,17 +18,16 @@ An attempt to generate a website to provide a unique experience
 
 ## To-do
 
-
+- pallet to web utilisation
 - Font generation
 - Layout generation 
 
 
 ## Done
 
-- Color generation (50% done)
+- Color generation (done)
 
 
 ## Credits
 
 - Done by myself
-- A part of the code : https://mika-s.github.io/javascript/colors/hsl/2017/12/05/generating-random-colors-in-javascript.html

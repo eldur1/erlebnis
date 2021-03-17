@@ -1,16 +1,10 @@
 
 // True or false 
 function trueOrFalse() {
-    let i = 0.5;
-    while(i == 0.5) {
-        i = Math.random();
-    }
-    if(i > 0.5) {
-        return true;
-    } 
-    else {
-        return false;
-    }
+    let i = 0.5
+    while(i == 0.5) { i = Math.random() }
+    if(i > 0.5) { return true } 
+    else { return false }
 }
 
 // Random Number between min and max
@@ -18,68 +12,24 @@ function RandomNumber(min , max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-
-// Function that generate a random number of colors (nColor) with parameters like hue saturation and lightness
-// Source : https://mika-s.github.io/javascript/colors/hsl/2017/12/05/generating-random-colors-in-javascript.html
-function generateHslColors (hue, saturation, lightness, nColor, pallet) {
-    let colors = []
-    for (let i = 0; i < nColor; i++) {
-        if(pallet == "Analogous") {
-            let delta = RandomNumber(20,100);
-            var currentHue = hue + (i *  (delta/nColor) ) ;
-        }
-        else if(pallet == "Monochromatic") {
-            var currentHue = hue;
-            var saturation = RandomNumber
-        }
-        colors[1].push(`hsl(${currentHue},${saturation}%,${lightness}%)`)
-    }
-    return colors
-
-}
-
 // Generation a random pallet type
 // Type of pallet
 function typeOfPallet() {
     let i = RandomNumber(1,6);
-    if (i == 1) {
-        this.name = "Shades"
-        return Analogous();
-    }
-    if (i == 2) {
-        this.name = "Shades"
-        return Monochromatic();
-    }
-    if (i == 3) {
-        this.name = "Shades"
 
-        return Triad();
-    }
-    if (i == 4) {
-        this.name = "Shades"
-
-        return Complementary();
-    }
-    if (i == 5) {
-        this.name = "Shades"
-        return Square();
-    }
-    if (i == 6) {
-        this.name = "Shades"
-        return  Shades();
-    }
+    if (i == 1) { return Analogous()}
+    if (i == 2) { return Monochromatic()}
+    if (i == 3) { return Triad()}
+    if (i == 4) { return Complementary()}
+    if (i == 5) { return Square() }
+    if (i == 6) { return  Shades() }
 } 
-
 
 function colorsGeneration() {
 
 let c = typeOfPallet();
-
-
 let h2 = document.createElement('h2');
 let title_h2 = document.body.appendChild(h2);
-
-
 title_h2.innerHTML = `${c[0]} color generation`;
  c[1].forEach(element => {
     let div = document.createElement('div');
@@ -88,6 +38,8 @@ title_h2.innerHTML = `${c[0]} color generation`;
     div.style.backgroundColor = element;
     
 }); 
+
+
 
 }
 
@@ -142,7 +94,6 @@ function Triad() {
         let rLightness = RandomNumber(20,85)
         let rSaturation = RandomNumber(30,100)
         let triadHue = rHue + (i * 120);
-
         if(triadHue > 360) {
             triadHue = triadHue - 360;
         }
@@ -160,8 +111,6 @@ function Complementary() {
         ["Complementary"],
         []
     ]
-
-
     for (let i = 0; i < nColor; i++) {
         let rLightness = RandomNumber(20,85)
         let rSaturation = RandomNumber(30,100)
