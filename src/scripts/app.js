@@ -32,7 +32,7 @@ function generateHslColors (hue, saturation, lightness, nColor, pallet) {
             var currentHue = hue;
             var saturation = RandomNumber
         }
-        colors.push(`hsl(${currentHue},${saturation}%,${lightness}%)`)
+        colors[1].push(`hsl(${currentHue},${saturation}%,${lightness}%)`)
     }
     return colors
 
@@ -40,52 +40,54 @@ function generateHslColors (hue, saturation, lightness, nColor, pallet) {
 
 // Generation a random pallet type
 // Type of pallet
-function typeOfPallet(name) {
+function typeOfPallet() {
     let i = RandomNumber(1,6);
     if (i == 1) {
-        let name = 'Analogous';
-        Analogous();
+        this.name = "Shades"
+        return Analogous();
     }
     if (i == 2) {
-        let name =  'Monochromatic';
-        Monochromatic();
+        this.name = "Shades"
+        return Monochromatic();
     }
     if (i == 3) {
-        let name =  'Triad';
-        Triad();
+        this.name = "Shades"
+
+        return Triad();
     }
     if (i == 4) {
-        let name = 'Complementary';
-        Complementary();
+        this.name = "Shades"
+
+        return Complementary();
     }
     if (i == 5) {
-        let name = 'Square';
-        Square();
+        this.name = "Shades"
+        return Square();
     }
     if (i == 6) {
-        let name =  'Shades';
-        Shades();
+        this.name = "Shades"
+        return  Shades();
     }
 } 
 
 
 function colorsGeneration() {
 
-
+let c = typeOfPallet();
 
 
 let h2 = document.createElement('h2');
 let title_h2 = document.body.appendChild(h2);
 
 
-//title_h2.innerHTML = `${c} color generation`;
-/* colors.forEach(element => {
+title_h2.innerHTML = `${c[0]} color generation`;
+ c[1].forEach(element => {
     let div = document.createElement('div');
     document.body.appendChild(div);
     console.log(element);
     div.style.backgroundColor = element;
     
-}); */
+}); 
 
 }
 
@@ -102,10 +104,13 @@ function Analogous() {
     // Delta is always the same as the number of color 
     let rDelta = RandomNumber(130,210);
     let delta = rDelta - ( (rDelta / 5 ) * (5 - nColor) );
-    let colors = []
+    let colors = [
+        ["Analogous"],
+        []
+    ]
     for (let i = 0; i < nColor; i++) {
         let currentHue = rHue + (i *  (delta/nColor) )
-        colors.push(`hsl(${currentHue},${rSaturation}%,${rLightness}%)`)
+        colors[1].push(`hsl(${currentHue},${rSaturation}%,${rLightness}%)`)
     }
     return colors
 
@@ -113,12 +118,15 @@ function Analogous() {
 function Monochromatic() {
     let rHue = RandomNumber(0,360)
     let nColor = RandomNumber(2,5)
-    let colors = []
+    let colors = [
+        ["Monochromatic"],
+        []
+    ]
 
     for (let i = 0; i < nColor; i++) {
         let rLightness = RandomNumber(20,85)
         let rSaturation = RandomNumber(30,100)
-        colors.push(`hsl(${rHue},${rSaturation}%,${rLightness}%)`)
+        colors[1].push(`hsl(${rHue},${rSaturation}%,${rLightness}%)`)
     }
     return colors
 }
@@ -126,7 +134,10 @@ function Triad() {
     
     let nColor = RandomNumber(3,3)
     let rHue = RandomNumber(0,360)
-    let colors = []
+    let colors = [
+        ["Triad"],
+        []
+    ]
     for (let i = 0; i < nColor; i++) {
         let rLightness = RandomNumber(20,85)
         let rSaturation = RandomNumber(30,100)
@@ -135,7 +146,7 @@ function Triad() {
         if(triadHue > 360) {
             triadHue = triadHue - 360;
         }
-        colors.push(`hsl(${triadHue},${rSaturation}%,${rLightness}%)`)
+        colors[1].push(`hsl(${triadHue},${rSaturation}%,${rLightness}%)`)
     }
     return colors
 
@@ -145,7 +156,10 @@ function Complementary() {
     // Gen a color and became complementary if even 
     let nColor =  RandomNumber(2,5)
     let rHue = RandomNumber(0,360)
-    let colors = []
+    let colors = [
+        ["Complementary"],
+        []
+    ]
 
 
     for (let i = 0; i < nColor; i++) {
@@ -155,7 +169,7 @@ function Complementary() {
         if( i % 2 == 0) {
             ComplHue = rHue + 180
         }
-        colors.push(`hsl(${ComplHue},${rSaturation}%,${rLightness}%)`)
+        colors[1].push(`hsl(${ComplHue},${rSaturation}%,${rLightness}%)`)
     }
     return colors
 
@@ -164,7 +178,10 @@ function Square() {
         // Gen a color and became complementary if even 
         let nColor = 4;
         let rHue = RandomNumber(0,360)
-        let colors = []
+        let colors = [
+            ["Square"],
+            []
+        ]
         for (let i = 0; i < nColor; i++) {
             let rLightness = RandomNumber(20,85)
             let rSaturation = RandomNumber(30,100)
@@ -173,7 +190,7 @@ function Square() {
                 SquareHue = SquareHue - 360;
 
             }
-            colors.push(`hsl(${SquareHue},${rSaturation}%,${rLightness}%)`)
+            colors[1].push(`hsl(${SquareHue},${rSaturation}%,${rLightness}%)`)
         }
         return colors
 
@@ -183,11 +200,14 @@ function Shades() {
         let nColor = RandomNumber(2,5)
         let rHue = RandomNumber(0,360)
         let rSaturation = RandomNumber(30,100)
-        let colors = []
+        let colors = [
+            ["Shades"],
+            []
+        ]
         for (let i = 0; i < nColor; i++) {
             let rLightness = RandomNumber(20,85)
             let ShadesHue = rHue;
-            colors.push(`hsl(${ShadesHue},${rSaturation}%,${rLightness}%)`)
+            colors[1].push(`hsl(${ShadesHue},${rSaturation}%,${rLightness}%)`)
         }
         return colors
 }
