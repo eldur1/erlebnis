@@ -11,7 +11,7 @@
 - `npm run clean` : clean the `dist` folder.
 
 
-## Syntax & naming conventio
+## Syntax & naming convention
 - Function written in camelCase.
 - r as beginning of variable mean random.
 
