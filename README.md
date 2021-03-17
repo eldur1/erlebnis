@@ -14,7 +14,7 @@ An attempt to generate a website and provide a unique experience.
 ## Syntax & naming convention
 - Functions written in camelCase.
 - `r` as beginning of variable mean random.
-
+- No use of ; at end of line.
 ## To-do
 - Pallet to web (choose colors from pallet and use it as bg and font color)
 - Font generation
