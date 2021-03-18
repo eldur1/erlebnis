@@ -18,16 +18,30 @@ function typeOfPallet() {
     let i = randomNumber(1,6);
 
     if (i == 1) { return analogous()}
-    if (i == 2) { return monochromatic()}
-    if (i == 3) { return triad()}
-    if (i == 4) { return complementary()}
-    if (i == 5) { return square() }
-    if (i == 6) { return shades() }
+    else if (i == 2) { return monochromatic()}
+    else if (i == 3) { return triad()}
+    else if (i == 4) { return complementary()}
+    else if (i == 5) { return square() }
+    else if (i == 6) { return shades() }
 } 
+
+
+function rColorInPallet() {
+    let rColorOfPallet1 = randomNumber( 1, c[1].length)
+    let rColorOfPallet2 = randomNumber( 1, c[1].length)
+    while(rColorOfPallet2 == rColorOfPallet1) {
+        rColorOfPallet2 = randomNumber( 1, c[1].length)
+    }
+    return rColorOfPallet1, rColorOfPallet2
+}
 
 function colorsGeneration() {
 
-let c = typeOfPallet();
+    let c = typeOfPallet();
+
+
+// Show color generates
+/*
 let h2 = document.createElement('h2');
 let title_h2 = document.body.appendChild(h2);
 title_h2.innerHTML = `${c[0]} color generation`;
@@ -36,20 +50,114 @@ title_h2.innerHTML = `${c[0]} color generation`;
     document.body.appendChild(div);
     console.log(element);
     div.style.backgroundColor = element;
+});  */
+
+
+
+// Find 2 color in the generate pallet
+
+return c
+
+}
+
+
+colorsGeneration();
+
+
+/* Background generation */
+let bg = document.querySelector('.background');
+
+
+function bgChoice() {
+    let typeOfBg = randomNumber(1,4)
+    if( typeOfBg == 1 ) { return blackBg() } else 
+    if( typeOfBg == 2 ) { return whiteBg() } else
+    if( typeOfBg == 3 ) { return colorBg() } else
+    if( typeOfBg == 4 ) { return gradientBg() }
+}
+
+function blackBg() {
+    bg.style.backgroundColor = "black";
+}
+function whiteBg() {
+    bg.style.backgroundColor = "white";
+
+}
+function colorBg() {
+    let namePallet = colorsGeneration()[0]
+    let colors = colorsGeneration()[1]
+    let colorsLength = colors.length
+    // Choose a color in the colors array
+    let rColorOfPallet = randomNumber( 1, colorsLength)-1
+    // Apply the color
+    bg.style.backgroundColor = colors[rColorOfPallet]
+
+}
+function gradientBg() {
+    let colors = colorsGeneration()[1]
+    let colorsLength = colors.length
+    
+    // 1. Choose a type of  gradient (linear or radial) 
+    let gradientType = randomNumber(1,1)
+
+    if( gradientType == 1 ) { linearGradient() } else
+    if( gradientType == 2 ) { radialGradient() }
+
+    // Choose number of colors we'll use (minimum 2)
+
+
+    // Loop that choose the color in the array
+
+    // Generate angles for each color selected
+
+
+
+    // 
+    function linearGradient() {
+        var rColorOfPallet = randomNumber( 2, 4)
+
+        var colorsSelected = []
+        for (let i = 0; i < rColorOfPallet; i++) {
+            let element = colors[i]
+            if(! colorsSelected.includes(element)) {
+                colorsSelected.push(element)
+            } 
+        }
+
+        let angles = []
+        for (let i = 0; i < colorsSelected.length; i++) {
+            let rAngle = randomNumber(0,360)
+            angles.push(rAngle)
+        }
+//   background: linear-gradient(180deg,hsl(207,92%,35%), hsl(100,40%,34%));
+        for (let i = 0; i < rColorOfPallet/2; i++) {
+            bg.style.background = "linear-gradient( " + angles[i] + "deg, " + colorsSelected[i] + "," + colorsSelected[i+1] + ")"
+            console.log(bg.style.background)
+        }
+
+
+    }
+    //
+    
+    function radialGradient() {
+        let rColorStop = randomNumber(0,1)
+
+    }
+
     
 
 
-}); 
-// Find a color in the generate pallet
-let rColorOfPallet1 = randomNumber( 1, c[1].length)
-let rColorOfPallet2 = randomNumber( 1, c[1].length)
-while(rColorOfPallet2 == rColorOfPallet1) {
-    rColorOfPallet2 = randomNumber( 1, c[1].length)
-}
+
 
 }
 
-colorsGeneration();
+gradientBg()
+
+
+
+
+
+/*  Pallet generation   */
 
 function analogous() {
     // Generate between 2 and 5 colors
