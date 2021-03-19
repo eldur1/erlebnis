@@ -12,6 +12,29 @@ function randomNumber(min , max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+function generation() {
+    console.log(input.value)
+}
+
+/* 
+
+generation() */
+
+const input = document.querySelector('input')
+
+
+let randonmess = randomNumber(1,10)
+input.value = randonmess
+input.nextElementSibling.innerHTML = input.value
+
+input.addEventListener('change', () => {
+    input.nextElementSibling.innerHTML = input.value
+    generation()
+    return randonmess
+})
+
+
+generation()
 // Generation a random pallet type
 // Type of pallet
 function typeOfPallet() {
@@ -68,6 +91,7 @@ function bgChoice() {
     if( typeOfBg == 2 ) { return whiteBg() } else
     if( typeOfBg == 3 ) { return colorBg() } else
     if( typeOfBg == 4 ) { return gradientBg() }
+    
 }
 
 function blackBg() {
@@ -78,7 +102,6 @@ function whiteBg() {
 
 }
 function colorBg() {
-    let namePallet = colorsGeneration()[0]
     let colors = colorsGeneration()[1]
     // Choose a color in the colors array
     let rColorOfPallet = randomNumber( 1, colors.length)-1
@@ -104,7 +127,11 @@ function gradientBg() {
     bg.style.background = "linear-gradient( " + rAngle + "deg, " + colorsSelected[0] + " 0% ," + colorsSelected[1] + " 100%" + ")"
 }
 
-gradientBg()
+
+
+
+
+
 
 
 /*  Pallet generation   */
