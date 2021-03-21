@@ -7,8 +7,8 @@ function trueOrFalse() {
     else { return false }
 }
 
-// Random Number between min and max
-function randomNumber(min , max) {
+// r N between min and max
+function rN(min , max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 function getRValue() {
@@ -23,7 +23,7 @@ function generation() {
 
 let bg = document.querySelector('.background');
 
-/* let randonmess = randomNumber(1,10)
+/* let randonmess = rN(1,10)
 const input = document.querySelector('input')
 
 input.value = randonmess
@@ -41,7 +41,7 @@ generation()
 // Type of pallet
 
 function typeOfPallet() {
-    let i = randomNumber(1,6);
+    let i = rN(1,6);
 
     if (i == 1) { return analogous()} else
     if (i == 2) { return monochromatic()} else
@@ -53,10 +53,10 @@ function typeOfPallet() {
 
 
 function rColorInPallet() {
-    let rColorOfPallet1 = randomNumber( 1, c[1].length)
-    let rColorOfPallet2 = randomNumber( 1, c[1].length)
+    let rColorOfPallet1 = rN( 1, c[1].length)
+    let rColorOfPallet2 = rN( 1, c[1].length)
     while(rColorOfPallet2 == rColorOfPallet1) {
-        rColorOfPallet2 = randomNumber( 1, c[1].length)
+        rColorOfPallet2 = rN( 1, c[1].length)
     }
     return rColorOfPallet1, rColorOfPallet2
 }
@@ -87,7 +87,7 @@ return c
 
 function bgChoice() {
     //let rValue = getRValue()
-    let typeOfBg = randomNumber(1,4)
+    let typeOfBg = rN(1,4)
     if( typeOfBg == 1 ) { blackBg() } else 
     if( typeOfBg == 2 ) { whiteBg() } else
     if( typeOfBg == 3 ) { colorBg() } else
@@ -112,7 +112,7 @@ function whiteBg() {
 function colorBg() {
     let colors = colorsGeneration()[1]
     // Choose a color in the colors array
-    let rColorOfPallet = randomNumber( 1, colors.length)-1
+    let rColorOfPallet = rN( 1, colors.length)-1
     let dataColors = []
     // Apply the color
     bg.style.backgroundColor = colors[rColorOfPallet]
@@ -127,15 +127,14 @@ function colorBg() {
 function gradientBg() {
     // Create a gradient with two different color of the pallet
     let colors = colorsGeneration()[1]
-    let rAngle = randomNumber(0,360)
+    let rAngle = rN(0,360)
     let colorsSelected = []
     let rColor1 = 1
     let rColor2 = 1
 
     do {
-        rColor1 = randomNumber(2, colors.length)
+        rColor1 = rN(2, colors.length)
     } while( rColor1 == rColor2)
-
 
     colorsSelected.push(colors[rColor1-1])
     colorsSelected.push(colors[rColor2-1])
@@ -147,47 +146,56 @@ function gradientBg() {
 /* font generation */
 
 
+
 function fontGeneration() {
 
-    // Get return of randomness
+    const title_h1 = document.querySelectorAll('.title-h1')
+    const title_h2 = document.querySelectorAll('.title-h2')
+    const paragraph = document.querySelectorAll('.p')    
+    const nOfHeadLevel = 3
+    let aElement = []
+
+    for (let i = 1; i < nOfHeadLevel+1; i++) {
+
+        // Dynamic element selector
+        if( i === 1 ) { var element = title_h1 } else    
+        if( i === 2 ) { var element = title_h2 } else 
+        if ( i === 3 ) { var element = paragraph }
+
+
+        // Paragraph generation
+        const fontSize = rN(16,24)
+        if ( i === 3 ) {
+            let rLineHeight = rN(100,150)
+            for (let i = 0; i < element.length; i++) {
+                const aElement = element[i];
+                aElement.style.lineHeight = rLineHeight + "%"
+                aElement.style.fontSize = fontSize + "px"
+            }
+        }
+
+        // Font size
+
+        let paragraphSize = rN(16,24)
 
 
 
-    if(randomness == 1 ) {
-        let rNumberOfFont  = 1
-        let rLineHeight = randomNumber(110,130)
-    } else
-    if(randomness == 2) {
-        let rNumberOfFont  = 2
-    } else 
-    if(randomness == 3) {
-        let rNumberOfFont  = 3
-
-    } else 
-    if(randomness == 4) {
-        let rNumberOfFont  = 4
-
-    } else 
-    if(randomness == 5) {
-        let rNumberOfFont  = 5
-        let rLineHeight = randomNumber(80,180)
+        // Number of font type (2 in MVP )
+        let rFontType = rN(1,2)
+        if( rFontType == 1 ) { 
+            for (let i = 0; i < element.length; i++) {
+                const aElement = element[i];
+                aElement.style.fontFamily = "arial, sans-serif" 
+            }
+        } else
+        if( rFontType == 2 ) { 
+            for (let i = 0; i < element.length; i++) {
+                const aElement = element[i];
+                aElement.style.fontFamily = "times, serif" 
+            }
+        }    
     }
-    let rFont = randomNumber(1,5)
-    let rNumberOfFont  = 2 
 
-
-    // Title font bold or not
-    let rStyle = trueOrFalse()
-    if(rStyle == true) {
-        // Title font is bold
-    }
-    else {
-        // Title font is normal
-    }
-
-
-    // random Line height
-    let rLineHeight = randomNumber(100,150)
 
     // color font (must be readable)
 
@@ -208,12 +216,12 @@ function analogous() {
     // Generate between 2 and 5 colors
     // Generate a random Hue and by that, generate other colors close to this hue
     // Analogous must have a short range of hue
-    let rHue = randomNumber(0,360)
-    let rSaturation = randomNumber(50,100)
-    let nColor = randomNumber(2,5)
-    let rLightness = randomNumber(30,75)
-    // Delta is always the same as the number of color 
-    let rDelta = randomNumber(130,210);
+    let rHue = rN(0,360)
+    let rSaturation = rN(50,100)
+    let nColor = rN(2,5)
+    let rLightness = rN(30,75)
+    // Delta is always the same as the N of color 
+    let rDelta = rN(130,210);
     let delta = rDelta - ( (rDelta / 5 ) * (5 - nColor) );
     let colors = [
         ["Analogous"],
@@ -227,31 +235,31 @@ function analogous() {
 
 }
 function monochromatic() {
-    let rHue = randomNumber(0,360)
-    let nColor = randomNumber(2,5)
+    let rHue = rN(0,360)
+    let nColor = rN(2,5)
     let colors = [
         ["Monochromatic"],
         []
     ]
 
     for (let i = 0; i < nColor; i++) {
-        let rLightness = randomNumber(20,85)
-        let rSaturation = randomNumber(30,100)
+        let rLightness = rN(20,85)
+        let rSaturation = rN(30,100)
         colors[1].push(`hsl(${rHue},${rSaturation}%,${rLightness}%)`)
     }
     return colors
 }
 function triad() {
     
-    let nColor = randomNumber(3,3)
-    let rHue = randomNumber(0,360)
+    let nColor = rN(3,3)
+    let rHue = rN(0,360)
     let colors = [
         ["Triad"],
         []
     ]
     for (let i = 0; i < nColor; i++) {
-        let rLightness = randomNumber(20,85)
-        let rSaturation = randomNumber(30,100)
+        let rLightness = rN(20,85)
+        let rSaturation = rN(30,100)
         let hue = rHue + (i * 120);
         if(hue > 360) {
             hue = hue - 360;
@@ -264,15 +272,15 @@ function triad() {
 function complementary() {
 
     // Gen a color and became complementary if even 
-    let nColor =  randomNumber(2,5)
-    let rHue = randomNumber(0,360)
+    let nColor =  rN(2,5)
+    let rHue = rN(0,360)
     let colors = [
         ["Complementary"],
         []
     ]
     for (let i = 0; i < nColor; i++) {
-        let rLightness = randomNumber(20,85)
-        let rSaturation = randomNumber(30,100)
+        let rLightness = rN(20,85)
+        let rSaturation = rN(30,100)
         let hue = rHue;
         if( i % 2 == 0) {
             hue = rHue + 180
@@ -285,14 +293,14 @@ function complementary() {
 function square() {
         // Gen a color and became complementary if even 
         let nColor = 4;
-        let rHue = randomNumber(0,360)
+        let rHue = rN(0,360)
         let colors = [
             ["Square"],
             []
         ]
         for (let i = 0; i < nColor; i++) {
-            let rLightness = randomNumber(20,85)
-            let rSaturation = randomNumber(30,100)
+            let rLightness = rN(20,85)
+            let rSaturation = rN(30,100)
             let hue = rHue + (i * 90)
             if( hue > 360) {
                 hue = hue - 360;
@@ -305,15 +313,15 @@ function square() {
 }
 function shades() {
         // Gen a color and became complementary if even 
-        let nColor = randomNumber(2,5)
-        let rHue = randomNumber(0,360)
-        let rSaturation = randomNumber(30,100)
+        let nColor = rN(2,5)
+        let rHue = rN(0,360)
+        let rSaturation = rN(30,100)
         let colors = [
             ["Shades"],
             []
         ]
         for (let i = 0; i < nColor; i++) {
-            let rLightness = randomNumber(20,85)
+            let rLightness = rN(20,85)
             let ShadesHue = rHue;
             colors[1].push(`hsl(${ShadesHue},${rSaturation}%,${rLightness}%)`)
         }

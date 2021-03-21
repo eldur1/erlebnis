@@ -13,7 +13,8 @@ An attempt to generate a website and provide a unique experience.
 
 ## Syntax & naming convention
 - Functions written in camelCase.
-- `r` as beginning of variable mean random.
+- `n` in a function/ variable mean number 
+- `r` as beginning of function/ variable mean random.
 - No use of ; at end of line.
  
 ## MVP 
@@ -28,8 +29,9 @@ An attempt to generate a website and provide a unique experience.
 
 
 ### Font generation :
-- sans-serif/ serif
-- Lineheight
+- ✅ 2 types of font (serif/sans-serif)
+- ✅ Lineheight
+- ✅ Font size
 - Color font (no readability check)
 
 ### Content generation : 
@@ -40,12 +42,11 @@ An attempt to generate a website and provide a unique experience.
 - Margin (elements)
 - Alignment (Left, right, center)
 
-
-
 ## Beta 
 
 ### Generation : 
 - Seed 
+- Randomness cursor
 
 ### Font generation :
 - Google Fonts
