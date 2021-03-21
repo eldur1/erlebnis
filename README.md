@@ -21,8 +21,6 @@ An attempt to generate a website and provide a unique experience.
 ### Generation :
 - ✅ randomNumber()
 - ✅ trueOrFalse()
-- 
-
 
 ### Color generation : 
 - ✅ Pallet 
@@ -62,9 +60,6 @@ An attempt to generate a website and provide a unique experience.
 - Grid generation
 
 
-
-## Done
-- Pallet generation (done)
-
 ## Credit(s)
-- Done by myself 
+
+Done by myself 
