@@ -11,19 +11,21 @@ function trueOrFalse() {
 function randomNumber(min , max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
+function getRValue() {
+    let rValue = input.value
+    return rValue
+} 
+// Generation of the site
 function generation() {
-    console.log(input.value)
+    fontGeneration()
 }
 
-/* 
 
-generation() */
+let bg = document.querySelector('.background');
 
+/* let randonmess = randomNumber(1,10)
 const input = document.querySelector('input')
 
-
-let randonmess = randomNumber(1,10)
 input.value = randonmess
 input.nextElementSibling.innerHTML = input.value
 
@@ -31,12 +33,13 @@ input.addEventListener('change', () => {
     input.nextElementSibling.innerHTML = input.value
     generation()
     return randonmess
-})
+}) */
 
 
 generation()
 // Generation a random pallet type
 // Type of pallet
+
 function typeOfPallet() {
     let i = randomNumber(1,6);
 
@@ -61,9 +64,7 @@ function rColorInPallet() {
 function colorsGeneration() {
 
     let c = typeOfPallet();
-
-
-    // Show color generates
+/*     // Show color generates
     let h2 = document.createElement('h2');
     let title_h2 = document.body.appendChild(h2);
     title_h2.innerHTML = `${c[0]} color generation`;
@@ -71,7 +72,7 @@ function colorsGeneration() {
         let div = document.createElement('div');
         document.body.appendChild(div);
         div.style.backgroundColor = element;
-    });  
+    });   */
 
 
 return c
@@ -82,31 +83,46 @@ return c
 
 
 /* Background generation */
-let bg = document.querySelector('.background');
 
 
 function bgChoice() {
+    //let rValue = getRValue()
     let typeOfBg = randomNumber(1,4)
-    if( typeOfBg == 1 ) { return blackBg() } else 
-    if( typeOfBg == 2 ) { return whiteBg() } else
-    if( typeOfBg == 3 ) { return colorBg() } else
-    if( typeOfBg == 4 ) { return gradientBg() }
-    
+    if( typeOfBg == 1 ) { blackBg() } else 
+    if( typeOfBg == 2 ) { whiteBg() } else
+    if( typeOfBg == 3 ) { colorBg() } else
+    if( typeOfBg == 4 ) { gradientBg() }    
+}
+
+function getDataColors() {
+
 }
 
 function blackBg() {
     bg.style.backgroundColor = "black";
+    return "black"
+
 }
 function whiteBg() {
     bg.style.backgroundColor = "white";
+    return "white"
+
 
 }
 function colorBg() {
     let colors = colorsGeneration()[1]
     // Choose a color in the colors array
     let rColorOfPallet = randomNumber( 1, colors.length)-1
+    let dataColors = []
     // Apply the color
     bg.style.backgroundColor = colors[rColorOfPallet]
+
+    for (let i = 0; i < 2; i++) {
+        if(i == 1) { dataColors[0].push("color") }
+        else { dataColors[1].push(rColorOfPallet) }
+    }
+    return dataColors
+
 }
 function gradientBg() {
     // Create a gradient with two different color of the pallet
@@ -123,13 +139,65 @@ function gradientBg() {
 
     colorsSelected.push(colors[rColor1-1])
     colorsSelected.push(colors[rColor2-1])
-
     bg.style.background = "linear-gradient( " + rAngle + "deg, " + colorsSelected[0] + " 0% ," + colorsSelected[1] + " 100%" + ")"
+    return "gradient"
 }
 
 
+/* font generation */
 
 
+function fontGeneration() {
+
+    // Get return of randomness
+
+
+
+    if(randomness == 1 ) {
+        let rNumberOfFont  = 1
+        let rLineHeight = randomNumber(110,130)
+    } else
+    if(randomness == 2) {
+        let rNumberOfFont  = 2
+    } else 
+    if(randomness == 3) {
+        let rNumberOfFont  = 3
+
+    } else 
+    if(randomness == 4) {
+        let rNumberOfFont  = 4
+
+    } else 
+    if(randomness == 5) {
+        let rNumberOfFont  = 5
+        let rLineHeight = randomNumber(80,180)
+    }
+    let rFont = randomNumber(1,5)
+    let rNumberOfFont  = 2 
+
+
+    // Title font bold or not
+    let rStyle = trueOrFalse()
+    if(rStyle == true) {
+        // Title font is bold
+    }
+    else {
+        // Title font is normal
+    }
+
+
+    // random Line height
+    let rLineHeight = randomNumber(100,150)
+
+    // color font (must be readable)
+
+
+}
+
+function contentGeneration() {
+
+
+}
 
 
 

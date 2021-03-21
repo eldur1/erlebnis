@@ -15,10 +15,52 @@ An attempt to generate a website and provide a unique experience.
 - Functions written in camelCase.
 - `r` as beginning of variable mean random.
 - No use of ; at end of line.
-## To-do
-- Pallet to web (choose colors from pallet and use it as bg and font color)
-- Font generation
-- Layout generation 
+ 
+## MVP 
+
+### Generation :
+- ✅ randomNumber()
+- ✅ trueOrFalse()
+- 
+
+
+### Color generation : 
+- ✅ Pallet 
+- ✅ Background generation 
+
+
+### Font generation :
+- sans-serif/ serif
+- Lineheight
+- Color font (no readability check)
+
+### Content generation : 
+- Generation of words (no sentences)
+
+### Layout generation : 
+- Margin (body)
+- Margin (elements)
+- Alignment (Left, right, center)
+
+
+
+## Beta 
+
+### Generation : 
+- Seed 
+
+### Font generation :
+- Google Fonts
+- Number of fonts
+- Color font (readability check)
+
+
+### Content generation : 
+- Sentences maker 
+
+### Layout generation : 
+- Grid generation
+
 
 
 ## Done
