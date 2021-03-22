@@ -1,13 +1,14 @@
+"use strict"
 
 // True or false 
 function trueOrFalse() {
     let i = 0.5
-    while(i == 0.5) { i = Math.random() }
-    if(i > 0.5) { return true } 
+    while( i == 0.5 ) { i = Math.random() }
+    if( i > 0.5 ) { return true } 
     else { return false }
 }
 
-// r N between min and max
+// random number between a determined min and max
 function rN(min , max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -37,9 +38,8 @@ input.addEventListener('change', () => {
 
 
 generation()
-// Generation a random pallet type
 // Type of pallet
-
+    
 function typeOfPallet() {
     let i = rN(1,6);
 
@@ -79,9 +79,6 @@ return c
 
 }
 
-
-
-
 /* Background generation */
 
 
@@ -101,13 +98,10 @@ function getDataColors() {
 function blackBg() {
     bg.style.backgroundColor = "black";
     return "black"
-
 }
 function whiteBg() {
     bg.style.backgroundColor = "white";
     return "white"
-
-
 }
 function colorBg() {
     let colors = colorsGeneration()[1]
@@ -125,13 +119,13 @@ function colorBg() {
 
 }
 function gradientBg() {
-    // Create a gradient with two different color of the pallet
+    // Create a gradient
     let colors = colorsGeneration()[1]
     let rAngle = rN(0,360)
     let colorsSelected = []
     let rColor1 = 1
     let rColor2 = 1
-
+    // Make sure there's two different colors
     do {
         rColor1 = rN(2, colors.length)
     } while( rColor1 == rColor2)
@@ -145,62 +139,101 @@ function gradientBg() {
 
 /* font generation */
 
-
-
 function fontGeneration() {
 
     const title_h1 = document.querySelectorAll('.title-h1')
     const title_h2 = document.querySelectorAll('.title-h2')
+    const title_h3 = document.querySelectorAll('.title-h3')
     const paragraph = document.querySelectorAll('.p')    
-    const nOfHeadLevel = 3
-    let aElement = []
 
-    for (let i = 1; i < nOfHeadLevel+1; i++) {
+    var aTextLevel = [
+        [title_h1],
+        [title_h2],
+        [title_h3],
+        [paragraph]
+    ]
+    const iterator = aTextLevel.keys()
+    let aRatioFont = [
+        ["Minor Second", "1.067"],
+        ["Major Second", "1.125"], 
+        ["Minor Third", "1.200"], 
+        ["Major Third", "1.250"], 
+        ["Perfect fourth", "1.333"], 
+        ["Augmented fourth", "1.414"],
+        ["Perfect fifth", "1.500"],
+        ["Golden ratio", "1.618"] // 
+    ]
+    var baseSizeFont = rN(16,24)
+    let ratioValues = aRatioFont[rN(0,7)]
+    let ratioFont = ratioValues[1]
 
+    for (const key of iterator) {
+        var aText = []
         // Dynamic element selector
-        if( i === 1 ) { var element = title_h1 } else    
-        if( i === 2 ) { var element = title_h2 } else 
-        if ( i === 3 ) { var element = paragraph }
+        var rLineHeight = rN(100,150)
+        let element  = aTextLevel[key]
+        var elementNodelist = element[0]
 
 
-        // Paragraph generation
-        const fontSize = rN(16,24)
-        if ( i === 3 ) {
-            let rLineHeight = rN(100,150)
-            for (let i = 0; i < element.length; i++) {
-                const aElement = element[i];
-                aElement.style.lineHeight = rLineHeight + "%"
-                aElement.style.fontSize = fontSize + "px"
+        // Title and paragraph
+        if(key == 3) {
+            for (let i = 0; i < element[0].length; i++) {
+                let computedFontSize = baseSizeFont
+                elementNodelist[i].style.fontSize = computedFontSize + "px"
+                elementNodelist[i].style.lineHeight = rLineHeight + "%"
+
+            }
+        }
+        else {
+            for (let i = 0; i < element[0].length; i++) {
+
+                let lengthA =  key+1
+                let computedFontSize = baseSizeFont * ( ratioFont * ( 4 -  lengthA )  )
+                elementNodelist[i].style.fontSize = computedFontSize + "px"
+                elementNodelist[i].style.lineHeight = rLineHeight + "%"
+                
             }
         }
 
-        // Font size
+        
+    } 
+
+
+
+
+
+/* 
+        // Paragraph generation
+        if ( i === 3 ) {
+            let rLineHeight = rN(100,150)
+            for (let i = 0; i < element.length; i++) {
+                const aText = element[i];
+                aText.style.lineHeight = rLineHeight + "%"
+                aText.style.fontSize = baseSizeFont + "px"
+            }
+        }
+
 
         let paragraphSize = rN(16,24)
-
-
-
         // Number of font type (2 in MVP )
         let rFontType = rN(1,2)
         if( rFontType == 1 ) { 
             for (let i = 0; i < element.length; i++) {
-                const aElement = element[i];
-                aElement.style.fontFamily = "arial, sans-serif" 
+                const aText = element[i];
+                aText.style.fontFamily = "arial, sans-serif" 
             }
         } else
         if( rFontType == 2 ) { 
             for (let i = 0; i < element.length; i++) {
-                const aElement = element[i];
-                aElement.style.fontFamily = "times, serif" 
+                const aText = element[i];
+                aText.style.fontFamily = "times, serif" 
             }
-        }    
-    }
+        }     */
+}
 
 
     // color font (must be readable)
 
-
-}
 
 function contentGeneration() {
 

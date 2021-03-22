@@ -1,7 +1,7 @@
 
 ## Web project of generative website
 Web experimental art :
-An attempt to generate a website and provide a unique experience.
+An attempt to create a generative website.
 
 ## Install and commands
 - `npm i` : install npm.
@@ -15,18 +15,24 @@ An attempt to generate a website and provide a unique experience.
 - Functions written in camelCase.
 - `n` in a function/ variable mean number 
 - `r` as beginning of function/ variable mean random.
+- `a` in a function/ variable mean array.
+- `o` in a function/ variable mean object.
 - No use of ; at end of line.
  
 ## MVP 
 
-### Generation :
+From chaos to order, the first version is really basic. It produce non predictable result and often ugly result.
+The most important for the MVP is not to get the best algorithm but have an algorithm that work. 
+We cannot jump this part. We need to see results that doesn't work to improve the algorithm. 
+Here's a list of functionnality that the algorithm have in the MVP
+
+### Generation tools :
 - ✅ randomNumber()
 - ✅ trueOrFalse()
 
 ### Color generation : 
-- ✅ Pallet 
-- ✅ Background generation 
-
+- ✅ Five types of pallet 
+- ✅ Background
 
 ### Font generation :
 - ✅ 2 types of font (serif/sans-serif)
@@ -43,6 +49,15 @@ An attempt to generate a website and provide a unique experience.
 - Alignment (Left, right, center)
 
 ## Beta 
+
+Beta include a improved version of the algorithm. 
+
+- Font generation use google font library to produce more unique generation. 
+- A seed system to save the generation and reuse it. 
+- Randomness cursor that add the possibility to choose the level of random, It allow the user to choose the balance between chaos and order. 
+- For a more coherent page, the content generator create real sentences (not with real sense).
+- The layout generation is also improved with a grid system.
+
 
 ### Generation : 
 - Seed 
