@@ -38,6 +38,7 @@ Here's a list of functionnality that the algorithm have in the MVP
 - ✅ 2 types of font (serif/sans-serif)
 - ✅ Lineheight
 - ✅ Font size
+- ✅ Random ratio 
 - Color font (no readability check)
 
 ### Content generation : 
