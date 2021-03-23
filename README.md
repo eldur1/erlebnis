@@ -81,6 +81,12 @@ Beta include a improved version of the algorithm.
 
 - modular javascript
 
+## Some stuff 
+Load dynamically a font :
+https://usefulangle.com/post/74/javascript-dynamic-font-loading
+
+Webfontload package to simply load fonts from google fonts
+https://www.npmjs.com/package/webfontloader
 
 ## Credit(s)
 
