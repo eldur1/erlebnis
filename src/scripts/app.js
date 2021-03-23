@@ -148,8 +148,12 @@ function fontGeneration() {
     ]
 
     var aFontFamily = [
-        ["Arial, sans-serif"],
-        ["Times, serif"]
+        ['Lato'],
+        ['Lexend'],
+        ['Montserrat'],
+        ['Noto Sans'],
+        ['Open Sans'],
+        ['Oswald']
     ]
     const iterator = aTextLevel.keys()
     var baseSizeFont = rN(16,24)
@@ -176,6 +180,20 @@ function fontGeneration() {
         let computedFontSize = baseSizeFont
         var val = baseSizeFont
 
+        // Font family
+        let rFontFamily = rN(1,aFontFamily.length-1)
+        var fontName = aFontFamily[rFontFamily]
+        let rFontWeight = rN(1,2)
+        // Load font from 
+        // push name in the array
+        var WebFont = require('webfontloader')
+        console.log(fontName);
+        WebFont.load({
+            google: {
+                families: [fontName[0]]
+            }
+        })
+
 
         // Font size and line height
 
@@ -184,14 +202,12 @@ function fontGeneration() {
             for (let i = 0; i < element[0].length; i++) {
                 elementNodelist[i].style.fontSize = computedFontSize + "px"
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
+                elementNodelist[i].style.fontFamily = fontName
+
             }
         }
         // Titles
         else {
-
-        // Font family
-            let rFontFamily = rN(1,aFontFamily.length)
-
             let lengthA =  key
             var iRatio = 3 - key
             // Size calculator for each title (depend on head level)
@@ -201,10 +217,9 @@ function fontGeneration() {
                     var val = val * ratioFont
                 }
                 aComputedRatio.push(val)
-                console.log(aComputedRatio[key+1])
                 elementNodelist[i].style.fontSize = aComputedRatio[key+1] + "px"
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
-                elementNodelist[i].style.fontFamily = aFontFamily[rFontFamily-1]
+                elementNodelist[i].style.fontFamily = fontName
             }
         }
 

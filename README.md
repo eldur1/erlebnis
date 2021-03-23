@@ -35,7 +35,7 @@ Here's a list of functionnality that the algorithm have in the MVP
 - ✅ Background
 
 ### Font generation :
-- ✅ 2 types of font (serif/sans-serif)
+- ✅ Fon family (array of font)
 - ✅ Lineheight
 - ✅ Font size
 - ✅ Random ratio 
