@@ -7,7 +7,6 @@ function trueOrFalse() {
     if( i > 0.5 ) { return true } 
     else { return false }
 }
-
 // random number between a determined min and max
 function rN(min , max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -19,27 +18,14 @@ function getRValue() {
 // Generation of the site
 function generation() {
     fontGeneration()
+    bgChoice()
 }
-
 
 let bg = document.querySelector('.background');
 
-/* let randonmess = rN(1,10)
-const input = document.querySelector('input')
-
-input.value = randonmess
-input.nextElementSibling.innerHTML = input.value
-
-input.addEventListener('change', () => {
-    input.nextElementSibling.innerHTML = input.value
-    generation()
-    return randonmess
-}) */
-
-
 generation()
+
 // Type of pallet
-    
 function typeOfPallet() {
     let i = rN(1,6);
     if (i == 1) { return analogous()} else
@@ -83,7 +69,7 @@ return c
 
 function bgChoice() {
     //let rValue = getRValue()
-    let typeOfBg = rN(1,4)
+    let typeOfBg = rN(4,4)
     if( typeOfBg == 1 ) { blackBg() } else 
     if( typeOfBg == 2 ) { whiteBg() } else
     if( typeOfBg == 3 ) { colorBg() } else
@@ -139,6 +125,16 @@ function gradientBg() {
 
 function fontGeneration() {
 
+    let aRatioFont = [
+        ["Minor Second", "1.067"],
+        ["Major Second", "1.125"], 
+        ["Minor Third", "1.200"], 
+        ["Major Third", "1.250"], 
+        ["Perfect fourth", "1.333"], 
+        ["Augmented fourth", "1.414"],
+        ["Perfect fifth","1.500"],
+        ["Golden ratio", "1.618"] // 
+    ]
     const title_h1 = document.querySelectorAll('.title-h1')
     const title_h2 = document.querySelectorAll('.title-h2')
     const title_h3 = document.querySelectorAll('.title-h3')
@@ -150,17 +146,12 @@ function fontGeneration() {
         [title_h3],
         [paragraph]
     ]
-    const iterator = aTextLevel.keys()
-    let aRatioFont = [
-        ["Minor Second", "1.067"],
-        ["Major Second", "1.125"], 
-        ["Minor Third", "1.200"], 
-        ["Major Third", "1.250"], 
-        ["Perfect fourth", "1.333"], 
-        ["Augmented fourth", "1.414"],
-        ["Perfect fifth","1.500"],
-        ["Golden ratio", "1.618"] // 
+
+    var aFontFamily = [
+        ["Arial, sans-serif"],
+        ["Times, serif"]
     ]
+    const iterator = aTextLevel.keys()
     var baseSizeFont = rN(16,24)
     let ratioValues = aRatioFont[rN(0,7)]
     let ratioFont = ratioValues[1]
@@ -168,9 +159,14 @@ function fontGeneration() {
     let aComputedRatio = []
     aComputedRatio.push(ratioFont * baseSizeFont)
 
-    console.log(ratioFontName + " : " + ratioFont)
-    console.log("Base font size : " + baseSizeFont)
 
+    // DEBUG
+
+    //console.log(ratioFontName + " : " + ratioFont)
+    //console.log("Base font size : " + baseSizeFont)
+
+
+    // Loop every type of text (p, h1, h2, h3)
     for (const key of iterator) {
         var aText = []
         // Dynamic element selector
@@ -180,78 +176,60 @@ function fontGeneration() {
         let computedFontSize = baseSizeFont
         var val = baseSizeFont
 
-        // Title and paragraph
+
+        // Font size and line height
+
+        // Paragraph
         if(key == 3) {
             for (let i = 0; i < element[0].length; i++) {
                 elementNodelist[i].style.fontSize = computedFontSize + "px"
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
             }
         }
+        // Titles
         else {
+
+        // Font family
+            let rFontFamily = rN(1,aFontFamily.length)
+
             let lengthA =  key
             var iRatio = 3 - key
+            // Size calculator for each title (depend on head level)
             for (let i = 0; i < element[0].length; i++) {
-                //console.log("Numéro " + iRatio)
                 // 3 times, 2 times and 1 time
                 for(let i = 0; i < iRatio ; i++) {
-                   // console.log(val)
                     var val = val * ratioFont
                 }
                 aComputedRatio.push(val)
                 console.log(aComputedRatio[key+1])
                 elementNodelist[i].style.fontSize = aComputedRatio[key+1] + "px"
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
+                elementNodelist[i].style.fontFamily = aFontFamily[rFontFamily-1]
             }
         }
 
-        
+
+
     } 
-console.log(aComputedRatio)
-
-
-
-
-
-/* 
-        // Paragraph generation
-        if ( i === 3 ) {
-            let rLineHeight = rN(100,150)
-            for (let i = 0; i < element.length; i++) {
-                const aText = element[i];
-                aText.style.lineHeight = rLineHeight + "%"
-                aText.style.fontSize = baseSizeFont + "px"
-            }
-        }
-
-
-        let paragraphSize = rN(16,24)
-        // Number of font type (2 in MVP )
-        let rFontType = rN(1,2)
-        if( rFontType == 1 ) { 
-            for (let i = 0; i < element.length; i++) {
-                const aText = element[i];
-                aText.style.fontFamily = "arial, sans-serif" 
-            }
-        } else
-        if( rFontType == 2 ) { 
-            for (let i = 0; i < element.length; i++) {
-                const aText = element[i];
-                aText.style.fontFamily = "times, serif" 
-            }
-        }     */
 }
 
 
-    // color font (must be readable)
+// color font (must be readable)
 
 
 function contentGeneration() {
 
 
+
 }
 
-/*  Pallet generation   */
+function layoutGeneration() {
 
+
+}
+
+
+/*  Pallet generation   */
 function analogous() {
     // Generate between 2 and 5 colors
     // Generate a random Hue and by that, generate other colors close to this hue

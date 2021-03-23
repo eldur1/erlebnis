@@ -18,7 +18,7 @@ An attempt to create a generative website.
 - `a` in a function/ variable mean array.
 - `o` in a function/ variable mean object.
 - No use of ; at end of line.
- 
+
 ## MVP 
 
 From chaos to order, the first version is really basic. It produce non predictable result and often ugly result.
@@ -75,6 +75,11 @@ Beta include a improved version of the algorithm.
 
 ### Layout generation : 
 - Grid generation
+
+
+## To improve
+
+- modular javascript
 
 
 ## Credit(s)
