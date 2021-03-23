@@ -42,7 +42,6 @@ generation()
     
 function typeOfPallet() {
     let i = rN(1,6);
-
     if (i == 1) { return analogous()} else
     if (i == 2) { return monochromatic()} else
     if (i == 3) { return triad()} else
@@ -116,7 +115,6 @@ function colorBg() {
         else { dataColors[1].push(rColorOfPallet) }
     }
     return dataColors
-
 }
 function gradientBg() {
     // Create a gradient
@@ -160,12 +158,18 @@ function fontGeneration() {
         ["Major Third", "1.250"], 
         ["Perfect fourth", "1.333"], 
         ["Augmented fourth", "1.414"],
-        ["Perfect fifth", "1.500"],
+        ["Perfect fifth","1.500"],
         ["Golden ratio", "1.618"] // 
     ]
     var baseSizeFont = rN(16,24)
     let ratioValues = aRatioFont[rN(0,7)]
     let ratioFont = ratioValues[1]
+    let ratioFontName = ratioValues[0]
+    let aComputedRatio = []
+    aComputedRatio.push(ratioFont * baseSizeFont)
+
+    console.log(ratioFontName + " : " + ratioFont)
+    console.log("Base font size : " + baseSizeFont)
 
     for (const key of iterator) {
         var aText = []
@@ -173,30 +177,36 @@ function fontGeneration() {
         var rLineHeight = rN(100,150)
         let element  = aTextLevel[key]
         var elementNodelist = element[0]
-
+        let computedFontSize = baseSizeFont
+        var val = baseSizeFont
 
         // Title and paragraph
         if(key == 3) {
             for (let i = 0; i < element[0].length; i++) {
-                let computedFontSize = baseSizeFont
                 elementNodelist[i].style.fontSize = computedFontSize + "px"
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
-
             }
         }
         else {
+            let lengthA =  key
+            var iRatio = 3 - key
             for (let i = 0; i < element[0].length; i++) {
-
-                let lengthA =  key+1
-                let computedFontSize = baseSizeFont * ( ratioFont * ( 4 -  lengthA )  )
-                elementNodelist[i].style.fontSize = computedFontSize + "px"
+                //console.log("Numéro " + iRatio)
+                // 3 times, 2 times and 1 time
+                for(let i = 0; i < iRatio ; i++) {
+                   // console.log(val)
+                    var val = val * ratioFont
+                }
+                aComputedRatio.push(val)
+                console.log(aComputedRatio[key+1])
+                elementNodelist[i].style.fontSize = aComputedRatio[key+1] + "px"
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
-                
             }
         }
 
         
     } 
+console.log(aComputedRatio)
 
 
 
@@ -239,9 +249,6 @@ function contentGeneration() {
 
 
 }
-
-
-
 
 /*  Pallet generation   */
 
