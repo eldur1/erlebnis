@@ -20,6 +20,7 @@ function generation() {
     fontGeneration()
     bgChoice()
     layoutGeneration()
+    contentGeneration()
 }
 
 let bg = document.querySelector('.background');
@@ -148,11 +149,6 @@ function fontGeneration() {
         [paragraph]
     ]
 
-    var aContentPage = []
-    
-
-
-    
     var aFontFamily = [
         ['Lato'],
         ['Lexend'],
@@ -161,12 +157,17 @@ function fontGeneration() {
         ['Open Sans'],
         ['Oswald']
     ]
+
+    // Font size variables
     const iterator = aTextLevel.keys()
     var baseSizeFont = rN(16,24)
     let ratioValues = aRatioFont[rN(0,7)]
     let ratioFont = ratioValues[1]
     let ratioFontName = ratioValues[0]
     let aComputedRatio = []
+    var rLineHeight = rN(120,150)
+    var computedFontSize = baseSizeFont
+
 
     // Text layout
     let pBump = trueOrFalse()
@@ -180,27 +181,25 @@ function fontGeneration() {
     //console.log("Base font size : " + baseSizeFont)
 
     // Loop every type of text (p, h1, h2, h3)
+
+
+    // Font family
+    let rFontFamily = rN(1,aFontFamily.length-1)
+    var fontName = aFontFamily[rFontFamily]
+    let rFontWeight = rN(1,2)
+
+    var WebFont = require('webfontloader')
+    WebFont.load({
+        google: {
+            families: [fontName[0]]
+        }
+    })
+
+
     for (const key of iterator) {
         var aText = []
-        var rLineHeight = rN(120,150)
-        let element  = aTextLevel[key]
+        var element  = aTextLevel[key]
         var elementNodelist = element[0]
-        let computedFontSize = baseSizeFont
-        var val = baseSizeFont
-
-        // Font family
-        let rFontFamily = rN(1,aFontFamily.length-1)
-        var fontName = aFontFamily[rFontFamily]
-        let rFontWeight = rN(1,2)
-        // Load font from 
-        // push name in the array
-        var WebFont = require('webfontloader')
-        WebFont.load({
-            google: {
-                families: [fontName[0]]
-            }
-        })
-
 
         // Font size and line height
 
@@ -222,7 +221,6 @@ function fontGeneration() {
         // Titles
         // Will be executed 3 times (h1,h2,h3)
         else {
-
             var val = baseSizeFont
 
             for(let i = 0; i < key+1 ; i++) {
@@ -243,22 +241,40 @@ function fontGeneration() {
 }
 
 
-// color font (must be readable)
+
+
 
 
 function contentGeneration() {
+    var generativeElement = document.querySelectorAll('.generative-content')
+    var aHello = [
+        "Hello",
+        "Hi",
+        "Salut",
+        "Hallo"
+    ]
 
-    let rNOfTitle = rN(3, 8)
+    var aTryingTo = [
+        "impress his futur employee.",
+        "feel existing",
+        "prove himself he can also do great design",
+        "escape from impostor syndrome",
+        "have the love he never had from his parents",
+        "make a living from his passion"
+    ]
 
-
-    let title = document.createElement('h1')
-    for (let i = 0; i < rNOfTitle; i++) {
-        let element = content.appendChild(title)
-        if(i == 1) { element.classList.add("title", "title--large") }
-        else {
-
+    for(let i = 0; i < generativeElement.length; i++) {
+        let currentElement = generativeElement[i]
+        if(currentElement.classList.contains("hi")) {
+            currentElement.innerHTML = aHello[rN(0, aHello.length-1)]
+        } else 
+        if(currentElement.classList.contains("amount_designer")) {
+            currentElement.innerHTML = rN(100,10000)
+        } else 
+        if(currentElement.classList.contains("trying_to")) {
+            currentElement.innerHTML = aTryingTo[rN(0, aTryingTo.length-1)]
         }
-    }
+    } 
 }
 
 function layoutGeneration() {

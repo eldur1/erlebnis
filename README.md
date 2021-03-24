@@ -48,7 +48,7 @@ Here's a list of functionnality that the algorithm have in the MVP
 
 ## To do 
 - Move to VueJS
-- Content viaration 
+- Animation on content generation
 
 ## Beta 
 
