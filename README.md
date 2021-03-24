@@ -54,12 +54,11 @@ Here's a list of functionnality that the algorithm have in the MVP
 
 Beta include a improved version of the algorithm. 
 
-- Font generation use google font library to produce more unique generation. 
 - A seed system to save the generation and reuse it. 
-- Randomness cursor that add the possibility to choose the level of random, It allow the user to choose the balance between chaos and order. 
-- For a more coherent page, the content generator create real sentences (not with real sense).
-- The layout generation is also improved with a grid system.
+- (?) Randomness cursor that add the possibility to choose the level of random, It allow the user to choose the balance between chaos and order. 
 
+
+(?) : Not sure about that
 
 ### Generation : 
 - Seed 
@@ -74,9 +73,6 @@ Beta include a improved version of the algorithm.
 - Grid generation
 - Accorded spacing (same scale on every spacing) 
 
-
-## To improve
-- modular javascript
 
 ## Some stuff 
 Webfontload package to simply load fonts from google fonts
