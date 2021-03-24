@@ -19,10 +19,11 @@ function getRValue() {
 function generation() {
     fontGeneration()
     bgChoice()
+    layoutGeneration()
 }
 
 let bg = document.querySelector('.background');
-
+let content = document.querySelector('.content')
 generation()
 
 // Type of pallet
@@ -135,9 +136,9 @@ function fontGeneration() {
         ["Perfect fifth","1.500"],
         ["Golden ratio", "1.618"] // 
     ]
-    const title_h1 = document.querySelectorAll('.title-h1')
-    const title_h2 = document.querySelectorAll('.title-h2')
-    const title_h3 = document.querySelectorAll('.title-h3')
+    const title_h1 = document.querySelectorAll('.title--large')
+    const title_h2 = document.querySelectorAll('.title--big')
+    const title_h3 = document.querySelectorAll('.title--medium')
     const paragraph = document.querySelectorAll('.p')    
 
     var aTextLevel = [
@@ -163,6 +164,11 @@ function fontGeneration() {
     let aComputedRatio = []
     aComputedRatio.push(ratioFont * baseSizeFont)
 
+    // Text layout
+    let pBump = trueOrFalse()
+    let marginBottomElement = rN(0,50) + "px"
+    let pMaxWidth = rN(30,70) + "ch"
+
 
     // DEBUG
 
@@ -174,7 +180,7 @@ function fontGeneration() {
     for (const key of iterator) {
         var aText = []
         // Dynamic element selector
-        var rLineHeight = rN(100,150)
+        var rLineHeight = rN(120,150)
         let element  = aTextLevel[key]
         var elementNodelist = element[0]
         let computedFontSize = baseSizeFont
@@ -203,6 +209,11 @@ function fontGeneration() {
                 elementNodelist[i].style.fontSize = computedFontSize + "px"
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
                 elementNodelist[i].style.fontFamily = fontName
+                elementNodelist[i].style.maxWidth = pMaxWidth
+                if(pBump == true) { 
+                    elementNodelist[i].style.marginLeft = rN(10,20) + "px"
+                } 
+
 
             }
         }
@@ -220,6 +231,8 @@ function fontGeneration() {
                 elementNodelist[i].style.fontSize = aComputedRatio[key+1] + "px"
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
                 elementNodelist[i].style.fontFamily = fontName
+                elementNodelist[i].style.marginBottom = marginBottomElement
+
             }
         }
 
@@ -239,6 +252,14 @@ function contentGeneration() {
 }
 
 function layoutGeneration() {
+
+    let rMargin = rN(8, 24) + "px"
+    let contentWidth = rN(50,90) + "%"
+
+    
+    document.body.style.margin = rMargin
+    content.style.width = contentWidth
+
 
 
 }

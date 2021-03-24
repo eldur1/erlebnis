@@ -40,14 +40,13 @@ Here's a list of functionnality that the algorithm have in the MVP
 - ✅ Font size
 - ✅ Random ratio 
 - Color font (no readability check)
-
+- One font for every title
 ### Content generation : 
 - Generation of words (no sentences)
 
 ### Layout generation : 
-- Margin (body)
-- Margin (elements)
-- Alignment (Left, right, center)
+- ✅ Margin (body)
+- ✅ Margin (elements)
 
 ## Beta 
 
@@ -75,10 +74,10 @@ Beta include a improved version of the algorithm.
 
 ### Layout generation : 
 - Grid generation
+- Accorded spacing (same scale on every spacing) 
 
 
 ## To improve
-
 - modular javascript
 
 ## Some stuff 
