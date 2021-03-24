@@ -142,12 +142,17 @@ function fontGeneration() {
     const paragraph = document.querySelectorAll('.p')    
 
     var aTextLevel = [
-        [title_h1],
-        [title_h2],
         [title_h3],
+        [title_h2],
+        [title_h1],
         [paragraph]
     ]
 
+    var aContentPage = []
+    
+
+
+    
     var aFontFamily = [
         ['Lato'],
         ['Lexend'],
@@ -162,7 +167,6 @@ function fontGeneration() {
     let ratioFont = ratioValues[1]
     let ratioFontName = ratioValues[0]
     let aComputedRatio = []
-    aComputedRatio.push(ratioFont * baseSizeFont)
 
     // Text layout
     let pBump = trueOrFalse()
@@ -175,11 +179,9 @@ function fontGeneration() {
     //console.log(ratioFontName + " : " + ratioFont)
     //console.log("Base font size : " + baseSizeFont)
 
-
     // Loop every type of text (p, h1, h2, h3)
     for (const key of iterator) {
         var aText = []
-        // Dynamic element selector
         var rLineHeight = rN(120,150)
         let element  = aTextLevel[key]
         var elementNodelist = element[0]
@@ -193,7 +195,6 @@ function fontGeneration() {
         // Load font from 
         // push name in the array
         var WebFont = require('webfontloader')
-        console.log(fontName);
         WebFont.load({
             google: {
                 families: [fontName[0]]
@@ -210,34 +211,34 @@ function fontGeneration() {
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
                 elementNodelist[i].style.fontFamily = fontName
                 elementNodelist[i].style.maxWidth = pMaxWidth
+/*                 // A little bump
                 if(pBump == true) { 
                     elementNodelist[i].style.marginLeft = rN(10,20) + "px"
                 } 
-
+ */
 
             }
         }
         // Titles
+        // Will be executed 3 times (h1,h2,h3)
         else {
-            let lengthA =  key
-            var iRatio = 3 - key
+
+            var val = baseSizeFont
+
+            for(let i = 0; i < key+1 ; i++) {
+                var val = val * ratioFont
+            }
+                aComputedRatio.push(val)
+            
             // Size calculator for each title (depend on head level)
             for (let i = 0; i < element[0].length; i++) {
-                // 3 times, 2 times and 1 time
-                for(let i = 0; i < iRatio ; i++) {
-                    var val = val * ratioFont
-                }
-                aComputedRatio.push(val)
-                elementNodelist[i].style.fontSize = aComputedRatio[key+1] + "px"
+                elementNodelist[i].style.fontSize = aComputedRatio[key] + "px"
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
                 elementNodelist[i].style.fontFamily = fontName
                 elementNodelist[i].style.marginBottom = marginBottomElement
-
+                
             }
         }
-
-
-
     } 
 }
 
@@ -247,8 +248,17 @@ function fontGeneration() {
 
 function contentGeneration() {
 
+    let rNOfTitle = rN(3, 8)
 
 
+    let title = document.createElement('h1')
+    for (let i = 0; i < rNOfTitle; i++) {
+        let element = content.appendChild(title)
+        if(i == 1) { element.classList.add("title", "title--large") }
+        else {
+
+        }
+    }
 }
 
 function layoutGeneration() {
@@ -256,7 +266,6 @@ function layoutGeneration() {
     let rMargin = rN(8, 24) + "px"
     let contentWidth = rN(50,90) + "%"
 
-    
     document.body.style.margin = rMargin
     content.style.width = contentWidth
 
@@ -381,3 +390,33 @@ function shades() {
         }
         return colors
 }
+
+
+
+/* Interaction */
+
+let btn_hero = document.querySelector('.js-btn-hero')
+let next = document.querySelector('.next')
+
+btn_hero.addEventListener('click', () => {
+    content.style.display = "none"
+    next.style.display = "block"
+});
+
+
+let btn_manifesto = document.querySelector('.js-manifesto')
+let btn_how_to = document.querySelector('.js-how-to')
+
+let manifesto = document.querySelector('.manifesto')
+let how_to = document.querySelector('.how-to')
+
+
+btn_manifesto.addEventListener('click', () => {
+    next.style.display = "none"
+    manifesto.style.display = "block"
+});
+btn_how_to.addEventListener('click', () => {
+    next.style.display = "none"
+    how_to.style.display = "block"
+
+});

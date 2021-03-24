@@ -41,12 +41,14 @@ Here's a list of functionnality that the algorithm have in the MVP
 - ✅ Random ratio 
 - Color font (no readability check)
 - One font for every title
-### Content generation : 
-- Generation of words (no sentences)
 
 ### Layout generation : 
 - ✅ Margin (body)
 - ✅ Margin (elements)
+
+## To do 
+- Move to VueJS
+- Content viaration 
 
 ## Beta 
 
@@ -67,10 +69,6 @@ Beta include a improved version of the algorithm.
 - Google Fonts
 - Number of fonts
 - Color font (readability check)
-
-
-### Content generation : 
-- Sentences maker 
 
 ### Layout generation : 
 - Grid generation
