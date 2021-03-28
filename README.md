@@ -39,8 +39,6 @@ Here's a list of functionnality that the algorithm have in the MVP
 - ✅ Lineheight
 - ✅ Font size
 - ✅ Random ratio 
-- Color font (no readability check)
-- One font for every title
 
 ### Layout generation : 
 - ✅ Margin (body)
@@ -54,9 +52,8 @@ Here's a list of functionnality that the algorithm have in the MVP
 
 Beta include a improved version of the algorithm. 
 
-- A seed system to save the generation and reuse it. 
-- (?) Randomness cursor that add the possibility to choose the level of random, It allow the user to choose the balance between chaos and order. 
-
+- keyword system ( one keyword by category)
+- readability font check
 
 (?) : Not sure about that
 
