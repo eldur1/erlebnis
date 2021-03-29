@@ -135,7 +135,7 @@ function fontGeneration() {
         ["Perfect fourth", "1.333"], 
         ["Augmented fourth", "1.414"],
         ["Perfect fifth","1.500"],
-        ["Golden ratio", "1.618"] // 
+        ["Golden ratio", "1.618"]
     ]
     const title_h1 = document.querySelectorAll('.title--large')
     const title_h2 = document.querySelectorAll('.title--big')
@@ -150,12 +150,11 @@ function fontGeneration() {
     ]
 
     var aFontFamily = [
-        ['Lato'],
-        ['Lexend'],
-        ['Montserrat'],
-        ['Noto Sans'],
-        ['Open Sans'],
-        ['Oswald']
+        ['BenchNine'],
+        ['Inconsolata'],
+        ['Open Sans Light'],
+        ['Oxygen'],
+        ['Dm Serif Display']
     ]
 
     // Font size variables
@@ -239,10 +238,6 @@ function fontGeneration() {
         }
     } 
 }
-
-
-
-
 function contentGeneration() {
     var generativeElement = document.querySelectorAll('.generative-content')
     var aHello = [

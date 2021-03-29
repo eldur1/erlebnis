@@ -21,7 +21,7 @@ An attempt to create a generative website.
 
 ## MVP 
 
-From chaos to order, the first version is really basic. It produce non predictable result and often ugly result.
+It produce non predictable result.
 The most important for the MVP is not to get the best algorithm but have an algorithm that work. 
 We cannot jump this part. We need to see results that doesn't work to improve the algorithm. 
 Here's a list of functionnality that the algorithm have in the MVP
@@ -45,7 +45,7 @@ Here's a list of functionnality that the algorithm have in the MVP
 - ✅ Margin (elements)
 
 ## To do 
-- Move to VueJS
+- ✅ Move to VueJS
 - Animation on content generation
 
 ## Beta 
