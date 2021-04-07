@@ -45,7 +45,7 @@ Here's a list of functionnality that the algorithm have in the MVP
 - ✅ Margin (elements)
 
 ## To do 
-- ✅ Move to VueJS
+- ✅ Modular JS
 - Animation on content generation
 
 ## Beta 
