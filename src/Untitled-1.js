@@ -51,3 +51,36 @@ for(let i = 0; i < iN ; i++) {
     console.log("coucou " + iN)
 }
 if(! aComputedRatio.includes(val)) { aComputedRatio.push(val) }
+
+/*     // Show color generates
+    let h2 = document.createElement('h2');
+    let title_h2 = document.body.appendChild(h2);
+    title_h2.innerHTML = `${c[0]} color generation`;
+    c[1].forEach(element => {
+        let div = document.createElement('div');
+        document.body.appendChild(div);
+        div.style.backgroundColor = element;
+    });   */
+
+
+    function square() {
+        // Gen a color and became complementary if even 
+        let nColor = 4;
+        let rHue = rN(0,360)
+        let colors = [
+            ["Square"],
+            []
+        ]
+        for (let i = 0; i < nColor; i++) {
+            let rLightness = rN(20,85)
+            let rSaturation = rN(30,100)
+            let hue = rHue + (i * 90)
+            if( hue > 360) {
+                hue = hue - 360;
+
+            }
+            colors[1].push(`hsl(${hue},${rSaturation}%,${rLightness}%)`)
+        }
+        return colors
+
+}
