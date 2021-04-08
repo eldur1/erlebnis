@@ -1,9 +1,6 @@
 import { rN, trueOrFalse } from 'fcts.js'
 
-function color() {
-
     var aColor = []
-
     for (let i = 0; i < 5; i++) {
         // Primary
         if(i == 0) {
@@ -45,7 +42,7 @@ function color() {
             aColor.push(color)
         }
     }
-/*     let primary = document.querySelector('.color--primary')
+/* let primary = document.querySelector('.color--primary')
     primary.style.backgroundColor = aColor[0]
 
     let secondary = document.querySelector('.color--secondary')
@@ -61,7 +58,5 @@ function color() {
     black.style.backgroundColor = aColor[4]
 
     */
-    return aColor 
-}
 
-export { color }
+export { aColor }

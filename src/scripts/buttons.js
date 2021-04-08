@@ -1,5 +1,6 @@
 import { rN } from 'fcts.js'
-
+import { aColor } from 'color.js'
+console.log(aColor);
 function spacing() {
     let aSpacing = []
     var spacingValue = rN(5,8)
@@ -18,7 +19,6 @@ function spacing() {
 }
 
 function buttons() {
-    let aColor = import('color.js')
     let buttons = document.querySelectorAll('.button')
     let aSpacing = spacing()
     let rBorderRadius = rN(2,8) + "px"
@@ -26,7 +26,7 @@ function buttons() {
         let element = buttons[i]
         var padding = aSpacing[1] + "px " + aSpacing[2] + "px "
         element.style.borderRadius = rBorderRadius
-        console.log(aColor[0])
+        //console.log(aColor[0])
         if(element.classList.contains("button--alt")) {
             let rBorderWidth = rN(2,4)
             element.style.border = rBorderWidth + "px" + " solid " + aColor[0]
