@@ -19,12 +19,6 @@ An attempt to create a generative website.
 - `o` in a function/ variable mean object.
 - No use of ; at end of line.
 
-## MVP 
-
-It produce non predictable result.
-The most important for the MVP is not to get the best algorithm but have an algorithm that work. 
-We cannot jump this part. We need to see results that doesn't work to improve the algorithm. 
-Here's a list of functionnality that the algorithm have in the MVP
 
 ### Generation tools :
 - ✅ randomNumber()
@@ -39,37 +33,23 @@ Here's a list of functionnality that the algorithm have in the MVP
 - ✅ Lineheight
 - ✅ Font size
 - ✅ Random ratio 
+- ✅ Google Fonts
+- ✅ Number of fonts
+- Bold font import
+
 
 ### Layout generation : 
 - ✅ Margin (body)
 - ✅ Margin (elements)
+- (?) Grid generation
+- ✅ Spacing generation
+- Spacing utilisation
 
-## To do 
-- ✅ Modular JS
+### Other
+- ✅ Modular JS files
+- ✅ Design system generation
 - Animation on content generation
-
-## Beta 
-
-Beta include a improved version of the algorithm. 
-
-- keyword system ( one keyword by category)
-- readability font check
-
-(?) : Not sure about that
-
-### Generation : 
-- Seed 
-- Randomness cursor
-
-### Font generation :
-- Google Fonts
-- Number of fonts
-- Color font (readability check)
-
-### Layout generation : 
-- Grid generation
-- Accorded spacing (same scale on every spacing) 
-
+- GSAP Transition
 
 ## Some stuff 
 Webfontload package to simply load fonts from google fonts

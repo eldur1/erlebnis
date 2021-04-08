@@ -116,13 +116,19 @@ function font() {
     } 
     let bg = document.querySelector('.background');
 
-    let spanColor = document.querySelectorAll('.color--primary')
+    let spanColorPrimary = document.querySelectorAll('.color--primary')
+    let spanColorAction = document.querySelectorAll('.color--action')
 
-    for (let i = 0; i < spanColor.length; i++) {
-    let element = spanColor[i]
+    for (let i = 0; i < spanColorPrimary.length; i++) {
+    let element = spanColorPrimary[i]
     //console.log(element);
     element.style.color = aColor[0]
     }
+    for (let i = 0; i < spanColorAction.length; i++) {
+        let element = spanColorAction[i]
+        //console.log(element);
+        element.style.color = aColor[2]
+        }
     bg.style.backgroundColor = aColor[3]
 
 }

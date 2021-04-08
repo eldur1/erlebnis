@@ -28,10 +28,10 @@ function buttons() {
         //console.log(aColor[0])
         if(element.classList.contains("button--alt")) {
             let rBorderWidth = rN(2,4)
-            element.style.border = rBorderWidth + "px" + " solid " + aColor[0]
+            element.style.border = rBorderWidth + "px" + " solid " + aColor[2]
             var padding = aSpacing[1] - rBorderWidth + "px " + aSpacing[2] + "px"
             element.style.backgroundColor = "transparent"
-            element.style.color = aColor[0]
+            element.style.color = aColor[2]
         } else {
             element.style.backgroundColor = aColor[2]
         }
