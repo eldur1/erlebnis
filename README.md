@@ -20,6 +20,8 @@ An attempt to create a generative website.
 - No use of ; at end of line.
 
 
+## Roadmap
+
 ### Generation tools :
 - ✅ randomNumber()
 - ✅ trueOrFalse()
@@ -29,12 +31,11 @@ An attempt to create a generative website.
 - ✅ Background
 
 ### Font generation :
-- ✅ Fon family (array of font)
+- ✅ Font family (array of font)
 - ✅ Lineheight
 - ✅ Font size
 - ✅ Random ratio 
 - ✅ Google Fonts
-- ✅ Number of fonts
 - Bold font import
 
 
