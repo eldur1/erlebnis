@@ -1,0 +1,30 @@
+{
+    "salutation": [
+        "Hello",
+        "Hi",
+        "Salut",
+        "Hallo",
+        "Hola",
+        "Konnichiwa",
+        "Guten Tag",
+        "Olá",
+        "Goddag",
+        "Goedendag",
+        "Namaste"
+    ],
+    "tryingTo": [
+        "impress his futur employee",
+        "feel existing",
+        "prove himself he can also do great design",
+        "escape from impostor syndrome",
+        "have the love he never had from his parents",
+        "make a living from his passion"
+    ],
+    "ctaHero": [
+        "Tell me more",
+        "What's a generative website",
+        "gen- what ?",
+        "Why it is unique",
+        "btn-CTA"
+    ]
+}

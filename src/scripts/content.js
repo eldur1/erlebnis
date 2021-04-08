@@ -1,41 +1,40 @@
 import { rN } from 'fcts.js'
 function contentGen() {
     var generativeElement = document.querySelectorAll('.generative-content')
-    var aHello = [
-        "Hello",
-        "Hi",
-        "Salut",
-        "Hallo",
-        "Hola",
-        "Konnichiwa",
-        "Guten Tag",
-        "Olá",
-        "Goddag",
-        "Goedendag",
-        "Namaste",
-    ]
 
-    var aTryingTo = [
-        "impress his futur employee",
-        "feel existing",
-        "prove himself he can also do great design",
-        "escape from impostor syndrome",
-        "have the love he never had from his parents",
-        "make a living from his passion",
-        ]
+    // Replace ./data.json with your JSON feed
+    fetch('../assets/data/generative-content.json')
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+        // Work with JSON data here
 
-    for(let i = 0; i < generativeElement.length; i++) {
-        let currentElement = generativeElement[i]
-        if(currentElement.classList.contains("hi")) {
-            currentElement.innerHTML = aHello[rN(0, aHello.length-1)]
-        } else 
-        if(currentElement.classList.contains("amount_designer")) {
-            currentElement.innerHTML = rN(10000,100000)
-        } else 
-        if(currentElement.classList.contains("trying_to")) {
-            currentElement.innerHTML = aTryingTo[rN(0, aTryingTo.length-1)]
-        }
-    } 
+
+        for(let i = 0; i < generativeElement.length+1; i++) {
+            let element = generativeElement[i]
+
+            if(element.classList.contains("hi")) {
+                let eData = data.salutation
+                element.innerHTML = eData[rN(0, eData.length)]
+            } else 
+            if(element.classList.contains("amount_designer")) {
+                element.innerHTML = rN(10000,100000)
+            } else 
+            if(element.classList.contains("trying_to")) {
+                let eData = data.tryingTo
+                element.innerHTML = eData[rN(0, eData.length)]
+            }
+            if(element.classList.contains("cta_hero")) {
+                let eData = data.ctaHero
+                element.innerHTML = eData[rN(0, eData.length)]
+            }
+        } 
+    })
+    .catch((err) => {
+        // Do something for an error here
+    })
+
 }
 
 export { contentGen } 
