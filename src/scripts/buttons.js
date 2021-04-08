@@ -1,6 +1,5 @@
 import { rN } from 'fcts.js'
 import { aColor } from 'color.js'
-console.log(aColor);
 function spacing() {
     let aSpacing = []
     var spacingValue = rN(5,8)

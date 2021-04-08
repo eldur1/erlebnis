@@ -1,4 +1,5 @@
 import { rN, trueOrFalse } from 'fcts.js'
+import { aColor } from 'color.js'
 function font() {
 
     let aRatioFont = [
@@ -113,5 +114,16 @@ function font() {
             }
         }
     } 
+    let bg = document.querySelector('.background');
+
+    let spanColor = document.querySelectorAll('.color--primary')
+
+    for (let i = 0; i < spanColor.length; i++) {
+    let element = spanColor[i]
+    //console.log(element);
+    element.style.color = aColor[0]
+    }
+    bg.style.backgroundColor = aColor[3]
+
 }
 export { font }
