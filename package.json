@@ -25,6 +25,7 @@
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
+    "gsap": "^3.6.1",
     "webfontloader": "^1.6.28"
   }
 }

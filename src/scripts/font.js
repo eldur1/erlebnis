@@ -129,7 +129,7 @@ function font() {
         //console.log(element);
         element.style.color = aColor[2]
         }
-    bg.style.backgroundColor = aColor[3]
+    
 
 }
 export { font }

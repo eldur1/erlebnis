@@ -7,7 +7,6 @@ function contentGen() {
         return response.json()
     })
     .then((data) => {
-        console.log(data);
         for(let i = 0; i < generativeElement.length; i++) {
             let element = generativeElement[i]
 

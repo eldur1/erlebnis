@@ -101,7 +101,7 @@ let aPallet = [
     triad(),
     shades()
 ]
-let choosenPallet = aPallet[rN(0,aPallet.length-1)]
+let choosenPallet = aPallet[2]
 export { choosenPallet }
 
 
