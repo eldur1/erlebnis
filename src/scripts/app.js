@@ -20,4 +20,19 @@ function generation() {
 generation()
 
 
+/*
+
+
+Background color and object color must match
+These two must match with CTA and span color
+
+How to do it ?
+
+- All colors needs to be generated at the same time and be convenient
+- Text : black or white
+- Background is light or black 
+- The circle has a color close to bg but enought different
+-  ’
+
+*/
 

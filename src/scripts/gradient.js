@@ -1,4 +1,3 @@
-import { choosenPallet } from 'pallet.js'
 import { rN } from 'fcts.js'
 import gsap  from "gsap"
 function gradientbg() {
@@ -7,30 +6,34 @@ function gradientbg() {
     document.body.appendChild(background)
     background.classList.add('background')
 
-    let aPallet = choosenPallet[1]
-    let rColor = aPallet[0, rN(0, aPallet.length-1)]
-    background.style.backgroundColor = aPallet[1]
+    var colors = []
+    var rHue = [rN(0,360), rN(0,360)]
+    var delta = Math.abs(rHue[0] - rHue[1]);
+    // Get hue enought different than the first one
+    do {
+        var delta = Math.abs(rHue[0] - rHue[1]);
+        rHue[1] = rN(0,360)
+    }
+    while( delta < 60)
 
-    // movable object
+    console.log(delta);
+    for (let i = 0; i < 2; i++) {
+        let rLightness = rN(50,80)
+        let rSaturation = rN(70, 100)
+        colors.push(`hsl(${rHue[i]},${rSaturation}%,${rLightness}%)`)
+        console.log(colors[i]);
+    }
 
-    let object = document.createElement('div')
-    document.body.appendChild(object)
-    let rSize = rN(200, 500)
-    object.style.width = rSize + "px"
-    object.style.height = rSize + "px"
-    object.style.zIndex = -2
-    object.style.position = "absolute"
-    object.style.borderRadius = rSize + "px"
-    object.style.webkitFilter = "blur(" + rSize/2 + "px" + ")"
-    object.style.backgroundColor = aPallet[2]
-    let centerObject = rSize/2
-    console.log(centerObject);
-    document.addEventListener('mousemove', (event) => {
-        event.clientX 
-        gsap.to(object, {
-            x:event.clientX-centerObject,
-            y:event.clientY-centerObject
-        })
-    });
+
+    // Create a gradient
+            // Colors = 2 couleurs random
+    let rAngle = rN(0,360)
+    background.style.background = "linear-gradient( " + rAngle + "deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")"
+    return "gradient"
+
+
+
+
+
 }
 export { gradientbg }
