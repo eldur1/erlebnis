@@ -1,0 +1,82 @@
+@import '~modularscale-sass/stylesheets/modularscale';
+body {
+  color: white;
+  background-color: #101010;
+}
+main {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1400px;
+}
+.inline-block {
+  display: inline-block;
+}
+.reload {
+  display: inline-block;
+
+}
+.hi {
+  -webkit-text-stroke: 0.5px white;
+  color:#101010
+}
+
+.gradient {
+  border-radius: 20%;
+}
+.reload {
+  display: inline;
+}
+.button {
+  border:none;
+  color:white;
+}
+.italic {
+  font-style: italic;
+}
+.avatar {
+  width: 100%;
+  transform: scaleX(-1);
+  filter: drop-shadow(0px 4px 28px rgba(0, 0, 0, 0.25));
+}
+.background {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  top:680px;
+}
+.next {
+  display: none;
+}
+.manifesto {
+  display: none;
+}
+.how-to {
+  display: none;
+}
+.crossed {
+  text-decoration: line-through;
+}
+.underlign {
+  text-decoration: underline;
+}
+.img { width: 100%;}
+.generative-content {
+}
+
+// Spacing 
+.spacing-bottom {
+
+}
+
+
+
+// Design system 
+
+
+.color {
+  width:200px;
+  height: 200px;
+  display: inline-block;
+
+}

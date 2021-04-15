@@ -11,5 +11,9 @@ function layoutGeneration() {
       }
 
     document.body.style.margin = rMargin
+
+      
+    // Donner des
+
 }
 export {layoutGeneration as layout}

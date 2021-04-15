@@ -10,11 +10,12 @@ import { gradientbg } from 'gradient.js'
 // Generation of the site
 function generation() {
     font()
-    layout()
+    //layout()
     contentGen()
-    interactions()
+    //interactions()
     buttons()
     gradientbg()
+
 }
 
 generation()
@@ -32,7 +33,7 @@ How to do it ?
 - Text : black or white
 - Background is light or black 
 - The circle has a color close to bg but enought different
--  ’
+-  
 
 */
 

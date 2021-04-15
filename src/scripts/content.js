@@ -9,7 +9,6 @@ function contentGen() {
     .then((data) => {
         for(let i = 0; i < generativeElement.length; i++) {
             let element = generativeElement[i]
-
             if(element.classList.contains("hi")) {
                 let eData = data.salutation
                 element.innerHTML = eData[rN(0, eData.length-1)]
@@ -30,6 +29,7 @@ function contentGen() {
     .catch((err) => {
         console.log(err);
     })
+
 
 }
 

@@ -5,12 +5,12 @@ function font() {
     let aRatioFont = [
         //["Minor Second", "1.067"],
         //["Major Second", "1.125"], 
-        ["Minor Third", "1.200"], 
-        ["Major Third", "1.250"], 
-        ["Perfect fourth", "1.333"], 
-        ["Augmented fourth", "1.414"],
-        //["Perfect fifth","1.500"],
-        //["Golden ratio", "1.618"]
+        //["Minor Third", "1.200"], 
+        //["Major Third", "1.250"], 
+        //["Perfect fourth", "1.333"], 
+        //["Augmented fourth", "1.414"],
+        ["Perfect fifth","1.500"],
+        ["Golden ratio", "1.618"]
     ]
     const title_h1 = document.querySelectorAll('.title--large')
     const title_h2 = document.querySelectorAll('.title--big')
@@ -25,14 +25,18 @@ function font() {
     ]
 
     var aFontFamily = [
-        ['Montserrat'],
-        ['Inconsolata'],
-        ['Playfair Display'],
-        //['Open Sans Light'],
-        //['Oxygen'],
+/*         ['Raleway'],
+        ['Inconsolata'], */
         ['DM Serif Display'],
-        ['Work Sans'],
-        ['IBM Plex Sans'],
+/*         ['Robota Slab'],
+        ['Lora'],
+        ['Abel'],
+        ['Questrial'],
+        ['Catamaran'],
+        ['Cuprum'],
+        ['Montserrat'],
+        ['Oswald'],
+        ['Poppins'] */
     ]
 
     // Font size variables
@@ -108,7 +112,7 @@ function font() {
             // Size calculator for each title (depend on head level)
             for (let i = 0; i < element[0].length; i++) {
                 elementNodelist[i].style.fontSize = aComputedRatio[key] + "px"
-                elementNodelist[i].style.lineHeight = rLineHeight + "%"
+                //elementNodelist[i].style.lineHeight = rLineHeight + "%"
                 elementNodelist[i].style.fontFamily = fontName
                 
             }
