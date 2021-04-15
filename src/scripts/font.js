@@ -16,12 +16,11 @@ function font() {
     const title_h2 = document.querySelectorAll('.title--big')
     const title_h3 = document.querySelectorAll('.title--medium')
     const paragraph = document.querySelectorAll('.p')    
-
     var aTextLevel = [
         [title_h3],
         [title_h2],
         [title_h1],
-        [paragraph]
+        [paragraph],
     ]
 
     var aFontFamily = [
