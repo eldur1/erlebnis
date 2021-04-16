@@ -1,0 +1,37 @@
+// Media queries
+
+
+
+
+// Tablet
+@media (min-width:$tablet) {
+    .reload {
+        float:right
+    }
+}
+
+// Desktop
+@media (min-width:$desktop) {
+    .avatar {
+        margin-left:102px;
+        display: inline-block;
+        margin:0 auto;
+        z-index: 4;
+    }
+    .background {
+        width: 70%;
+        right: 50%;
+        transform: translateX(50%);
+        top: -130px;
+        padding: 300px 360px;
+        height: 200%;
+        left: inherit;
+    }
+    .content {
+        display: inline-block;
+        max-width: 500px;
+        margin-left: 100px;
+        transform: translateY(70px);
+    }
+
+}
