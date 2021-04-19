@@ -12,6 +12,12 @@
 
 // Desktop
 @media (min-width:$desktop) {
+    p {
+        max-width: 43ch;
+    }
+    .delayed-section--img {
+        float: right;
+    }
     .avatar {
         margin-left:102px;
         display: inline-block;
