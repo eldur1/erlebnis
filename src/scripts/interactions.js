@@ -1,4 +1,5 @@
 import { gsap, Power3} from "gsap"
+import { rN } from "fcts.js"
 gsap.registerPlugin(ScrollTrigger);
 
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -18,7 +19,6 @@ function interactions() {
 
     function scrollDelay() {
         const delSections = document.querySelectorAll(".delayed-section");
-
         delSections.forEach(section => {
         const containerAnim = gsap.to(section.querySelector(".innerContainer"), {
             y: "10vh",
@@ -43,7 +43,6 @@ function interactions() {
             animation: containerAnim,
             scrub: true,
             trigger: section,
-            markers:true,
             start: "top bottom",
             end: "bottom top",
             onUpdate: self => {

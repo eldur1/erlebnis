@@ -86,6 +86,11 @@ Content :
 Webfontload package to simply load fonts from google fonts
 https://www.npmjs.com/package/webfontloader
 
+Scroll effect :
+Thanks to ScrollTrigger and the greensock team for this example I used ! :)
+https://codepen.io/GreenSock/pen/wvMeNee
+
+
 ## Credit(s)
 
 Done by myself 
