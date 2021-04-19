@@ -12,13 +12,14 @@ function generation() {
     font()
     //layout()
     contentGen()
-    //interactions()
+    interactions()
     buttons()
     gradientbg()
 
 }
 
 generation()
+
 
 
 /*

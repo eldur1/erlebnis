@@ -20,7 +20,7 @@ function contentGen() {
                 let eData = data.tryingTo
                 element.innerHTML = eData[rN(0, eData.length-1)]
             }
-            if(element.classList.contains("cta_hero")) {
+            if(element.classList.contains("js-btn-hero")) {
                 let eData = data.ctaHero
                 element.innerHTML = eData[rN(0, eData.length-1)]
             }

@@ -24,10 +24,10 @@ function font() {
     ]
 
     var aFontFamily = [
-/*         ['Raleway'],
-        ['Inconsolata'], */
+        ['Raleway'],
+        ['Inconsolata'],
         ['DM Serif Display'],
-/*         ['Robota Slab'],
+        ['Roboto Slab'],
         ['Lora'],
         ['Abel'],
         ['Questrial'],
@@ -35,12 +35,12 @@ function font() {
         ['Cuprum'],
         ['Montserrat'],
         ['Oswald'],
-        ['Poppins'] */
+        ['Poppins']
     ]
 
     // Font size variables
     const iterator = aTextLevel.keys()
-    var baseSizeFont = rN(16,20)
+    var baseSizeFont = rN(17,20)
     let ratioValues = aRatioFont[rN(0,aRatioFont.length-1)]
     let ratioFont = ratioValues[1]
     let ratioFontName = ratioValues[0]

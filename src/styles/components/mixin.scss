@@ -17,12 +17,13 @@
         display: inline-block;
         margin:0 auto;
         z-index: 4;
+        margin-left:100px
     }
     .background {
-        width: 70%;
-        right: 50%;
+        width: 40%;
+        right: 40%;
         transform: translateX(50%);
-        top: -130px;
+        top: -310px;
         padding: 300px 360px;
         height: 200%;
         left: inherit;
@@ -32,6 +33,9 @@
         max-width: 500px;
         margin-left: 100px;
         transform: translateY(70px);
+    }
+    .work {
+        margin-left:100px;
     }
 
 }

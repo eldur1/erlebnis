@@ -1,29 +1,61 @@
+import { gsap, Power3} from "gsap"
+gsap.registerPlugin(ScrollTrigger);
+
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 function interactions() {
-let content = document.querySelector('.content')
-
-    let btn_hero = document.querySelector('.js-btn-hero')
-    let next = document.querySelector('.next')
-
-    let btn_manifesto = document.querySelector('.js-manifesto')
-    let btn_how_to = document.querySelector('.js-how-to')
-
+    let hero = document.querySelector('.main')
     let manifesto = document.querySelector('.manifesto')
-    let how_to = document.querySelector('.how-to')
-
-    btn_hero.addEventListener('click', () => {
-        content.style.display = "none"
-        next.style.display = "block"
-    });
+    let btn_about = document.querySelector('.js-btn-hero')
     
-    btn_manifesto.addEventListener('click', () => {
-        next.style.display = "none"
+    btn_about.addEventListener('click', () => {
+        hero.style.display = "none"
         manifesto.style.display = "block"
     });
-    btn_how_to.addEventListener('click', () => {
-        next.style.display = "none"
-        how_to.style.display = "block"
-    
+    let btn_reload = document.querySelector('.js-reload')
+    btn_reload.addEventListener('click', () => {
+        document.location.reload()
     });
+
+    function scrollDelay() {
+        const delSections = document.querySelectorAll(".delayed-section");
+
+        delSections.forEach(section => {
+        const containerAnim = gsap.to(section.querySelector(".innerContainer"), {
+            y: "10vh",
+            ease: "none"
+        });
+        
+        const imageAnim = gsap.to(section.querySelector(".js-scroll"), {
+            y: "-10vh",
+            ease: "none",
+            paused: true
+        });
+        
+        const scrub = gsap.to(imageAnim, {
+            progress: 1,
+            paused: true,
+            ease: "power3",
+            duration: parseFloat(section.dataset.scrub) || 1,
+            overwrite: true
+        });
+        
+        ScrollTrigger.create({
+            animation: containerAnim,
+            scrub: true,
+            trigger: section,
+            markers:true,
+            start: "top bottom",
+            end: "bottom top",
+            onUpdate: self => {
+            scrub.vars.progress = self.progress;
+            scrub.invalidate().restart();
+            }
+        });
+        });
+
+    }
+   scrollDelay()
+
 }
 
 export { interactions }

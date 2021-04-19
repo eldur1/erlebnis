@@ -27,7 +27,7 @@ An attempt to create a generative website.
 - ✅ trueOrFalse()
 
 ### Color generation : 
-- ✅ Five types of pallet 
+- ✅ Five types of pallet (no more used)
 - ✅ Background
 
 ### Font generation :
@@ -48,9 +48,39 @@ An attempt to create a generative website.
 
 ### Other
 - ✅ Modular JS files
-- ✅ Design system generation
+- ✅ Design system generation (font, spacing)
 - Animation on content generation
 - GSAP Transition
+
+
+## To do :
+- GSAP scroll delay
+- GSAP Interaction
+- Content about integration ?
+- Projects
+- Content writing
+- More generative result 
+- 
+
+
+## What is generated ? 
+
+Style : 
+- Fonts (12)
+- Gradient 
+- Font ratio (2)
+- Base font size (4)
+- Spacing (4)
+- Border (2)
+- Gradient (25 combinaisons)
+
+Content :
+- Hi (10)
+- Trying to (6)
+- Btn hero (5)
+
+> For the moment, 5 760 000 possility excluding different gradient
+
 
 ## Some stuff 
 Webfontload package to simply load fonts from google fonts
