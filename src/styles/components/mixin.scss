@@ -31,13 +31,13 @@
         top: 310px;
         padding: 100px 330px;
         height: 200%;
-        left: 0;
+        left: -60px;
     }
     .content {
         display: inline-block;
         max-width: 500px;
         margin-left: 100px;
-        transform: translateY(70px);
+        transform:translateY(-100px)
     }
     .work {
         margin-left:100px;

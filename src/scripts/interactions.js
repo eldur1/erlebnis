@@ -1,5 +1,4 @@
 import { gsap, Power3} from "gsap"
-import { rN } from "fcts.js"
 gsap.registerPlugin(ScrollTrigger);
 
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -21,12 +20,12 @@ function interactions() {
         const delSections = document.querySelectorAll(".delayed-section");
         delSections.forEach(section => {
         const containerAnim = gsap.to(section.querySelector(".innerContainer"), {
-            y: "10vh",
+            y: "30vh",
             ease: "none"
         });
         
         const imageAnim = gsap.to(section.querySelector(".js-scroll"), {
-            y: "-10vh",
+            y: "-30vh",
             ease: "none",
             paused: true
         });
@@ -53,6 +52,37 @@ function interactions() {
         });
 
     }
+    function cursor() {
+        let div = document.createElement('div')
+        var cursor = document.body.appendChild(div)
+        cursor.classList.add('cursor')
+        function mouseMove() {
+
+        }
+        document.addEventListener('mousemove', (event) => {
+            gsap.to(cursor, {
+                x:event.pageX-10,
+                y:event.pageY-10,
+                ease:Power3.easeOut
+            })
+            
+        })
+        document.addEventListener('scroll', () => {
+            var coords = cursor.getBoundingClientRect()
+            //console.log(Math.round(coords.top + window.scrollY));
+            //console.log("coordonnées : " + coords.y);
+            //console.log("window : " + window.scrollY);
+            // Récupérer la position en X et Y du curseur actuel 
+            // Au scroll, fais en sorte qu'elle garde sa position par 
+            //console.log(currentPos);
+            gsap.to(cursor, {
+                duration:0.1,
+                y:Math.round(coords.top + window.scrollY),
+                ease:Power3.easeOut
+            }) 
+        })
+    }
+   //cursor()
    scrollDelay()
 
 }

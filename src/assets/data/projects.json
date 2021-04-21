@@ -1,0 +1,85 @@
+{
+    "Ordinem" : {
+        "name" : "Ordinem",
+        "activity" : "design, development, UI, UX",
+        "link" : "http://eliedur.be/projets/tfa/",
+        "color" : "#49F4C2",
+        "category" : "current"
+    },
+    "Sea of Rust" : {
+        "name" : "Sea of Rust",
+        "activity" : "design, development, UI, UX",
+        "link" : "https://sea-of-rust.com/",
+        "color" : "#b63421",
+        "category" : "current"
+    },
+    "Clash of Movies" : {
+        "name" : "Clash of Movies",
+        "activity" : "development, data",
+        "link" : "http://eliedur.be/projets/data-play/",
+        "color" : "#30a9eb",
+        "category" : "old"
+    },
+    "Space tour" : {
+        "name" : "Space tour",
+        "activity" : "development",
+        "link" : "http://eliedur.be/projets/space-tour/",
+        "color" : "#13162F",
+        "category" : "current"
+    },
+    "C³" : {
+        "name" : "C³",
+        "activity" : "development, design",
+        "link" : "http://eliedur.be/projets/c3/",
+        "color" : "#139D42",
+        "category" : "old"
+    },
+    "Give" : {
+        "name" : "Give",
+        "activity" : "development",
+        "link" : "http://eliedur.be/projets/give/",
+        "color" : "#B70A72",
+        "category" : "current"
+    },
+    "Oh wonder" : {
+        "name" : "Oh wonder",
+        "activity" : "development, design, pseudo website",
+        "link" : "http://eliedur.be/projets/oh-wonder/",
+        "color" : "#101010",
+        "category" : "old"
+    },
+    "Old portfolio" : {
+        "name" : "Old portfolio",
+        "activity" : "development, design",
+        "link" : "http://eliedur.be/projets/old-portfolio/",
+        "color" : "#961616",
+        "category" : "old"
+    },
+    "Rethinking UX" : {
+        "name" : "Rethinking UX",
+        "activity" : "UX, UI, Writing",
+        "link" : "http://eliedur.be/projets/rethinking-ux/",
+        "color" : "#961616",
+        "category" : "old"
+    },
+    "Gao Xingjian" : {
+        "name" : "Gao Xingjian",
+        "activity" : "design, developmentn pseudo website",
+        "link" : "http://eliedur.be/projets/gao-xingjian/",
+        "color" : "#101010",
+        "category" : "old"
+    },
+    "Max Richter" : {
+        "name" : "Max Richter",
+        "activity" : "design, development, pseudo website",
+        "link" : "http://eliedur.be/projets/max-richter/",
+        "color" : "#101010",
+        "category" : "old"
+    },
+    "Why Design Systems Fails" : {
+        "name" : "Why Design Systems Fails",
+        "activity" : "writing",
+        "link" : "http://eliedur.be/projets/iolce",
+        "color" : "#F23636"
+    }
+}

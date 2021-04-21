@@ -40,7 +40,7 @@ function font() {
 
     // Font size variables
     const iterator = aTextLevel.keys()
-    var baseSizeFont = rN(17,20)
+    var baseSizeFont = rN(16,19)
     let ratioValues = aRatioFont[rN(0,aRatioFont.length-1)]
     let ratioFont = ratioValues[1]
     let ratioFontName = ratioValues[0]

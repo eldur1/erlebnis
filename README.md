@@ -67,19 +67,18 @@ An attempt to create a generative website.
 
 Style : 
 - Fonts (12)
-- Gradient 
 - Font ratio (2)
 - Base font size (4)
 - Spacing (4)
-- Border (2)
-- Gradient (25 combinaisons)
+- Border (3)
+- Gradient (20 combinaisons)
 
 Content :
 - Hi (10)
 - Trying to (6)
 - Btn hero (5)
 
-> For the moment, 5 760 000 possility excluding different gradient
+> For the moment,  possility excluding different gradient
 
 
 ## Some stuff 

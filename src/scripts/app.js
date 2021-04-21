@@ -4,17 +4,28 @@ import { font } from 'font.js'
 import { contentGen } from 'content.js'
 import { interactions } from 'interactions.js'
 import { layout } from 'layout.js'
-import { buttons } from 'buttons.js'
+import { buttons,  } from 'buttons.js'
 import { gradientbg } from 'gradient.js'
 
 // Generation of the site
 function generation() {
+
+
+    // Générer 
+    /*
+    Taille de la police
+    Spacing
+    Border radius
+    
+
+    */
     font()
     //layout()
-    contentGen()
-    interactions()
     buttons()
     gradientbg()
+    interactions()
+    contentGen()
+
 
 }
 

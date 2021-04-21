@@ -6,16 +6,21 @@ function gradientbg() {
     background.classList.add('background')
 
     var colors = []
-    var rHue = [rN(0,360), rN(0,360)]
-    var delta = Math.abs(rHue[0] - rHue[1]);
+    var delta = 0
     // Get hue enought different than the first one
+    let flag = false
     do {
-        var delta = Math.abs(rHue[0] - rHue[1]);
-        rHue[1] = rN(0,360)
+        var rHue = [rN(0,360), rN(0,360)]
+        let highestHue = Math.max(...rHue)
+        let minHue = Math.min(...rHue)
+        var delta = highestHue - minHue
     }
-    while( delta < 80 && delta > 300)
-
+    while(delta > 300 )
+    console.log(rHue);
+    console.log(delta);
+    
     for (let i = 0; i < 2; i++) {
+        //console.log(rHue[i]);
         let rLightness = rN(30,50)
         let rSaturation = rN(70, 100)
         colors.push(`hsl(${rHue[i]},${rSaturation}%,${rLightness}%)`)

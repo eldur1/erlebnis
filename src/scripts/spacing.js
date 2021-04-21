@@ -1,5 +1,6 @@
 import { rN } from 'fcts.js'
 
+
 function spacing() {
     let aSpacing = []
     var spacingValue = rN(5,8)
@@ -29,12 +30,12 @@ function spacing() {
             element.style.marginBottom = aSpacing[i+2] + "px"
         }
     }
-
     return aSpacing
 }
 function border() {
     let aBorderValues = [
         "0px",
+        "50px",
         "100000px"
     ]
     let rBorder = rN(0, aBorderValues.length-1)
@@ -48,7 +49,9 @@ function border() {
     gradientBg.style.borderRadius = border
 
 
-    console.log("lol");
     return border
 }
+
+
+
 export { spacing, border }
