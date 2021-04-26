@@ -8,8 +8,7 @@ function interactions() {
     let btn_about = document.querySelector('.js-btn-hero')
     
     btn_about.addEventListener('click', () => {
-        hero.style.display = "none"
-        manifesto.style.display = "block"
+        // Animation to anchor
     });
     let btn_reload = document.querySelector('.js-reload')
     btn_reload.addEventListener('click', () => {

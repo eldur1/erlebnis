@@ -14,6 +14,8 @@ main {
 }
 .reload {
   display: inline-block;
+  right: 35px;
+  z-index: 100;
 }
 .hi {
   -webkit-text-stroke: 0.8px white;
@@ -56,29 +58,29 @@ main {
   top:680px;
   left:0;
 }
-.next {
-  display: none;
-}
+
+
 .manifesto {
-  display: none;
+  & p {
+    max-width: 300ch;
+  }
+  & img {
+    margin: 0 auto;
+    position: relative;
+    height: auto;
+    margin-left: 15%;
+    display: inline-block;
+    width: 70%;
+  }
 }
 
-.how-to {
-  display: none;
-}
+
 
 .img { width: 100%;}
 .generative-content {
 }
 
-// Spacing 
-.spacing-bottom {
 
-}
-
-
-
-// Design system 
 
 
 .color {

@@ -17,18 +17,27 @@ function spacing() {
     }
     let aSizeSpacing = [
         "medium",
-        "big"
+        "big",
     ]
     // Execute 2 times (medium, big)
     for (let i = 0; i < aSizeSpacing.length; i++) {
         const sizeName = aSizeSpacing[i];
-        let spacingElement = document.querySelectorAll('.spacing-bottom--' + sizeName)
+        let spacingElementBottom = document.querySelectorAll('.spacing-bottom--' + sizeName)
         // Affect style of each element (medium or big)
-        for (let x = 0; x < spacingElement.length; x++) {
-            const element = spacingElement[x];
+        for (let x = 0; x < spacingElementBottom.length; x++) {
+            const element = spacingElementBottom[x];
             //console.log(aSpacing[i+2]);
             element.style.marginBottom = aSpacing[i+2] + "px"
         }
+
+        let spacingElementTop = document.querySelectorAll('.spacing-top--' + sizeName)
+        // Affect style of each element (medium or big)
+        for (let y = 0; y < spacingElementTop.length; y++) {
+            const element = spacingElementTop[y];
+            element.style.marginTop = aSpacing[i+2] + "px"
+        }
+
+
     }
     return aSpacing
 }

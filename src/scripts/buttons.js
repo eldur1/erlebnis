@@ -9,15 +9,22 @@ function buttons() {
     let borderType = border()
 
 
+
+    // Project link
     fetch('../assets/data/projects.json')
     .then((response) => {
         return response.json()
     })
     .then((data) => {
+
+
         // Recover border, spacing
         var count = Object.keys(data).length;
         // For each project, create element
         let container = document.querySelector('.work')
+        // Hue and Lightness are defined outside the loop the get the same value for every element
+        let rSaturation = rN(30,100)
+        let rLightness = rN(40,60)
         for (const key in data) {
             if (Object.hasOwnProperty.call(data, key)) {
                 let a = document.createElement('a')
@@ -29,9 +36,9 @@ function buttons() {
                 elementDOM.target = "_blank"
                 elementDOM.style.fontSize = "22px"
                 elementDOM.classList.add('button', 'button--project', 'p' )
-                elementDOM.style.backgroundColor = "hsl(" + rN(0,360) + ", " + rN(0,100) + "%, " + rN(30,70) + "%)"
+                elementDOM.style.backgroundColor = "hsl(" + rN(0,360) + ", " + rSaturation + "%, " + rLightness + "%)"
                 var padding = aSpacing[1] + "px " + aSpacing[2] + "px "
-                elementDOM.style.borderRadius = rBorderRadius
+                elementDOM.style.borderRadius = borderType
                 elementDOM.style.padding = padding
             }
         }
@@ -39,7 +46,7 @@ function buttons() {
     .catch((err) => {
         console.log(err);
     })
-    
+    // Other buttons
     let rBorderRadius = rN(2,8) + "px"
     for (let i = 0; i < buttons.length; i++) {
         let element = buttons[i]
