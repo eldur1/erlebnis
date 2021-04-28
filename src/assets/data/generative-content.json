@@ -19,11 +19,16 @@
         "have the love he never had from his parents",
         "make a living from his passion"
     ],
-    "ctaHero": [
-        "Tell me more",
-        "What's a generative website",
-        "gen- what ?",
-        "Why it is unique",
-        "btn-CTA"
+    "why": [
+        "I'm never late at work",
+        "I cook delicious katsu curry",
+        "I'm curious and always want to learn more",
+        "I'm versatile"
+    ],
+    "work_content": [
+        "I worked on...",
+        "My projects",
+        "I made this",
+        "Stuff I've made"
     ]
 }

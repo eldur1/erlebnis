@@ -1,0 +1,42 @@
+
+// Tablet
+@media (min-width:$tablet) {
+    .reload {
+        float:right
+    }
+}
+
+// Desktop
+@media (min-width:$desktop) {
+    p {
+        max-width: 43ch;
+    }
+    .delayed-section--img {
+        float: right;
+    }
+    .avatar {
+        margin-left:102px;
+        display: inline-block;
+        margin:0 auto;
+        z-index: 4;
+        margin-left:100px
+    }
+    .background {
+        width: 20%;
+        transform: translateX(50%);
+        top: 108px;
+        padding: 60px 300px;
+        height: 100%;
+        left: -40px;
+    }
+    .content {
+        display: inline-block;
+        max-width: 500px;
+        margin-left: 100px;
+        transform:translateY(-100px)
+    }
+    .work, .manifesto {
+        margin-left:100px;
+    }
+
+}

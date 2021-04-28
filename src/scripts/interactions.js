@@ -1,15 +1,16 @@
 import { gsap, Power3} from "gsap"
+import { _removeLinkedListItem } from "gsap/gsap-core";
 gsap.registerPlugin(ScrollTrigger);
 
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 function interactions() {
     let hero = document.querySelector('.main')
     let manifesto = document.querySelector('.manifesto')
-    let btn_about = document.querySelector('.js-btn-hero')
+/*     let btn_about = document.querySelector('.js-btn-hero')
     
     btn_about.addEventListener('click', () => {
         // Animation to anchor
-    });
+    }); */
     let btn_reload = document.querySelector('.js-reload')
     btn_reload.addEventListener('click', () => {
         document.location.reload()
@@ -54,32 +55,55 @@ function interactions() {
     function cursor() {
         let div = document.createElement('div')
         var cursor = document.body.appendChild(div)
-        cursor.classList.add('cursor')
-        function mouseMove() {
+        let link = document.querySelectorAll('.button')
+        console.log(link);
+        let mouseX = 0;
+        let mouseY = 0;
 
-        }
-        document.addEventListener('mousemove', (event) => {
+
+        cursor.classList.add('cursor')
+        window.addEventListener('mousemove', (event) => {
             gsap.to(cursor, {
-                x:event.pageX-10,
-                y:event.pageY-10,
+                    x:event.clientX-10,
+                    y:event.clientY -10,
                 ease:Power3.easeOut
             })
-            
+                mouseX = event.clientX-10;
+                mouseY = event.clientY-10;
         })
-        document.addEventListener('scroll', () => {
-            var coords = cursor.getBoundingClientRect()
-            //console.log(Math.round(coords.top + window.scrollY));
-            //console.log("coordonnées : " + coords.y);
-            //console.log("window : " + window.scrollY);
-            // Récupérer la position en X et Y du curseur actuel 
-            // Au scroll, fais en sorte qu'elle garde sa position par 
-            //console.log(currentPos);
-            gsap.to(cursor, {
-                duration:0.1,
-                y:Math.round(coords.top + window.scrollY),
-                ease:Power3.easeOut
-            }) 
+
+
+        var cursor = document.querySelector('.cursor')
+        let divTest = document.createElement('div')
+        let test = document.body.appendChild(divTest)
+        test.style.width = "100px"
+        test.style.height = "100px"
+        test.style.backgroundColor = "blue"
+    
+        var tl =  gsap.timeline({
+            paused : true
         })
+        tl.to(cursor, {
+            scale:1,
+            duration:0.1,
+            ease:Power3.easeOut
+        }) 
+        tl.to(cursor, {
+            scale:5,
+            duration:0.1,
+            ease:Power3.easeOut
+        }) 
+
+
+
+        link.forEach(element => {
+        
+            test.addEventListener('mouseenter', () => {
+                tl.play()
+            });
+        });
+
+
     }
    //cursor()
    scrollDelay()

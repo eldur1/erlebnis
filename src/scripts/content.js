@@ -1,4 +1,5 @@
 import { rN } from 'fcts.js'
+import { parse } from 'postcss';
 function contentGen() {
     var generativeElement = document.querySelectorAll('.generative-content')
 
@@ -7,24 +8,16 @@ function contentGen() {
         return response.json()
     })
     .then((data) => {
-        for(let i = 0; i < generativeElement.length; i++) {
-            let element = generativeElement[i]
-            if(element.classList.contains("hi")) {
-                let eData = data.salutation
-                element.innerHTML = eData[rN(0, eData.length-1)]
-            } else 
-            if(element.classList.contains("amount_designer")) {
-                element.innerHTML = rN(10000,100000)
-            } else 
-            if(element.classList.contains("trying_to")) {
-                let eData = data.tryingTo
-                element.innerHTML = eData[rN(0, eData.length-1)]
-            }
-            if(element.classList.contains("js-btn-hero")) {
-                let eData = data.ctaHero
-                element.innerHTML = eData[rN(0, eData.length-1)]
-            }
-        } 
+        var count = Object.keys(data).length;
+        console.log(count);
+        for (let i = 0; i < count; i++) {
+            let element = Object.keys(data)[i]
+            let elementDOM = generativeElement[i]
+            let eData = data[element];
+            console.log(eData);
+            let rContent = eData[rN(0, eData.length-1)]
+            elementDOM.innerHTML = rContent
+        }
     })
     .catch((err) => {
         console.log(err);

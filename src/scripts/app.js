@@ -22,8 +22,8 @@ function generation() {
     font()
     //layout()
     buttons()
-    gradientbg()
     interactions()
+    gradientbg()
     contentGen()
 
 

@@ -53,7 +53,7 @@ function gradientbg() {
 
     // Create a gradient
     let rAngle = rN(0,360)
-    background.style.background = "linear-gradient( "  + "0deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")"
+    background.style.background = "linear-gradient( "  + rAngle + "deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")"
     return "gradient"
 }
 export { gradientbg }
