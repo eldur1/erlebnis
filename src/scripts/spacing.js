@@ -16,12 +16,15 @@ function spacing() {
         //currentElement.innerHTML = aSpacing[i]
     }
     let aSizeSpacing = [
+        "small",
         "medium",
         "big",
     ]
-    // Execute 2 times (medium, big)
+    // Execute 3 times (small, medium, big)
     for (let i = 0; i < aSizeSpacing.length; i++) {
         const sizeName = aSizeSpacing[i];
+
+        
         let spacingElementBottom = document.querySelectorAll('.spacing-bottom--' + sizeName)
         // Affect style of each element (medium or big)
         for (let x = 0; x < spacingElementBottom.length; x++) {

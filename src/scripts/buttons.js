@@ -11,8 +11,6 @@ function buttons() {
 
     // interactions
 
-
-
     // Project link
     fetch('../assets/data/projects.json')
     .then((response) => {
@@ -35,6 +33,7 @@ function buttons() {
                 link.innerHTML = element.name
                 link.href = element.link
                 link.target = "_blank"
+                link.rel = "noreferrer"
                 link.style.color = "white"
                 link.style.fontSize = "22px"
                 link.classList.add('button', 'button--project', 'p' )
@@ -52,7 +51,7 @@ function buttons() {
 
 
     // tests
-    var cursor = document.querySelector('.cursor')
+/*     var cursor = document.querySelector('.cursor')
 
     let div = document.createElement('div')
     let test = document.body.appendChild(div)
@@ -78,7 +77,7 @@ function buttons() {
         tl.play()
         console.log(cursor);
         console.log("Entre");
-    });
+    }); */
 /*     test.addEventListener('mouseleave', () => {
         console.log("Sors");
         //tl.reverse(0)

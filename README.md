@@ -54,14 +54,14 @@ An attempt to create a generative website.
 
 
 ## To do :
-- GSAP scroll delay
+- ✅ GSAP scroll delay
 - GSAP Interaction
 - Content about integration ?
 - Projects
-- Content writing
+- ✅ Content writing
 - More generative result 
-- 
-
+- Fixed refresh button 
+- Scroll position in refresh
 
 ## What is generated ? 
 

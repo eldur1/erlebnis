@@ -1,7 +1,7 @@
 @import '~modularscale-sass/stylesheets/modularscale';
 body {
   color: white;
-  background-color: #101010;
+  background-color: black;
   font-display:swap;
 
 }
@@ -10,7 +10,6 @@ main {
   width: 80%;
   max-width: 1400px;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  
 }
 .reload {
   display: inline-block;
@@ -76,6 +75,21 @@ main {
 
 
 
+// COLOR BACKGROUND
+
+.color-bg {
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: -10;
+  line-height: 0;
+  display: none;
+
+}
+
+.squareColor {
+  transition-duration: 0.3s;
+}
 .img { width: 100%;}
 .generative-content {
 }

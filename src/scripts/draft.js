@@ -503,3 +503,28 @@ let aPallet = [
     shades()
 ]
 let choosenPallet = aPallet[0, aPallet.length-1] */
+
+
+
+    // movable object
+
+/*     let object = document.createElement('div')
+    document.body.appendChild(object)
+    let rSize = rN(100, 300)
+    object.style.width = rSize + "px"
+    object.style.height = rSize + "px"
+    object.style.zIndex = -2
+    object.style.position = "absolute"
+    object.style.borderRadius = rSize + "px"
+    object.style.webkitFilter = "blur(" + rSize/2 + "px" + ")"
+    object.style.backgroundColor = 'white'
+    let centerObject = rSize/2
+    console.log(centerObject);
+    document.addEventListener('mousemove', (event) => {
+        event.clientX 
+        gsap.to(object, {
+            x:event.clientX-centerObject,
+            y:event.clientY-centerObject,
+            ease:Power2.easeOut
+        })
+    }); */
