@@ -1,5 +1,3 @@
-body {
-}
 .cursor {
     position: fixed;
     width: 15px;
@@ -11,6 +9,7 @@ body {
     left:0;
 } 
 .link {
+    cursor: pointer;
     &--projects {
         display: block;
         color:white;

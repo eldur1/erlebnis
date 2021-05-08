@@ -31,7 +31,6 @@ function contentGen() {
     let profilePicture = document.querySelector('.avatar')
 
 
-    console.log('assets/images/avatar_' + rPicture + ".jpeg")
     profilePicture.src = 'assets/images/avatar_' + rPicture + ".jpeg"
 
 }

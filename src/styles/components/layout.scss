@@ -3,6 +3,7 @@ body {
   color: white;
   background-color: black;
   font-display:swap;
+  margin: 35px auto;
 
 }
 main {
@@ -13,7 +14,7 @@ main {
 }
 .reload {
   display: inline-block;
-  right: 35px;
+  right: 165px;
   z-index: 100;
 }
 .hi {
@@ -27,7 +28,8 @@ main {
   border-radius: 20%;
 }
 .reload {
-  display: inline;
+  display: inline-block;
+
 }
 .button {
   border:none;
@@ -91,8 +93,6 @@ main {
   transition-duration: 0.3s;
 }
 .img { width: 100%;}
-.generative-content {
-}
 
 
 

@@ -11,24 +11,30 @@
         "Goedendag",
         "Namaste"
     ],
-    "tryingTo": [
-        "impress his futur employee",
-        "feel existing",
-        "prove himself he can also do great design",
-        "escape from impostor syndrome",
-        "have the love he never had from his parents",
-        "make a living from his passion"
+    "fact": [
+        "My favourite tea is Thé des moines",
+        "I make websites",
+        "My shoe size is 42",
+        "I'm 22 years old",
+        "I also do photography",
+        "Last year, I listened to 2150 hours of music",
+        "I really really do love Radiohead",
+        "My first website was about Minecraft in 2010"
     ],
     "why": [
         "I'm never late at work",
         "I cook delicious katsu curry",
-        "I'm curious and always want to learn more",
-        "I have a lot of different skills"
+        "I'm curious",
+        "I have a lot of different skills",
+        "I always want to learn more",
+        "I'm not doing it for the money" ,
+        "I'm open minded"
     ],
     "work_content": [
         "I worked on...",
         "My projects",
         "I made this",
-        "Stuff I've made"
+        "Stuff I've made",
+        "What I've done"
     ]
 }

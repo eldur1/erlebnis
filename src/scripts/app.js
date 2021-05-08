@@ -8,6 +8,7 @@ import { interactions } from 'interactions.js'
 import { buttons,  } from 'buttons.js'
 import { gradientbg } from 'gradient.js'
 
+
 // Generation of the site
 function generation() {
 
@@ -22,16 +23,15 @@ function generation() {
     */
     font()
     //layout()
-    buttons()
     interactions()
     gradientbg()
+    buttons()
     contentGen()
 
 
 }
 
 generation()
-
 
 
 /*

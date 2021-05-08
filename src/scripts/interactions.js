@@ -6,11 +6,36 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 function interactions() {
     let hero = document.querySelector('.main')
     let manifesto = document.querySelector('.manifesto')
-/*     let btn_about = document.querySelector('.js-btn-hero')
+    let btn_case = document.querySelector('.js-case')
+    let btn_generative = document.querySelector('.js-generative')
+
+    var tl_btn =  gsap.timeline({
+        paused : true
+    })
+
+    tl_btn.to(hero, {
+        opacity:0,
+        duration:1,
+        ease:Power3.easeOut
+    }) 
+    tl_btn.to(hero, {
+        display:'none',
+        duration:1,
+        ease:Power3.easeOut
+    })
+
+
+    btn_case.addEventListener('click', () => {
+        tl_btn.play()
+    })
+
+    btn_generative.addEventListener('click', () => {
+        tl_btn.play()
+    })
+
     
-    btn_about.addEventListener('click', () => {
-        // Animation to anchor
-    }); */
+
+
     let btn_reload = document.querySelector('.js-reload')
     btn_reload.addEventListener('click', () => {
         document.location.reload()
@@ -52,6 +77,7 @@ function interactions() {
         });
 
     }
+    
     function cursor() {
         let div = document.createElement('div')
         var cursor = document.body.appendChild(div)

@@ -2,6 +2,7 @@ import { rN } from 'fcts.js'
 import { aColor } from 'color.js'
 import { spacing, border } from 'spacing.js'
 import { gsap, Power3} from "gsap"
+import { colors } from 'gradient.js'
 
 function buttons() {
 
@@ -48,6 +49,7 @@ function buttons() {
         console.log(err);
     })
 
+    console.log(colors);
 
 
     // tests

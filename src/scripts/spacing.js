@@ -16,31 +16,25 @@ function spacing() {
         //currentElement.innerHTML = aSpacing[i]
     }
     let aSizeSpacing = [
+        "min",
         "small",
         "medium",
         "big",
     ]
-    // Execute 3 times (small, medium, big)
+    // Execute 3 times (min, small, medium, big)
     for (let i = 0; i < aSizeSpacing.length; i++) {
-        const sizeName = aSizeSpacing[i];
+        const sizeName = aSizeSpacing[i]
 
-        
-        let spacingElementBottom = document.querySelectorAll('.spacing-bottom--' + sizeName)
-        // Affect style of each element (medium or big)
-        for (let x = 0; x < spacingElementBottom.length; x++) {
-            const element = spacingElementBottom[x];
-            //console.log(aSpacing[i+2]);
-            element.style.marginBottom = aSpacing[i+2] + "px"
+        let coords = ['top', 'left', 'right', 'bottom']
+        for (let j = 0; j < coords.length; j++) {
+            const elementPos = coords[j]
+            let spacingElement = document.querySelectorAll('.spacing-' + elementPos + "--" + sizeName)
+            for (let x = 0; x < spacingElement.length; x++) {
+                const element = spacingElement[x]
+                let margin = "margin-" + elementPos
+                element.style.[margin]  = aSpacing[i+1] + "px"
+            }
         }
-
-        let spacingElementTop = document.querySelectorAll('.spacing-top--' + sizeName)
-        // Affect style of each element (medium or big)
-        for (let y = 0; y < spacingElementTop.length; y++) {
-            const element = spacingElementTop[y];
-            element.style.marginTop = aSpacing[i+2] + "px"
-        }
-
-
     }
     return aSpacing
 }
