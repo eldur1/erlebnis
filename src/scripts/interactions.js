@@ -24,9 +24,16 @@ function interactions() {
         ease:Power3.easeOut
     })
 
+    var tl_btn_case = gsap.timeline({ paused:true })
+    tl_btn_case.to(page_case, {
+        duration:1,
+        opacity:0,
+    })
 
+    let page_case = document.querySelector('.section--case')
     btn_case.addEventListener('click', () => {
         tl_btn.play()
+
     })
 
     btn_generative.addEventListener('click', () => {
