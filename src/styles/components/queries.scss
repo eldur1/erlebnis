@@ -8,8 +8,14 @@
 
 // Desktop
 @media (min-width:$desktop) {
+    body {
+        max-width: 933px;
+    }
     p {
         max-width: 43ch;
+    }
+    .title-div {
+        max-width: 433px;
     }
     .delayed-section--img {
         float: right;
@@ -23,16 +29,14 @@
     }
     .background {
         width: 20%;
-        transform: translateX(50%);
-        top: 200px;
+        top: 0;
         padding: 60px 300px;
-        height: 100%;
-        left: -40px;
+        height: 70%;
+        left: -70px;
     }
     .content {
         display: inline-block;
         max-width: 500px;
-        margin-left: 100px;
         transform:translateY(-100px)
     }
     .work, .manifesto {

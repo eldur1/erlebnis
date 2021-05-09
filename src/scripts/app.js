@@ -23,7 +23,7 @@ function generation() {
     */
     font()
     //layout()
-    interactions()
+    //interactions()
     gradientbg()
     buttons()
     contentGen()

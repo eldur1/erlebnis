@@ -1,16 +1,4 @@
 {
-    "salutation": [
-        "Hello",
-        "Hi",
-        "Salut",
-        "Hallo",
-        "Hola",
-        "Guten Tag",
-        "Olá",
-        "Goddag",
-        "Goedendag",
-        "Namaste"
-    ],
     "fact": [
         "My favourite tea is Thé des moines",
         "I make websites",
@@ -30,11 +18,13 @@
         "I'm not doing it for the money" ,
         "I'm open minded"
     ],
-    "work_content": [
-        "I worked on...",
-        "My projects",
-        "I made this",
-        "Stuff I've made",
-        "What I've done"
+    "bad_adj": [
+        "cool",
+        "super",
+        "great"
+    ],
+    "good_adj": [
+        "bad",
+        "useless"
     ]
 }

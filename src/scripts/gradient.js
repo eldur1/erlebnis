@@ -5,8 +5,7 @@ export var colors = []
 
 function gradientbg() {
     // Set up background
-    let background = document.querySelector('.gradient')
-    background.classList.add('background')
+    var background = document.querySelectorAll('.gradient')
 
 
     function deltaGeneration(rDeltaMin, rDeltaMax, maxDelta ) {
@@ -69,7 +68,11 @@ function gradientGeneration() {
     }
     // Create a gradient
     let rAngle = rN(0,360)
-    background.style.background = "linear-gradient( "  + rAngle + "deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")"
+    for (let i = 0; i < background.length; i++) {
+        background.classList.add('background')
+        const element = background[i];
+        element.style.background = "linear-gradient( "  + rAngle + "deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")"
+    }
 }
 
 
