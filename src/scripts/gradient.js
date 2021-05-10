@@ -68,8 +68,9 @@ function gradientGeneration() {
     }
     // Create a gradient
     let rAngle = rN(0,360)
+    background[0].classList.add('background')
+
     for (let i = 0; i < background.length; i++) {
-        background.classList.add('background')
         const element = background[i];
         element.style.background = "linear-gradient( "  + rAngle + "deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")"
     }

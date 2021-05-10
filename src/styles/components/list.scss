@@ -1,0 +1,63 @@
+ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+.icon-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    margin-top: 64px;
+    &__el {
+        display: inline-block;
+        margin-left: 8px;
+        margin-right: 8px;
+        &--github a{
+            background-image: url("../assets/icons/github.svg");
+        }
+        &--linkedin a{
+            background-image: url("../assets/icons/linkedin.svg");
+        }
+        &--instagram a{
+            background-image: url("../assets/icons/instagram.svg");
+        }
+        & a {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            white-space: nowrap;
+            text-indent: 100%;
+            overflow: hidden;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s cubic-bezier(0.86, 0, 0.07, 1);
+            vertical-align: middle;
+        }
+    }
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 933px;
+    flex-direction: column;
+}
+.footer-ul {
+
+    &__el {
+        line-height: 150%;
+        padding-bottom:4px;
+        & a {
+        color:white;
+            
+        }
+        &--link {
+        }
+        &--title {
+
+        }
+    }
+}
