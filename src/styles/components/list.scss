@@ -9,7 +9,6 @@ ul {
     padding: 0;
     list-style: none;
     display: block;
-    margin-top: 64px;
     &__el {
         display: inline-block;
         margin-left: 8px;
@@ -22,6 +21,7 @@ ul {
         }
         &--instagram a{
             background-image: url("../assets/icons/instagram.svg");
+
         }
         & a {
             width: 25px;
@@ -44,20 +44,14 @@ footer {
     justify-content: space-between;
     max-width: 933px;
     flex-direction: column;
+    color:white;
 }
 .footer-ul {
 
     &__el {
         line-height: 150%;
         padding-bottom:4px;
-        & a {
-        color:white;
-            
-        }
         &--link {
-        }
-        &--title {
-
         }
     }
 }

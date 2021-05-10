@@ -1,26 +1,22 @@
 @import '~modularscale-sass/stylesheets/modularscale';
 body {
-  color: white;
+  color: #131313;
   background-color: black;
   margin: 32px;
   overflow-x: hidden;
 }
-main {
-  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+a {
+  color: white;
+  text-decoration: underline;
 }
-.nav {
-  margin: 0 auto;
-  display: flex;
-  max-width: 933px;
-  z-index: 100;
-  justify-content: space-between;
-}
+
 .hi {
   -webkit-text-stroke: 0.8px white;
   color:#101010
 }
 .work {
   margin-top:56px;
+  color:white;
 }
 .reload {
   display: inline-block;
@@ -28,7 +24,8 @@ main {
 }
 .button {
   border:none;
-  color:white;
+  color:#131313;
+  background-color: white;
   text-decoration: none;
   &--project {
     display: inline-block;
@@ -61,17 +58,21 @@ main {
   }
 
 }
+.about-me {
+  color:white;
+}
 .gradient {
   &--footer {
-    & a {
-      color:white;
-    }
+    color:white;
     position: absolute;
     left:0;
     padding:32px;
   }
 }
-
+.generative-content {
+  font-style: italic;
+  text-decoration: underline;
+}
 .manifesto {
   & p {
     max-width: 300ch;

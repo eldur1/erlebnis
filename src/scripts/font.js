@@ -6,10 +6,10 @@ function font() {
         //["Minor Second", "1.067"],
         //["Major Second", "1.125"], 
         //["Minor Third", "1.200"], 
-        //["Major Third", "1.250"], 
+        ["Major Third", "1.250"], 
         ["Perfect fourth", "1.333"], 
         ["Augmented fourth", "1.414"],
-        ["Perfect fifth","1.500"],
+        //["Perfect fifth","1.500"],
         //["Golden ratio", "1.618"]
     ]
     const title_h1 = document.querySelectorAll('.title--large')
@@ -46,7 +46,7 @@ function font() {
     let ratioFont = ratioValues[1]
     let ratioFontName = ratioValues[0]
     let aComputedRatio = []
-    var rLineHeight = rN(120,150)
+    var rLineHeight = rN(130,150)
     var computedFontSize = baseSizeFont
 
 
