@@ -89,7 +89,7 @@ function font() {
             for (let i = 0; i < element[0].length; i++) {
                 elementNodelist[i].style.fontSize = computedFontSize + "px"
                 elementNodelist[i].style.lineHeight = rLineHeight + "%"
-                elementNodelist[i].style.maxWidth = pMaxWidth
+                //elementNodelist[i].style.maxWidth = pMaxWidth
             }
         }
         // Titles

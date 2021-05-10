@@ -37,7 +37,7 @@ function gradientbg() {
         // Brun
         var aHue = deltaGeneration(13,47, 20)
         var rSaturation = deltaGeneration(30,80,30)
-        var rLightness = deltaGeneration(30,67,30)
+        var rLightness = deltaGeneration(40,67,30)
     }
     else if(rPicture == 4) {
         // Rouges bleu fushia
@@ -49,7 +49,7 @@ function gradientbg() {
         // Vert
         var aHue = deltaGeneration(73,140, 50)
         var rSaturation = deltaGeneration(20,80,30)
-        var rLightness = deltaGeneration(10,45,10)
+        var rLightness = deltaGeneration(30,55,10)
 
     }
     else if(rPicture == 6) {
