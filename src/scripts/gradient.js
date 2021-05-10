@@ -2,7 +2,7 @@ import { rN } from 'fcts.js'
 import { rPicture } from 'content.js'
 
 export var colors = []
-var background = document.querySelectorAll('.gradient')
+var background = document.querySelectorAll('.background')
 
 function gradientbg() {
     // Set up background

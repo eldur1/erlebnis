@@ -8,20 +8,21 @@
 
 // Desktop
 @media (min-width:$desktop) {
-    .hero {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        &__el {
-            &--content {
-                max-width: 433px;
-                display: inline-block;
-            }
-            &--avatar {
-                margin-top:100px;
-            }
+    .section {
+        &__hero {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
         }
     }
+    .content {
+        max-width: 433px;
+        display: inline-block;
+    }
+    .avatar {
+        margin-top:100px;
+    }
+    
     .nav {
         margin: initial;
         float:right;
@@ -43,11 +44,27 @@
         max-width: 401px;
     }
     .background {
-        width: 100%;
-        top: 0;
-        height: 95%;
-        left: -510px;
-        max-width: 1600px;
+        &--hero {
+            width: 100%;
+            top: 0;
+            height: 100%;
+            left: -510px;
+            max-width: 1600px;
+            position: absolute;
+        }
+        &--about {
+            display:block;
+        }
+        &--footer {
+            width: 997px;
+            margin-left:-32px;
+            left:inherit;
+            text-align:center;
+            p {
+                margin: 0 auto;
+            }
+        }
+
     }
     .content {
         display: inline-block;
@@ -57,19 +74,6 @@
         flex-direction: row;
         width: 933px;
     }
-    .gradient {
-        &--footer {
-            width: 997px;
-            margin-left:-32px;
-            left:inherit;
-            text-align:center;
-
-            p {
-                margin: 0 auto;
-            }
-        }
-    }
-
 }
 
 @media (min-width:$large) {
