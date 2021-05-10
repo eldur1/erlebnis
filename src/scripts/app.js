@@ -1,11 +1,9 @@
 "use strict"
 
 import { font } from 'font.js'
-//import { background } from 'background.js'
 import { contentGen } from 'content.js'
 import { interactions } from 'interactions.js'
-//import { layout } from 'layout.js'
-import { buttons,  } from 'buttons.js'
+import { buttons } from 'buttons.js'
 import { gradientbg } from 'gradient.js'
 
 

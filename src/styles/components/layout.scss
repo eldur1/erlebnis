@@ -54,18 +54,18 @@ a {
 }
 
 .background {
-  &--about {
-    width: 200px;
-    height: 200px;
-    display: none;
-  }
-  &--hero {
+  &--hero {
     z-index: -1000;
     width: 100%;
     height: 160%;
     top:100px;
     left:0;
     position: absolute;
+  }
+  &--about {
+    width: 200px;
+    height: 200px;
+    display: none;
   }
   &--footer {
     color:white;
