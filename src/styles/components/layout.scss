@@ -1,7 +1,7 @@
 @import '~modularscale-sass/stylesheets/modularscale';
 body {
-  color: #131313;
-  background-color: black;
+  color: black;
+  background-color: #131313;
   margin: 32px;
   overflow-x: hidden;
 }
@@ -14,9 +14,15 @@ a {
   -webkit-text-stroke: 0.8px white;
   color:#101010
 }
-.work {
+.section { 
+  &--projects {
+    color:white;
+    
+  }
   margin-top:56px;
-  color:white;
+}
+.work {
+  margin-left:-10px;
 }
 .reload {
   display: inline-block;

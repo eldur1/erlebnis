@@ -4,49 +4,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 function interactions() {
-    let hero = document.querySelector('.main')
-    let manifesto = document.querySelector('.manifesto')
-    let btn_case = document.querySelector('.js-case')
-    let btn_generative = document.querySelector('.js-generative')
-
-    var tl_btn =  gsap.timeline({
-        paused : true
-    })
-
-    tl_btn.to(hero, {
-        opacity:0,
-        duration:1,
-        ease:Power3.easeOut
-    }) 
-    tl_btn.to(hero, {
-        display:'none',
-        duration:1,
-        ease:Power3.easeOut
-    })
-
-    var tl_btn_case = gsap.timeline({ paused:true })
-    tl_btn_case.to(page_case, {
-        duration:1,
-        opacity:0,
-    })
-
-    let page_case = document.querySelector('.section--case')
-    btn_case.addEventListener('click', () => {
-        tl_btn.play()
-
-    })
-
-    btn_generative.addEventListener('click', () => {
-        tl_btn.play()
-    })
-
-    
-
-
-    let btn_reload = document.querySelector('.js-reload')
-    btn_reload.addEventListener('click', () => {
-        document.location.reload()
-    });
 
     function scrollDelay() {
         const delSections = document.querySelectorAll(".delayed-section");

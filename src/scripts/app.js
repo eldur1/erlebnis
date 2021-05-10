@@ -19,10 +19,11 @@ function generation() {
     Spacing
     Border radius
     //layout()
-    //interactions()
+
     
 
     */
+    interactions()
     font()
     gradientbg()
     buttons()

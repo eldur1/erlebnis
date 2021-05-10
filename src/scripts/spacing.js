@@ -32,7 +32,7 @@ function spacing() {
             for (let x = 0; x < spacingElement.length; x++) {
                 const element = spacingElement[x]
                 let margin = "margin-" + elementPos
-                //element.style.[margin]  = aSpacing[i+1] + "px"
+                element.style.[margin]  = aSpacing[i+1] + "px"
             }
         }
     }

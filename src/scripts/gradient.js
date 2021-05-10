@@ -29,7 +29,7 @@ function gradientbg() {
     }
     else if(rPicture == 2) {
         // Noir et blanc
-        var aHue = deltaGeneration(0,360, 180)
+        var aHue = deltaGeneration(0,359, 180)
         var rSaturation = [0,0]
         var rLightness = deltaGeneration(20,60,30)
     }
@@ -37,7 +37,7 @@ function gradientbg() {
         // Brun
         var aHue = deltaGeneration(13,47, 20)
         var rSaturation = deltaGeneration(30,80,30)
-        var rLightness = deltaGeneration(40,67,30)
+        var rLightness = deltaGeneration(40,67,20)
     }
     else if(rPicture == 4) {
         // Rouges bleu fushia
@@ -54,21 +54,22 @@ function gradientbg() {
     }
     else if(rPicture == 6) {
         //  Bleu rouge
-        var aHue = [rN(170,190), rN(310,360)]
+        var aHue = [rN(170,190), rN(310,359)]
         var rSaturation = deltaGeneration(70,90,10)
         var rLightness = deltaGeneration(40,50,5)
 
     }
-    console.log(background);
 
     for (let i = 0; i < 2; i++) {
         colors.push(`hsl(${aHue[i]},${rSaturation[i]}%,${rLightness[i]}%)`)
+
     }
     // Create a gradient
     let rAngle = rN(0,360)
 
     for (let i = 0; i < background.length; i++) {
         const element = background[i];
+        console.log("linear-gradient( "  + rAngle + "deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")");
         element.style.background = "linear-gradient( "  + rAngle + "deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")"
     }
 

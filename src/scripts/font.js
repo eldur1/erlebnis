@@ -5,10 +5,10 @@ function font() {
     let aRatioFont = [
         //["Minor Second", "1.067"],
         //["Major Second", "1.125"], 
-        //["Minor Third", "1.200"], 
+        ["Minor Third", "1.200"], 
         ["Major Third", "1.250"], 
         ["Perfect fourth", "1.333"], 
-        ["Augmented fourth", "1.414"],
+        //["Augmented fourth", "1.414"],
         //["Perfect fifth","1.500"],
         //["Golden ratio", "1.618"]
     ]

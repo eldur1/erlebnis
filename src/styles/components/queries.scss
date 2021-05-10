@@ -18,7 +18,7 @@
                 display: inline-block;
             }
             &--avatar {
-                margin-top:130px;
+                margin-top:100px;
             }
         }
     }
@@ -45,7 +45,7 @@
     .background {
         width: 100%;
         top: 0;
-        height: 85%;
+        height: 95%;
         left: -510px;
         max-width: 1600px;
     }
@@ -62,6 +62,8 @@
             width: 997px;
             margin-left:-32px;
             left:inherit;
+            text-align:center;
+
             p {
                 margin: 0 auto;
             }
