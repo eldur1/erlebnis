@@ -65,7 +65,9 @@ function font() {
 
 
     // Font family
-    let rFontFamily = rN(0,aFontFamily.length-1)
+    //let rFontFamily = rN(0,aFontFamily.length-1)
+    let rFontFamily = 2
+
     var fontName = aFontFamily[rFontFamily]
     let rFontWeight = rN(1,2)
 

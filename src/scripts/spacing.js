@@ -51,8 +51,11 @@ function border() {
     let avatar = document.querySelector('.avatar')
     avatar.style.borderRadius = border
 
-    let gradientBg = document.querySelector('.gradient')
-    gradientBg.style.borderRadius = border
+    let gradientBg = document.querySelectorAll('.gradient')
+    for (let i = 0; i < gradientBg.length; i++) {
+        const element = gradientBg[i];
+        element.style.borderRadius = border
+    }
 
 
     return border
