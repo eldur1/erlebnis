@@ -52,7 +52,9 @@ a {
   position: relative;
   max-width: 330px;
 }
-
+.sub-content {
+  max-width: 300px;
+}
 .background {
   &--hero {
     z-index: -1000;

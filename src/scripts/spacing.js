@@ -54,7 +54,13 @@ function border() {
     let gradientBg = document.querySelectorAll('.background')
     for (let i = 0; i < gradientBg.length; i++) {
         const element = gradientBg[i];
-        element.style.borderRadius = border
+        if(i == 2) {
+            element.style.borderRadius = border + " " + border + " 0 0" 
+        }
+        else {
+            element.style.borderRadius = border
+
+        }
     }
 
 

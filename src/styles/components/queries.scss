@@ -41,7 +41,8 @@
         z-index: 4;
         width: auto;
         height: auto;
-        max-width: 401px;
+        max-width: 380px;
+        transform:translateX(40px)
     }
     .background {
         &--hero {
@@ -60,6 +61,7 @@
             margin-left:-32px;
             left:inherit;
             text-align:center;
+            margin-top:43px;
             p {
                 margin: 0 auto;
             }
