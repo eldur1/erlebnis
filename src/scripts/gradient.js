@@ -2,10 +2,10 @@ import { rN } from 'fcts.js'
 import { rPicture } from 'content.js'
 
 export var colors = []
+var background = document.querySelectorAll('.gradient')
 
 function gradientbg() {
     // Set up background
-    var background = document.querySelectorAll('.gradient')
 
 
     function deltaGeneration(rDeltaMin, rDeltaMax, maxDelta ) {
@@ -59,22 +59,20 @@ function gradientbg() {
         var rLightness = deltaGeneration(40,50,5)
 
     }
+    console.log(background);
 
-    gradientGeneration()
-
-function gradientGeneration() {
     for (let i = 0; i < 2; i++) {
         colors.push(`hsl(${aHue[i]},${rSaturation[i]}%,${rLightness[i]}%)`)
     }
     // Create a gradient
     let rAngle = rN(0,360)
-    background[0].classList.add('background')
 
     for (let i = 0; i < background.length; i++) {
         const element = background[i];
         element.style.background = "linear-gradient( "  + rAngle + "deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")"
     }
-}
+
+
 
 
 }

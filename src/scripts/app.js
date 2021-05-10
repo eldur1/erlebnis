@@ -18,12 +18,12 @@ function generation() {
     Taille de la police
     Spacing
     Border radius
+    //layout()
+    //interactions()
     
 
     */
     font()
-    //layout()
-    //interactions()
     gradientbg()
     buttons()
     contentGen()

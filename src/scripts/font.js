@@ -69,7 +69,7 @@ function font() {
     let rFontFamily = 2
 
     var fontName = aFontFamily[rFontFamily]
-    let rFontWeight = rN(1,2)
+    //let rFontWeight = rN(1,2)
 
     var WebFont = require('webfontloader')
     WebFont.load({
