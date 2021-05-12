@@ -1,0 +1,10 @@
+.button {
+    border:none;
+    color:#131313;
+    background-color: white;
+    text-decoration: none;
+    &--project {
+        display: inline-block;
+        margin:10px;
+    }
+}
