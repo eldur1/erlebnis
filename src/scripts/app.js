@@ -11,16 +11,6 @@ import { gradientbg } from 'gradient.js'
 function generation() {
 
 
-    // Générer 
-    /*
-    Taille de la police
-    Spacing
-    Border radius
-    //layout()
-
-    
-
-    */
     interactions()
     font()
     gradientbg()

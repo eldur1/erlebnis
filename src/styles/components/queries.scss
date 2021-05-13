@@ -1,9 +1,13 @@
 
 // Tablet
+
 @media (min-width:$tablet) {
-    .reload {
-        float:right
+    .section {
+        &__hero {
+            transform: translateY(320px);
+        }
     }
+
 }
 
 // Desktop
@@ -13,6 +17,7 @@
             display: flex;
             width: 100%;
             justify-content: space-between;
+            transform:inherit;
         }
     }
     .content {
@@ -42,15 +47,22 @@
         width: auto;
         height: auto;
         max-width: 380px;
-        //transform:translateX(40px)
+        transform:translateX(40px)
+    }
+    .cta {
+        margin-left:0px;
+        right: inherit;
+    }
+    .js-case {
+        transform: translateX(-160px);
     }
     .background {
         &--hero {
-            width: 100%;
+            width: 120%;
             top: 0;
             height: 720px;
             left: -510px;
-            max-width: 1600px;
+            max-width: 1700px;
             position: absolute;
         }
         &--about {
@@ -78,10 +90,27 @@
     }
 }
 
+
+// very large screen
 @media (min-width:$large) {
     .background {
         &--hero {
-
+            width: 210%;
+            transform: translateX(-95%);
+            left: 50%;
+            max-width: initial;
         }
+    }
+}
+
+// tight width 
+
+@media (max-width:360px) {
+    nav {
+        margin-top:24px;
+    }
+    .cta {
+        left:32px;
+        top:81px;
     }
 }
