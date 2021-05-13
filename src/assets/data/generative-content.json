@@ -18,13 +18,20 @@
         "I'm not doing it for the money" ,
         "I'm open minded"
     ],
-    "bad_adj": [
+    "good_adj": [
         "cool",
         "super",
-        "great"
+        "great",
+        "extraordinary",
+        "insane",
+        "wonderful"
     ],
-    "good_adj": [
+    "bad_adj": [
         "bad",
-        "useless"
+        "useless",
+        "futile",
+        "boring",
+        "bizarre",
+        "ugly"
     ]
 }

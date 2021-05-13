@@ -28,7 +28,7 @@ function font() {
         ['Raleway'],
         ['Inconsolata'],
         ['DM Serif Display'],
-        ['Roboto Slab'],
+        ['Roboto Mono'],
         ['Lora'],
         ['Abel'],
         ['Questrial'],
@@ -36,7 +36,8 @@ function font() {
         ['Cuprum'],
         ['Montserrat'],
         ['Oswald'],
-        ['Poppins']
+        ['Poppins'],
+        ['KoHo']
     ]
 
     // Font size variables

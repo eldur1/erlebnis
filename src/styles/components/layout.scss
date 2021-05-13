@@ -13,6 +13,7 @@ body {
   &__about {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
   &__hero {
     transform: translateY(100px);
@@ -35,6 +36,11 @@ body {
 }
 .sub-content {
   max-width: 300px;
+}
+.about {
+  &__text {
+    max-width: 500px;
+  }
 }
 .background {
   &--hero {
