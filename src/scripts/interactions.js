@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 function interactions() {
     let reload_btn = document.querySelector('.js-reload')
     reload_btn.addEventListener('click',() => {
-        document.location.reload()
+        document.location.reload(true)
     });
 
     function scrollDelay() {

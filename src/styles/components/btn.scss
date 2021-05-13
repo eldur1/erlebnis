@@ -8,3 +8,12 @@
         margin:10px;
     }
 }
+
+.cta {
+    position: fixed;
+    z-index: 1000;
+    margin-left:-49px;
+}
+.js-case {
+    transform: translateX(-190px);
+}

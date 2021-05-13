@@ -90,7 +90,7 @@ function buttons() {
     let rBorderRadius = rN(2,8) + "px"
     for (let i = 0; i < buttons.length; i++) {
         let element = buttons[i]
-        var padding = aSpacing[1] + "px " + aSpacing[2] + "px "
+        var padding = aSpacing[0] + "px " + aSpacing[1] + "px "
         element.style.borderRadius = rBorderRadius
         if(element.classList.contains("button--alt")) {
             element.style.border = 2 + "px" + " solid white "
