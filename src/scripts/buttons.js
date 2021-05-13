@@ -23,8 +23,8 @@ function buttons() {
         // For each project, create element
         let container = document.querySelector('.work')
         // Hue and Lightness are defined outside the loop the get the same value for every element
-        let rSaturation = rN(30,100)
-        let rLightness = rN(40,60)
+        let rSaturation = rN(30,90)
+        let rLightness = rN(30,40)
         for (const key in data) {
             if (Object.hasOwnProperty.call(data, key)) {
                 let a = document.createElement('a')
