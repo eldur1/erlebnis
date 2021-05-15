@@ -37,6 +37,8 @@ function spacing() {
             }
         }
     }
+
+
     return aSpacing
 }
 function border() {
@@ -51,6 +53,24 @@ function border() {
     // Apply border to images & gradient bg
     let avatar = document.querySelector('.avatar')
     avatar.style.borderRadius = border
+
+    let hero_content = document.querySelector('.section__hero')
+
+
+    const mdMobile = window.matchMedia("(max-width:600px)");
+    const mdTablet = window.matchMedia("(max-width:1200px)");
+
+    if(border === aBorderValues[2]) {
+        if(mdMobile.matches) {
+            console.log("Mobile");
+            hero_content.style.transform = "translateY(100px)"
+        } 
+        else if(mdTablet.matches) {
+            console.log("Tablet");
+            hero_content.style.transform = "translateY(320px)"
+        } 
+    }
+
 
     let gradientBg = document.querySelectorAll('.background')
     for (let i = 0; i < gradientBg.length; i++) {

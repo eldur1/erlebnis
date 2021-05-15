@@ -69,7 +69,6 @@ function gradientbg() {
 
     for (let i = 0; i < background.length; i++) {
         const element = background[i];
-        console.log("linear-gradient( "  + rAngle + "deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")");
         element.style.background = "linear-gradient( "  + rAngle + "deg, " + colors[0] + " 0% ," + colors[1] + " 100%" + ")"
     }
 

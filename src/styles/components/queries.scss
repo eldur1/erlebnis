@@ -1,14 +1,14 @@
 
 // Tablet
 
-@media (min-width:$tablet) {
+/* @media (min-width:$tablet) {
     .section {
         &__hero {
             transform: translateY(320px);
         }
     }
 
-}
+} */
 
 // Desktop
 @media (min-width:$desktop) {
@@ -110,7 +110,8 @@
         margin-top:24px;
     }
     .cta {
-        left:32px;
-        top:81px;
+        left: 32px;
+        top: 14px;
+        width: 140px;
     }
 }

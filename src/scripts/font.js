@@ -29,20 +29,20 @@ function font() {
         ['Inconsolata'],
         ['DM Serif Display'],
         ['Roboto Mono'],
-        ['Lora'],
         ['Abel'],
+        ['Inter'],
+        ['Cabin'],
         ['Questrial'],
         ['Catamaran'],
         ['Cuprum'],
         ['Montserrat'],
-        ['Oswald'],
         ['Poppins'],
         ['KoHo']
     ]
 
     // Font size variables
     const iterator = aTextLevel.keys()
-    var baseSizeFont = rN(19,23)
+    var baseSizeFont = rN(19,22)
     let ratioValues = aRatioFont[rN(0,aRatioFont.length-1)]
     let ratioFont = ratioValues[1]
     let ratioFontName = ratioValues[0]
