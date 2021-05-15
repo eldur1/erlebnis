@@ -20,6 +20,7 @@ function spacing() {
         "small",
         "medium",
         "big",
+        "enormous"
     ]
     // Execute 3 times (min, small, medium, big)
     for (let i = 0; i < aSizeSpacing.length; i++) {
