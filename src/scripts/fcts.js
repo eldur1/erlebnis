@@ -9,6 +9,23 @@ function trueOrFalse() {
 function rN(min , max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+function deltaGeneration(rDeltaMin, rDeltaMax, maxDelta ) {
+    var delta = 0
+    // Get hue enought different than the first one
+    do {
+        var rDelta = [rN(rDeltaMin, rDeltaMax), rN(rDeltaMin, rDeltaMax)]
+        var delta = Math.max(...rDelta) - Math.min(...rDelta)
+    }
+    while(delta < maxDelta )
+    return rDelta
+}
 
-
-export { rN, trueOrFalse }
+function closeColor(value, delta) {
+    if(rN(0,1) == 0) {
+        return rN(value, value+delta)
+    }
+    else {
+        return rN(value-delta,value)
+    }
+}
+export { rN, trueOrFalse, deltaGeneration, closeColor }

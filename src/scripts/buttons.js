@@ -1,8 +1,8 @@
-import { rN } from 'fcts.js'
+import { rN, closeColor } from 'fcts.js'
 import { aColor } from 'color.js'
 import { spacing, border } from 'spacing.js'
 import { gsap, Power3} from "gsap"
-import { colors } from 'gradient.js'
+import { colors, rLightness, rSaturation, aHue } from 'gradient.js'
 
 function buttons() {
 
@@ -23,8 +23,7 @@ function buttons() {
         // For each project, create element
         let container = document.querySelector('.work')
         // Hue and Lightness are defined outside the loop the get the same value for every element
-        let rSaturation = rN(30,90)
-        let rLightness = rN(30,40)
+
         for (const key in data) {
             if (Object.hasOwnProperty.call(data, key)) {
                 let a = document.createElement('a')
@@ -35,10 +34,18 @@ function buttons() {
                 link.href = element.link
                 link.target = "_blank"
                 link.rel = "noreferrer"
-                link.style.color = "white"
+                link.style.color = "black"
                 link.style.fontSize = "22px"
                 link.classList.add('button', 'button--project', 'p' )
-                link.style.backgroundColor = "hsl(" + rN(0,360) + ", " + rSaturation + "%, " + rLightness + "%)"
+                console.log(rLightness[0][0]);
+                console.log(rLightness[0][1]);
+
+                let rSaturationButton = rN(rSaturation[0][0], rSaturation[0][1])
+                let rLightnessButton = rN(rLightness[0][0], rLightness[0][1])-10
+                let rHueButton = rN(aHue[0][0], aHue[0][1])
+
+                //console.log("hsl(" + closeColor(aHue[0][0], 30) + "," + closeColor(rSaturation[0], 10) + "%," + closeColor(rLightness[0], 30) + "%)");
+                link.style.backgroundColor = "hsl(" + rHueButton + "," + rSaturationButton + "%," + rLightnessButton + "%)"
                 var padding = aSpacing[1] + "px " + aSpacing[2] + "px "
                 link.style.borderRadius = borderType
                 link.style.padding = padding 

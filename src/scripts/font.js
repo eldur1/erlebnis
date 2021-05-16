@@ -115,7 +115,6 @@ function font() {
         }
     } 
     let bg = document.querySelector('.background');
-
     let spanColorPrimary = document.querySelectorAll('.color--primary')
     let spanColorAction = document.querySelectorAll('.color--action')
 
