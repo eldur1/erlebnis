@@ -13,7 +13,7 @@ function buttons() {
     // interactions
 
     // Project link
-    fetch('../assets/data/projects.json')
+    fetch('assets/data/projects.json')
     .then((response) => {
         return response.json()
     })
@@ -37,8 +37,6 @@ function buttons() {
                 link.style.color = "black"
                 link.style.fontSize = "22px"
                 link.classList.add('button', 'button--project', 'p' )
-                console.log(rLightness[0][0]);
-                console.log(rLightness[0][1]);
 
                 let rSaturationButton = rN(rSaturation[0][0], rSaturation[0][1])
                 let rLightnessButton = rN(rLightness[0][0], rLightness[0][1])-10
@@ -56,7 +54,6 @@ function buttons() {
         console.log(err);
     })
 
-    console.log(colors);
 
 
     // tests

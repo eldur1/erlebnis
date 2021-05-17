@@ -62,11 +62,9 @@ function border() {
 
     if(border === aBorderValues[2]) {
         if(mdMobile.matches) {
-            console.log("Mobile");
             hero_content.style.transform = "translateY(100px)"
         } 
         else if(mdTablet.matches) {
-            console.log("Tablet");
             hero_content.style.transform = "translateY(320px)"
         } 
     }

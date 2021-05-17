@@ -6,7 +6,7 @@ export var rPicture = rN(1,6)
 function contentGen() {
     var generativeElement = document.querySelectorAll('.generative-content')
 
-    fetch('../assets/data/generative-content.json')
+    fetch('assets/data/generative-content.json')
     .then((response) => {
         return response.json()
     })
