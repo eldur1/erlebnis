@@ -39,7 +39,7 @@ function buttons() {
                 link.classList.add('button', 'button--project', 'p' )
 
                 let rSaturationButton = rN(rSaturation[0][0], rSaturation[0][1])
-                let rLightnessButton = rN(rLightness[0][0], rLightness[0][1])-10
+                let rLightnessButton = rN(rLightness[0][0], rLightness[0][1])+25
                 let rHueButton = rN(aHue[0][0], aHue[0][1])
 
                 //console.log("hsl(" + closeColor(aHue[0][0], 30) + "," + closeColor(rSaturation[0], 10) + "%," + closeColor(rLightness[0], 30) + "%)");
