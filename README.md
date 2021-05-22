@@ -1,12 +1,11 @@
 
-## Web project of generative website
-Web experimental art :
-An attempt to create a generative website.
+## Web project of dynamic portfolio
+
+An attempt to create a dynamic website.
 
 ## Install and commands
 - `npm i` : install npm.
 - `npm start` : run server locally.
-- `npm start` : build on files changes, launch a dev server with browsersync.
 - `npm run build` : clean, lint and build the project.
 - `npm run clean` : clean the `dist` folder.
 
@@ -25,10 +24,12 @@ An attempt to create a generative website.
 ### Generation tools :
 - ✅ randomNumber()
 - ✅ trueOrFalse()
+- ✅ Delta of two values 
 
 ### Color generation : 
-- ✅ Five types of pallet (no more used)
-- ✅ Background
+- ✅ Five types of pallet (deprecated)
+- ✅ Gradient
+
 
 ### Font generation :
 - ✅ Font family (array of font)
@@ -36,49 +37,36 @@ An attempt to create a generative website.
 - ✅ Font size
 - ✅ Random ratio 
 - ✅ Google Fonts
-- Bold font import
+- ✅ Bold font import
 
 
 ### Layout generation : 
 - ✅ Margin (body)
 - ✅ Margin (elements)
-- (?) Grid generation
 - ✅ Spacing generation
-- Spacing utilisation
+- ✅ Spacing utilisation
 
 ### Other
 - ✅ Modular JS files
 - ✅ Design system generation (font, spacing)
 - Animation on content generation
-- GSAP Transition
-
+- ✅ GSAP Transition
+- ✅ GSAP scroll delay
+- ✅ Content writing
+- ✅ Fixed refresh button 
+- ✅ Scroll position in refresh
+- ✅ Summary of project
 
 ## To do :
-- ✅ GSAP scroll delay
-- GSAP Interaction
-- Content about integration ?
-- Projects
-- ✅ Content writing
-- More generative result 
-- Fixed refresh button 
-- Scroll position in refresh
+- Thumbnails of projects
 
-## What is generated ? 
+## Why go dynamic ? 
 
-Style : 
-- Fonts (12)
-- Font ratio (2)
-- Base font size (4)
-- Spacing (4)
-- Border (3)
-- Gradient (20 combinaisons)
+- Better user experience
+- Enriched navigation
+- Easier to maintain
+- More data input
 
-Content :
-- Hi (10)
-- Trying to (6)
-- Btn hero (5)
-
-> For the moment,  possility excluding different gradient
 
 
 ## Some stuff 
@@ -93,3 +81,7 @@ https://codepen.io/GreenSock/pen/wvMeNee
 ## Credit(s)
 
 Done by myself 
+
+## Licence
+
+Free to use for personnal use, contact me if you need anything.
