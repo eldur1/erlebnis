@@ -5,10 +5,14 @@ import { contentGen } from 'content.js'
 import { interactions } from 'interactions.js'
 import { buttons } from 'buttons.js'
 import { gradientbg } from 'gradient.js'
-
+import { weather } from 'weather.js'
 
 // Generation of the site
 function generation() {
+
+
+
+    //weather()
 
 
     interactions()

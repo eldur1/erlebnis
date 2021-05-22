@@ -13,7 +13,7 @@ function spacing() {
 
         let elementSpacing = "spacing--" + (i+1)
         let currentElement = document.querySelector('.' + elementSpacing)
-        //currentElement.innerHTML = aSpacing[i]
+        //currentElement.textContent = aSpacing[i]
     }
     let aSizeSpacing = [
         "min",

@@ -56,6 +56,14 @@ An attempt to create a dynamic website.
 - ✅ Fixed refresh button 
 - ✅ Scroll position in refresh
 - ✅ Summary of project
+- ✅ Responsive (mobile, wide screen)
+- ✅ Optimization lighthouse
+- ✅ Image optimization
+
+
+
+
+
 
 ## To do :
 - Thumbnails of projects

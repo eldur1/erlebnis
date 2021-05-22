@@ -41,7 +41,7 @@ function buttons() {
 
 
                 // Link
-                link.innerHTML = element.name
+                link.textContent = element.name
                 link.href = element.link
                 link.target = "_blank"
                 link.rel = "noreferrer"
@@ -54,7 +54,7 @@ function buttons() {
 
                 // Summary
                 summary.style.color = "black"
-                summary.innerHTML = element.summary
+                summary.textContent = element.summary
                 summary.style.fontSize = "13px"
                 summary.style.marginTop = aSpacing[2] + "px"
 

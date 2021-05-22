@@ -38,7 +38,7 @@ function contentGen() {
             else {
                 var rContent = eData[rN(0, eData.length-1)]
             }
-            elementDOM.innerHTML = rContent
+            elementDOM.textContent = rContent
             
             //Debug
             //console.log(eData);
