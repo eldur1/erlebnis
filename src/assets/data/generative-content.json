@@ -1,4 +1,10 @@
 {
+
+    "hello": [
+        "Good morning",
+        "Good Afternoon",
+        "Good Evening"
+    ],
     "fact": [
         "My favourite tea is Thé des moines",
         "I make websites",
