@@ -59,6 +59,9 @@ An attempt to create a dynamic website.
 
 ## To do :
 - Thumbnails of projects
+- Weather ?
+- White/ dark mode
+- Lang 
 
 ## Why go dynamic ? 
 
@@ -66,7 +69,7 @@ An attempt to create a dynamic website.
 - Enriched navigation
 - Easier to maintain
 - More data input
-
+- Personalized experience
 
 
 ## Some stuff 
