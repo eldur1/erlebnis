@@ -6,7 +6,7 @@
         "color" : "#49F4C2",
         "category" : "current",
         "summary" : "Ordinem is a web-app for flat sharing. From UI to UX, design, development, animation, I've made everything. Because we had issues with my roomnates to get daily housework done, I have made this application to never forget a task ! ",
-        "src" : "../assets/images/thumbnails/test.jpeg"
+        "src" : "../assets/images/thumbnails/ordinem.png"
 
     },
     "Sea of Rust" : {
@@ -16,7 +16,7 @@
         "color" : "#b63421",
         "category" : "current",
         "summary" : "Sea of Rust is the landing page of a Rust server. It was the possibility for me to try the framework VueJs and Tailwind CSS. ",
-        "src" : "../assets/images/thumbnails/test.jpeg"
+        "src" : "../assets/images/thumbnails/sea-of-rust.png"
 
     },
     "Clash of Movies" : {
@@ -36,7 +36,7 @@
         "color" : "#13162F",
         "category" : "current",
         "summary" : "Discover gravity while having fun! Space tour is a game to learn about the planets and the gravity principles. You'll learn more about this limitless universe",
-        "src" : "../assets/images/thumbnails/test.jpeg"
+        "src" : "../assets/images/thumbnails/space-tour.png"
 
     },
     "C³" : {
@@ -46,7 +46,7 @@
         "color" : "#139D42",
         "category" : "old",
         "summary" : "We've all been subject to pareidolia, even in video games. C³ was the occasion to bring creativity to a project and see the world differently",
-        "src" : "../assets/images/thumbnails/test.jpeg"
+        "src" : "../assets/images/thumbnails/c3.png"
 
     },
     "Give" : {
@@ -56,7 +56,7 @@
         "color" : "#B70A72",
         "category" : "current",
         "summary" : "Do you want to make a donation but you don't know who to donate to? Give is a terminal that allows you to make a donation to a random NGO",
-        "src" : "../assets/images/thumbnails/test.jpeg"
+        "src" : "../assets/images/thumbnails/give.png"
 
     },
     "Oh wonder" : {
@@ -84,7 +84,9 @@
         "link" : "http://eliedur.be/projets/rethinking-ux/",
         "color" : "#961616",
         "category" : "old",
-        "summary" : "During my second year, RUX (Rethinking User Experience) was a workshop to learn more about UX methods. This year, we had the chance to rethink the user experience of the famous KIKK Festival"
+        "summary" : "During my second year, RUX (Rethinking User Experience) was a workshop to learn more about UX methods. This year, we had the chance to rethink the user experience of the famous KIKK Festival",
+        "src" : "../assets/images/thumbnails/rux.png"
+
     },
     "Gao Xingjian" : {
         "name" : "Gao Xingjian",
@@ -112,7 +114,7 @@
         "link" : "http://eliedur.be/projets/iolce",
         "color" : "#F23636",
         "summary" : "Why Design Systems Fails is a conference made by Una Kravets. This workshop was a way to learn about design system and transcribe it in a case study in french.",
-        "src" : "../assets/images/thumbnails/test.jpeg"
+        "src" : "../assets/images/thumbnails/why.png"
 
     }
 }
