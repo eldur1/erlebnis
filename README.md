@@ -59,17 +59,16 @@ An attempt to create a dynamic website.
 - ✅ Responsive (mobile, wide screen)
 - ✅ Optimization lighthouse
 - ✅ Image optimization
-
-
+- ✅ Language
+- ✅ Weather
 
 
 
 
 ## To do :
 - Thumbnails of projects
-- Weather ?
 - White/ dark mode
-- Lang 
+
 
 ## Why go dynamic ? 
 
