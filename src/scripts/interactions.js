@@ -1,8 +1,6 @@
 import { gsap, Power3} from "gsap"
-import { _removeLinkedListItem } from "gsap/gsap-core";
-gsap.registerPlugin(ScrollTrigger);
-
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+gsap.registerPlugin(ScrollTrigger);
 function interactions() {
     let reload_btn = document.querySelector('.js-reload')
     reload_btn.addEventListener('click',() => {
