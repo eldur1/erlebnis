@@ -5,7 +5,7 @@
         "link" : "http://eliedur.be/projets/tfa/",
         "color" : "#49F4C2",
         "category" : "current",
-        "summary" : "Ordinem is a web-app for flat sharing. From UI to UX, design, development, animation, I've made everything. Because we had issues with my roomnates to get daily housework done, I have made this application to never forget a task ! ",
+        "summary" : "Ordinem is a web-app for flat sharing. From UI to UX, design, development, animation, I've made everything. Because we had issues with my roomnates to get daily housework done, I have made this application! ",
         "src" : "../assets/images/thumbnails/ordinem.png"
 
     },
@@ -25,7 +25,7 @@
         "link" : "http://eliedur.be/projets/data-play/",
         "color" : "#30a9eb",
         "category" : "old",
-        "summary" : "You like tarantino movies with a lot of insults, this website is made for you! Clash of Movies is a vulgarity comparator between two movies. In this project, I had the chance to manipulate for the first time a JSON database. I also made the chart rendering and the interactions.",
+        "summary" : "You like movies with a lot of insults, this website is made for you! Clash of Movies is a vulgarity comparator between two movies. In this project, I had the chance to manipulate for the first time a JSON database. I also made the chart rendering and the interactions.",
         "src" : "../assets/images/thumbnails/test.jpeg"
 
     },

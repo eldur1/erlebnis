@@ -1,6 +1,5 @@
 import { rN } from 'fcts.js'
 import { paths } from './lang'
-console.log(paths);
 export var rPicture = rN(1,6)
 
 function content() {
