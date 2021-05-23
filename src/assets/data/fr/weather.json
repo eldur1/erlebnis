@@ -1,15 +1,15 @@
 {
 
     "sentences": [
-        "It's snowing!",
-        "It's sleeting",
-        "be careful, it hails",
-        "don't go out, there are thunderstorm",
-        "take your umbrella, it's heavy rain",
-        "take your umbrella, it has a little rain",
-        "showers are forecast",
-        "oh no, there are big clouds outside",
-        "there are some little clouds in the sky",
-        "the weather is clear, time to go out !"
+        "Il neige !",
+        "La neige",
+        "attention, il y a de la grêle",
+        "ne sors pas, il y a de l'orage",
+        "prends ton parapluie, il pleut beaucoup",
+        "prends ton parapluie, il pleut un peu",
+        "une averse est prévue",
+        "oh non, il y a des gros nuages",
+        "il y a quelques nuages dans le ciel",
+        "le ciel est bleu, c'est l'heure de sortir !"
     ]
 }
