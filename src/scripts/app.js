@@ -12,10 +12,12 @@ import { font } from './style/font'
 import { content } from './content/content'
 import { buttons } from './content/buttons'
 import { project } from './content/project'
-
+import { weather } from './content/weather'
 
 // Interactions
 import { interactions } from './interactions'
+
+
 
 
 // Generation of the site
@@ -31,6 +33,7 @@ function generation() {
     content()
     buttons()
     project()
+    weather()
 
     // Interactions
 
