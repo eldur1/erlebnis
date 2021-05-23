@@ -1,12 +1,12 @@
 import { rN } from 'fcts.js'
-import { parse } from 'postcss';
-
+import { paths } from './lang'
+console.log(paths);
 export var rPicture = rN(1,6)
 
 function content() {
     var generativeElement = document.querySelectorAll('.generative-content')
 
-    fetch('assets/data/generative-content.json')
+    fetch(paths[1])
     .then((response) => {
         return response.json()
     })

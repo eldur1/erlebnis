@@ -3,10 +3,10 @@
     import { aBorder } from '../style/border.js' 
     import { rN } from '../fcts.js'
     import { rSaturation, rLightness, aHue } from '../style/gradient.js'
-
+    import { paths } from './lang'
     
     function project() {
-        fetch('assets/data/projects.json')
+        fetch(paths[0])
         .then((response) => {
             return response.json()
         })

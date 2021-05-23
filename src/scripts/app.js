@@ -9,13 +9,10 @@ import { font } from './style/font'
 
 
 // Content import
-import { content } from './content/content'
-import { buttons } from './content/buttons'
-import { project } from './content/project'
-import { weather_id } from './content/weather'
-
+import { languages } from './content/lang'
 // Interactions
 import { interactions } from './interactions'
+
 
 
 
@@ -30,13 +27,10 @@ function generation() {
     font()
 
     // Content generation
-    content()
-    buttons()
-    project()
-    weather_id()
+    languages()
+
 
     // Interactions
-
     interactions()
 
 }

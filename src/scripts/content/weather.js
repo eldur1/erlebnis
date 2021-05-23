@@ -1,4 +1,5 @@
 //import { response } from "express";
+import { paths } from './lang'
 
 var closestPlace = []
 
@@ -48,7 +49,7 @@ function weather_id() {
   
         }
         let weather_DOM = document.querySelector('.weather')
-        let weather_src = "assets/data/weather.json" 
+        let weather_src = paths[2] 
         fetch(weather_src)
         .then((response) => {
           return response.json()

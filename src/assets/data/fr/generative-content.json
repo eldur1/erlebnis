@@ -1,0 +1,43 @@
+{
+
+    "hello": [
+        "Bonjour !",
+        "Bon après-midi",
+        "Bonne soirée"
+    ],
+    "fact": [
+        "Mon thé préféré est le Thé des moines",
+        "Je fais des sites internets",
+        "Ma pointure est de 42",
+        "J'ai 22 ans",
+        "Je fais aussi de la photographie",
+        "L'année dernière, j'ai écouté 2150 heures de la musique",
+        "J'aime beaucoup Radiohead",
+        "Mon premier site internet était sur Minecraft "
+    ],
+    "why": [
+        "Je ne suis jamais en retard.",
+        "Je cuisine de délicieux katsu curry",
+        "Je suis curieux",
+        "Je suis pluridisciplinaire",
+        "J'ai toujours envie d'apprendre plus",
+        "Je ne fais pas ça pour l'argent" ,
+        "Je suis ouvert d'esprit"
+    ],
+    "good_adj": [
+        "cool",
+        "super",
+        "chouette",
+        "extraordinaire",
+        "fou",
+        "magnifique"
+    ],
+    "bad_adj": [
+        "mauvais",
+        "inutile",
+        "futile",
+        "ennuyant",
+        "bizarre",
+        "moche"
+    ]
+}
