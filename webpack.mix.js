@@ -37,6 +37,7 @@ mix
     ]
   })
   .webpackConfig({
+
     devtool: 'source-map',
     resolve: {
       modules: [
@@ -48,3 +49,5 @@ mix
 
 // disable manifest
 Mix.manifest.refresh = function(){ return void(0); };
+
+// FS
