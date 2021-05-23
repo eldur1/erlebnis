@@ -1,49 +1,46 @@
 "use strict"
 
 
+// Style import
+import { spacing } from './style/spacing.js'
+import { border } from './style/border.js'
+import { gradient } from './style/gradient.js'
+import { font } from './style/font.js' 
 
 
-import { font } from 'font.js'
-import { contentGen } from 'content.js'
-import { interactions } from 'interactions.js'
-import { buttons } from 'buttons.js'
-import { gradientbg } from 'gradient.js'
-import { weather } from 'weather.js'
+// Content import
+import { content } from './content/content.js'
+import { buttons } from './content/buttons.js'
+import { project } from './content/project.js'
 
+// Debug
+
+// Spacing values
+//import { aSpacing } from 'style/spacing.js'
+
+// Border values
+//import { aBorder } from 'style/border.js'
+
+
+// Colors values
+//import { colors } from 'style/spacing.js'
 
 
 // Generation of the site
 function generation() {
-
-
-    weather()
-
-
-    interactions()
+    // Style
+    spacing()
+    border()
+    gradient()
     font()
-    gradientbg()
+    // Content generation
+    content()
     buttons()
-    contentGen()
+    project()
+
 
 
 }
 
 generation()
-
-
-/*
-
-
-Background color and object color must match
-These two must match with CTA and span color
-
-How to do it ?
-
-- All colors needs to be generated at the same time and be convenient
-- Text : black or white
-- Background is light or black 
-- The circle has a color close to bg but enought different
--  
-
-*/
 

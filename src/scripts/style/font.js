@@ -1,5 +1,5 @@
-import { rN, trueOrFalse } from 'fcts.js'
-import { aColor } from 'color.js'
+import { rN, trueOrFalse } from '../fcts.js'
+import { aColors } from '../style/gradient.js'
 function font() {
 
     let aRatioFont = [
@@ -121,12 +121,12 @@ function font() {
     for (let i = 0; i < spanColorPrimary.length; i++) {
     let element = spanColorPrimary[i]
     //console.log(element);
-    element.style.color = aColor[0]
+    element.style.color = aColors[0]
     }
     for (let i = 0; i < spanColorAction.length; i++) {
         let element = spanColorAction[i]
         //console.log(element);
-        element.style.color = aColor[2]
+        element.style.color = aColors[2]
         }
     
 

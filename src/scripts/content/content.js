@@ -3,7 +3,7 @@ import { parse } from 'postcss';
 
 export var rPicture = rN(1,6)
 
-function contentGen() {
+function content() {
     var generativeElement = document.querySelectorAll('.generative-content')
 
     fetch('assets/data/generative-content.json')
@@ -59,4 +59,4 @@ function contentGen() {
 
 }
 
-export { contentGen } 
+export { content } 

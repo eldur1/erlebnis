@@ -1,7 +1,6 @@
 import { rN } from 'fcts.js'
 import gsap from 'gsap/gsap-core';
 
-console.log("coucou");
 
 
 let windowWidth = window.innerWidth
