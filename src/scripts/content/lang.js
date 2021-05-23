@@ -56,7 +56,7 @@ function languages() {
    content()
    buttons()
    project()
-   //weather_id()
+   weather_id()
 
 }
 
