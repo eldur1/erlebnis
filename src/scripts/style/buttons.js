@@ -22,6 +22,8 @@ function buttons() {
             element.style.color = aColors[2]
         } else {
             element.style.backgroundColor = aColors[2]
+            element.style.border = 1 + "px" + " solid black "
+
         }
         //console.log(padding)
         element.style.padding = padding

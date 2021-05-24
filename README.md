@@ -68,6 +68,11 @@ An attempt to create a dynamic website.
 ## To do :
 - Thumbnails of projects
 - White/ dark mode
+- Re-write traductions
+- Fix EN in nav
+- Latency for weather data
+- More languages
+- Improve tablet version
 
 
 ## Why go dynamic ? 

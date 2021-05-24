@@ -10,6 +10,28 @@
 
 } */
 
+
+
+  
+  @media (prefers-color-scheme: light) {
+    body {
+        background-color: $c-white;
+      }
+      .about-me {
+        color: $c-black;
+      }
+      .section__projects{
+        color:$c-black;
+      }
+      footer {
+          & a {
+            color:$c-black;
+          }
+        color:$c-black;
+    }
+  }
+
+
 // Desktop
 @media (min-width:$desktop) {
     .section {

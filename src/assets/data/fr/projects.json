@@ -14,19 +14,10 @@
         "activity" : "design, development, UI, UX",
         "link" : "https://sea-of-rust.com/",
         "color" : "#b63421",
+        "more" : "sea-of-rust",
         "category" : "current",
         "summary" : "Sea Of Rust est une landing page pour un serveur Rust. Cela a été la possibilité pour moi d'essayer pour la première fois le framwork VueJS et TailwindCSS.",
         "src" : "../assets/images/thumbnails/sea-of-rust.png"
-
-    },
-    "Clash of Movies" : {
-        "name" : "Clash of Movies",
-        "activity" : "development, data",
-        "link" : "http://eliedur.be/projets/data-play/",
-        "color" : "#30a9eb",
-        "category" : "old",
-        "summary" : "Tu aimes les films avec beaucoups d'insultes, ce site est fait pour toi ! Clash of Movies est un comparateur de vulgarité entre deux films. Dans ce projet, j'ai eu la chance de manipuler pour la première fois une base de donnée JSON. J'ai aussi fait les interactions et le rendu des graphiques.",
-        "src" : "../assets/images/thumbnails/test.jpeg"
 
     },
     "Space tour" : {
@@ -38,45 +29,6 @@
         "summary" : "Decouvrez la gravité tout en s'amusant ! Space tour est un jeu pour apprendre les planètes de notre système ainsi que le principe de gravité. Vous en serez d'avantage sur cet univers sans limite.",
         "src" : "../assets/images/thumbnails/space-tour.png"
 
-    },
-    "C³" : {
-        "name" : "C³",
-        "activity" : "development, design",
-        "link" : "http://eliedur.be/projets/c3/",
-        "color" : "#139D42",
-        "category" : "old",
-        "summary" : "Nous avons tous déjà été sujet à de la paréidolie, même dans les jeux-vidéos. C³ a été l'occasion d'apporter de la créativité dans un projet et de voir le monde autrement.",
-        "src" : "../assets/images/thumbnails/c3.png"
-
-    },
-    "Give" : {
-        "name" : "Give",
-        "activity" : "development",
-        "link" : "http://eliedur.be/projets/give/",
-        "color" : "#B70A72",
-        "category" : "current",
-        "summary" : "Vous souhaitez faire une donation mais vous ne savez pas à qui ? Give est une borne permettant de faire une donation à une ONG aléatoire dans le monde.",
-        "src" : "../assets/images/thumbnails/give.png"
-
-    },
-    "Oh wonder" : {
-        "name" : "Oh wonder",
-        "activity" : "development, design, pseudo website",
-        "link" : "http://eliedur.be/projets/oh-wonder/",
-        "color" : "#101010",
-        "category" : "old",
-        "summary" : "Un petit projet pour découvrir l'html, le CSS et GSAP.",
-        "src" : "../assets/images/thumbnails/test.jpeg"
-
-    },
-    "Old portfolio" : {
-        "name" : "Old portfolio",
-        "activity" : "development, design",
-        "link" : "http://eliedur.be/projets/old-portfolio/",
-        "color" : "#961616",
-        "category" : "old",
-        "summary" : "C'est une ancienne version de mon portfolio. Attention, il peut être lent.",
-        "src" : "../assets/images/thumbnails/test.jpeg"
     },
     "Rethinking UX" : {
         "name" : "Rethinking UX",
@@ -96,25 +48,6 @@
         "category" : "old",
         "summary" : "Il s'agit d'un faux site pour Gao Xingjian, un peintre à encre chinois qui fait des peintures abstraites. En plus de ce site, j'ai crée le branding et le packaging d'une fausse exposition.",
         "src" : "../assets/images/thumbnails/test.jpeg"
-
-    },
-    "Max Richter" : {
-        "name" : "Max Richter",
-        "activity" : "design, development, pseudo website",
-        "link" : "http://eliedur.be/projets/max-richter/",
-        "color" : "#101010",
-        "category" : "old",
-        "summary" : "Max Richter est un compositeur et pianiste de renom. Le site fait la promotion de son travail, sa musique et de ses prochains concerts.",
-        "src" : "../assets/images/thumbnails/test.jpeg"
-
-    },
-    "Why Design Systems Fails" : {
-        "name" : "Why Design Systems Fails",
-        "activity" : "writing",
-        "link" : "http://eliedur.be/projets/iolce",
-        "color" : "#F23636",
-        "summary" : "Why Design Systems Fails est une conférence présentée par Una Kravets. Cet atelier fût une manière d'en savoir plus sur le design system et retranscrire cela dans une étude de cas.",
-        "src" : "../assets/images/thumbnails/why.png"
 
     }
 }

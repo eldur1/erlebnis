@@ -12,21 +12,12 @@
     "Sea of Rust" : {
         "name" : "Sea of Rust",
         "activity" : "design, development, UI, UX",
+        "more": "sea-of-rust",
         "link" : "https://sea-of-rust.com/",
         "color" : "#b63421",
         "category" : "current",
         "summary" : "Sea of Rust is the landing page of a Rust server. It was the possibility for me to try the framework VueJs and Tailwind CSS. ",
         "src" : "../assets/images/thumbnails/sea-of-rust.png"
-
-    },
-    "Clash of Movies" : {
-        "name" : "Clash of Movies",
-        "activity" : "development, data",
-        "link" : "http://eliedur.be/projets/data-play/",
-        "color" : "#30a9eb",
-        "category" : "old",
-        "summary" : "You like movies with a lot of insults, this website is made for you! Clash of Movies is a vulgarity comparator between two movies. In this project, I had the chance to manipulate for the first time a JSON database. I also made the chart rendering and the interactions.",
-        "src" : "../assets/images/thumbnails/test.jpeg"
 
     },
     "Space tour" : {
@@ -38,45 +29,6 @@
         "summary" : "Discover gravity while having fun! Space tour is a game to learn about the planets and the gravity principles. You'll learn more about this limitless universe",
         "src" : "../assets/images/thumbnails/space-tour.png"
 
-    },
-    "C³" : {
-        "name" : "C³",
-        "activity" : "development, design",
-        "link" : "http://eliedur.be/projets/c3/",
-        "color" : "#139D42",
-        "category" : "old",
-        "summary" : "We've all been subject to pareidolia, even in video games. C³ was the occasion to bring creativity to a project and see the world differently",
-        "src" : "../assets/images/thumbnails/c3.png"
-
-    },
-    "Give" : {
-        "name" : "Give",
-        "activity" : "development",
-        "link" : "http://eliedur.be/projets/give/",
-        "color" : "#B70A72",
-        "category" : "current",
-        "summary" : "Do you want to make a donation but you don't know who to donate to? Give is a terminal that allows you to make a donation to a random NGO",
-        "src" : "../assets/images/thumbnails/give.png"
-
-    },
-    "Oh wonder" : {
-        "name" : "Oh wonder",
-        "activity" : "development, design, pseudo website",
-        "link" : "http://eliedur.be/projets/oh-wonder/",
-        "color" : "#101010",
-        "category" : "old",
-        "summary" : "A small school project to discover html css and GSAP.",
-        "src" : "../assets/images/thumbnails/test.jpeg"
-
-    },
-    "Old portfolio" : {
-        "name" : "Old portfolio",
-        "activity" : "development, design",
-        "link" : "http://eliedur.be/projets/old-portfolio/",
-        "color" : "#961616",
-        "category" : "old",
-        "summary" : "This is a old version of my portfolio, be careful, it can be slow",
-        "src" : "../assets/images/thumbnails/test.jpeg"
     },
     "Rethinking UX" : {
         "name" : "Rethinking UX",
@@ -96,25 +48,6 @@
         "category" : "old",
         "summary" : "It is a pseudo website for Gao Xingjian, chinese ink painter who make abstract painting. In addition to the site, I've create the branding and the packaging for a pseudo exhibition.",
         "src" : "../assets/images/thumbnails/test.jpeg"
-
-    },
-    "Max Richter" : {
-        "name" : "Max Richter",
-        "activity" : "design, development, pseudo website",
-        "link" : "http://eliedur.be/projets/max-richter/",
-        "color" : "#101010",
-        "category" : "old",
-        "summary" : "Max Richter is a famous composer and pianist. The website promote his work, his music and his next concerts",
-        "src" : "../assets/images/thumbnails/test.jpeg"
-
-    },
-    "Why Design Systems Fails" : {
-        "name" : "Why Design Systems Fails",
-        "activity" : "writing",
-        "link" : "http://eliedur.be/projets/iolce",
-        "color" : "#F23636",
-        "summary" : "Why Design Systems Fails is a conference made by Una Kravets. This workshop was a way to learn about design system and transcribe it in a case study in french.",
-        "src" : "../assets/images/thumbnails/why.png"
 
     }
 }

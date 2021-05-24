@@ -5,11 +5,11 @@ body {
   margin: 32px;
   overflow-x: hidden;
 }
-
 .section { 
   &__projects {
     color:$c-white;
   }
+
   &__about {
     display: flex;
     flex-direction: row;

@@ -1,6 +1,6 @@
 // This files will decide to show the website in french or english
 import { content } from './content'
-import { buttons } from './buttons'
+import { buttons } from '../style/buttons'
 import { project } from './project'
 import { weather_id } from './weather'
 
@@ -13,9 +13,6 @@ export var paths = [
 
 
 function languages() {
-
-
-
 
     // Change path of dynamic content
     let langCode = navigator.language
@@ -56,7 +53,7 @@ function languages() {
    content()
    buttons()
    project()
-   weather_id()
+   //weather_id()
 
 }
 

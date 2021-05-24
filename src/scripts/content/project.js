@@ -35,8 +35,8 @@
     
                     // Link
                     link.textContent = element.name
-                    link.href = element.link
-                    link.target = "_blank"
+                    link.href = element.more +".html"
+                    //link.target = "_blank"
                     link.rel = "noreferrer"
                     link.style.color = "black"
     
