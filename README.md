@@ -60,17 +60,23 @@ An attempt to create a dynamic website.
 - ✅ Optimization lighthouse
 - ✅ Image optimization
 - ✅ Language
-- ✅ Weather
 
+
+## Deprecated  (not used)
+
+- Weather position with geo-localisation (API, proxy to pass by CORS policy)
+- Pallet generator
+- Background gradient with square
+- Cursor 
+- Layout
 
 
 
 ## To do :
-- Thumbnails of projects
+- Finish thumbnails of projects
 - White/ dark mode
 - Re-write traductions
 - Fix EN in nav
-- Latency for weather data
 - More languages
 - Improve tablet version
 
