@@ -1,8 +1,7 @@
 //import { response } from "express";
-import { paths } from './lang'
-
+import { gradient } from '../style/gradient';
+import { paths } from '../content/lang'
 var closestPlace = []
-
 function weather_id() {
   navigator.geolocation.getCurrentPosition(success, error, options);
 
@@ -32,8 +31,8 @@ function weather_id() {
       })
       .then((data) => {
         var weatherJSON = data.consolidated_weather[0];
-        let wS = weatherJSON.weather_state_abbr
-        console.log(wS);
+        var wS = weatherJSON.weather_state_abbr
+        gradient()
         let i = 0;
         switch(wS) {
           case 'sn' : i = 0; break
@@ -46,17 +45,15 @@ function weather_id() {
           case 'hc' : i = 7; break
           case 'lc' : i = 8; break
           case 'c' : i = 9; break
-  
         }
         let weather_DOM = document.querySelector('.weather')
-        let weather_src = paths[2] 
+        let weather_src = paths[2]
         fetch(weather_src)
         .then((response) => {
           return response.json()
         })
         .then((data) => {
           let sentence = data.sentences[i]
-          console.log(sentence);
           weather_DOM.textContent = sentence
         })
       })
@@ -68,12 +65,7 @@ function weather_id() {
     console.warn(`ERREUR (${err.code}): ${err.message}`);
   }
   
-
-
-
-
 }
-
 
 
 

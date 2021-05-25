@@ -14,7 +14,6 @@
         "activity" : "design, development, UI, UX",
         "link" : "https://sea-of-rust.com/",
         "color" : "#b63421",
-        "more" : "sea-of-rust",
         "category" : "current",
         "summary" : "Sea Of Rust est une landing page pour un serveur Rust. Cela a été la possibilité pour moi d'essayer pour la première fois le framwork VueJS et TailwindCSS.",
         "src" : "../assets/images/thumbnails/sea-of-rust.png"

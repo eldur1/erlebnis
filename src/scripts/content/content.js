@@ -4,7 +4,6 @@ export var rPicture = rN(1,6)
 
 function content() {
     var generativeElement = document.querySelectorAll('.generative-content')
-
     fetch(paths[1])
     .then((response) => {
         return response.json()
@@ -15,7 +14,7 @@ function content() {
         for (let i = 0; i < count; i++) {
 
             let element = Object.keys(data)[i]
-            let elementDOM = generativeElement[i]
+            var elementDOM = generativeElement[i]
             let eData = data[element];
 
 
@@ -36,8 +35,8 @@ function content() {
             } 
             else {
                 var rContent = eData[rN(0, eData.length-1)]
+                elementDOM.textContent = rContent
             }
-            elementDOM.textContent = rContent
             
             //Debug
             //console.log(eData);

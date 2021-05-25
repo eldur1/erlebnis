@@ -23,21 +23,5 @@
         "J'ai toujours envie d'apprendre plus",
         "Je ne fais pas ça pour l'argent" ,
         "Je suis ouvert d'esprit"
-    ],
-    "good_adj": [
-        "cool",
-        "super",
-        "chouette",
-        "extraordinaire",
-        "fou",
-        "magnifique"
-    ],
-    "bad_adj": [
-        "mauvais",
-        "inutile",
-        "futile",
-        "ennuyant",
-        "bizarre",
-        "moche"
     ]
 }

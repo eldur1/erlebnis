@@ -6,7 +6,8 @@ import { spacing } from './style/spacing'
 import { border } from './style/border'
 import { gradient } from './style/gradient'
 import { font } from './style/font' 
-import { darkMode, theme } from './style/theme.js'
+import { darkMode, theme } from './style/theme'
+import { buttons } from 'style/buttons'
 
 
 // Content import
@@ -21,17 +22,19 @@ import { interactions } from './interactions'
 // Generation of the site
 function generation() {
     
-    console.log(navigator.geolocation)
+
+    // Content generation
+    languages()
 
     // Style
     spacing()
     border()
+    buttons()
     gradient()
     font()
     darkMode()
 
-    // Content generation
-    languages()
+
 
 
     // Interactions

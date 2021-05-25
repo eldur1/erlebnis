@@ -1,12 +1,47 @@
 import { gsap, Power3} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { langNavigator, languages } from 'content/lang.js'
+
+
+export var isReload = {
+    state: false
+}
 gsap.registerPlugin(ScrollTrigger);
 function interactions() {
-    let reload_btn = document.querySelector('.js-reload')
+
+
+
+/*     let reload_btn = document.querySelector('.js-reload')
     reload_btn.addEventListener('click',() => {
         document.location.reload(true)
-    });
+    }); */
 
+
+    
+
+    // Set language 
+    let lang_btn = document.querySelector('.js-lang')
+
+    if(langNavigator.langCode == "fr") {
+        lang_btn.textContent = "EN"
+    } else 
+    if(langNavigator.langCode == "en") {
+        lang_btn.textContent = "FR"
+    }
+
+    lang_btn.addEventListener('click', () => {
+        if(langNavigator.langCode == "fr") {
+            lang_btn.textContent = "FR"
+            langNavigator.langCode = "en"
+        } else 
+        if(langNavigator.langCode == "en") {
+            lang_btn.textContent = "EN"
+            langNavigator.langCode = "fr"
+        }
+        isReload.state = true
+        languages()
+
+    })
     function scrollDelay() {
         const delSections = document.querySelectorAll(".delayed-section");
         delSections.forEach(section => {

@@ -1,6 +1,5 @@
 import { rN, deltaGeneration } from '../fcts.js'
 import { rPicture } from '../content/content.js'
-
 export var aColors = []
 var background = document.querySelectorAll('.background')
 

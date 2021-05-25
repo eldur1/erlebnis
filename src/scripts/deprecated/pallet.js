@@ -1,6 +1,4 @@
 import { rN } from 'fcts.js'
-
-
 // Nut used
 
 function choosenPallet() {

@@ -23,21 +23,5 @@
         "I always want to learn more",
         "I'm not doing it for the money" ,
         "I'm open minded"
-    ],
-    "good_adj": [
-        "cool",
-        "super",
-        "great",
-        "extraordinary",
-        "insane",
-        "wonderful"
-    ],
-    "bad_adj": [
-        "bad",
-        "useless",
-        "futile",
-        "boring",
-        "bizarre",
-        "ugly"
     ]
 }
