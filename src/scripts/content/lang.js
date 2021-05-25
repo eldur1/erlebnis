@@ -9,8 +9,12 @@ export var paths = [
     'assets/data/en/generative-content.json',
     'assets/data/en/weather.json' 
 ]
+if(localStorage.getItem('language') == undefined) { 
+    var langCode = navigator.language
+} else {
+    var langCode = localStorage.getItem('language')
+}
 
-var langCode = navigator.language
 export var langNavigator =  {
     langCode: langCode.substring(0,2)
 }

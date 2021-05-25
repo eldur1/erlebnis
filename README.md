@@ -79,6 +79,7 @@ An attempt to create a dynamic website.
 - Fix EN in nav
 - More languages
 - Improve tablet version
+- Local storage (theme, language)
 
 
 ## Why go dynamic ? 

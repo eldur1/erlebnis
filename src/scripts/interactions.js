@@ -17,26 +17,47 @@ function interactions() {
     }); */
 
 
-    
+
+
 
     // Set language 
     let lang_btn = document.querySelector('.js-lang')
-
-    if(langNavigator.langCode == "fr") {
-        lang_btn.textContent = "EN"
-    } else 
-    if(langNavigator.langCode == "en") {
-        lang_btn.textContent = "FR"
-    }
-
-    lang_btn.addEventListener('click', () => {
-        if(langNavigator.langCode == "fr") {
-            lang_btn.textContent = "FR"
-            langNavigator.langCode = "en"
+    if(localStorage.getItem('language') == undefined) {
+        if(langNavigator.langCode == "fr" ) {
+            lang_btn.textContent = "EN"
         } else 
         if(langNavigator.langCode == "en") {
+            lang_btn.textContent = "FR"
+        }
+    } else {
+        var localStorageLanguage = localStorage.getItem('language');
+        if(localStorageLanguage == "fr") {
+            console.log("Francais comme langue détecté")
             lang_btn.textContent = "EN"
             langNavigator.langCode = "fr"
+        } else if(localStorageLanguage == "fr"){
+            console.log("Anglais comme langue détecté")
+            lang_btn.textContent = "FR"
+            langNavigator.langCode = "en"
+        }
+    }
+
+
+    lang_btn.addEventListener('click', () => {
+        // If it's in english > change to english
+        if(langNavigator.langCode == "fr") {
+            lang_btn.textContent = "FR"
+
+            langNavigator.langCode = "en"
+            localStorage.setItem('language', 'en')
+
+        } else 
+        // If it's in english > change to french
+        if(langNavigator.langCode == "en") {
+            lang_btn.textContent = "EN"
+
+            langNavigator.langCode = "fr"
+            localStorage.setItem('language', 'fr')
         }
         isReload.state = true
         languages()

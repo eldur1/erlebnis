@@ -13,7 +13,6 @@
         .then((data) => {
             // Recover border, spacing
             var count = Object.keys(data).length;
-            console.log(count);
             // For each project, create element
             let container = document.querySelector('.work')
             // Hue and Lightness are defined outside the loop the get the same value for every element
