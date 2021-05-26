@@ -22,6 +22,7 @@ import { interactions } from './interactions'
 // Generation of the site
 function generation() {
     
+    //window.setInterval(getRealTime,1000)
 
     // Content generation
     languages()
@@ -30,7 +31,9 @@ function generation() {
     spacing()
     border()
     buttons()
+    //
     gradient()
+    window.setInterval(gradient, 1000)
     font()
     darkMode()
 

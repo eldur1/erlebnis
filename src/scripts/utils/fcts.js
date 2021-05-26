@@ -1,3 +1,14 @@
+
+function getRealTime() {
+    var oTime = {
+        hours: new Date().getHours(),
+        days: new Date().getDay(),
+        minutes: new Date().getMinutes(),
+        seconds: new Date().getSeconds()
+    }
+    return oTime
+}
+
 // True or false 
 function trueOrFalse() {
     let i = 0.5
@@ -28,4 +39,4 @@ function closeColor(value, delta) {
         return rN(value-delta,value)
     }
 }
-export { rN, trueOrFalse, deltaGeneration, closeColor }
+export { rN, trueOrFalse, deltaGeneration, closeColor, getRealTime }

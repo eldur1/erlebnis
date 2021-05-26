@@ -1,4 +1,4 @@
-import { rN } from '../fcts.js'
+import { rN } from '../utils/fcts.js'
 
 
 // Values of Spacing and border

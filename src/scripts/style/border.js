@@ -1,5 +1,5 @@
 import { aSpacing } from './spacing.js'
-import { rN } from '../fcts.js'
+import { rN } from '../utils/fcts.js'
 
 
 export var aBorder = []

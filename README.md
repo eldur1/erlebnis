@@ -28,7 +28,6 @@ An attempt to create a dynamic website.
 
 ### Color generation : 
 - ✅ Five types of pallet (deprecated)
-- ✅ Gradient
 
 
 ### Font generation :
@@ -60,6 +59,8 @@ An attempt to create a dynamic website.
 - ✅ Optimization lighthouse
 - ✅ Image optimization
 - ✅ Language
+- ✅ Local storage language
+
 
 
 ## Deprecated  (not used)
@@ -69,6 +70,8 @@ An attempt to create a dynamic website.
 - Background gradient with square
 - Cursor 
 - Layout
+- ✅ Gradient with profile picture
+
 
 
 
@@ -79,8 +82,7 @@ An attempt to create a dynamic website.
 - Fix EN in nav
 - More languages
 - Improve tablet version
-- Local storage (theme, language)
-
+- Local storage theme
 
 ## Why go dynamic ? 
 

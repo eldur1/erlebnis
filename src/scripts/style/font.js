@@ -1,5 +1,5 @@
-import { rN, trueOrFalse } from '../fcts.js'
-import { aColors } from '../style/gradient.js'
+import { rN, trueOrFalse } from '../utils/fcts'
+import { aColors } from '../style/gradient'
 function font() {
 
     let aRatioFont = [

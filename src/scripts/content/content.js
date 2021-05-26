@@ -1,4 +1,4 @@
-import { rN } from 'fcts.js'
+import { rN } from '../utils/fcts.js'
 import { paths } from './lang'
 export var rPicture = rN(1,6)
 

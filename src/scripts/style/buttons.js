@@ -1,4 +1,4 @@
-import { rN } from '../fcts.js'
+import { rN } from '../utils/fcts.js'
 import { aColors } from '../style/gradient.js'
 import { aSpacing } from '../style/spacing.js'
 import { aBorder } from '../style/border.js'

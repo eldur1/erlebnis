@@ -1,7 +1,7 @@
 // Project link
     import { aSpacing } from '../style/spacing.js'
     import { aBorder } from '../style/border.js' 
-    import { rN } from '../fcts.js'
+    import { rN } from '../utils/fcts.js'
     import { rSaturation, rLightness, aHue } from '../style/gradient.js'
     import { paths } from './lang'
     
@@ -55,12 +55,12 @@
                         div.style.fontSize = "22px"
                         div.classList.add('button', 'button--project', 'p' )
         
-                        let rSaturationButton = rN(rSaturation[0][0], rSaturation[0][1])
-                        let rLightnessButton = rN(rLightness[0][0], rLightness[0][1])+25
-                        let rHueButton = rN(aHue[0][0], aHue[0][1])
+                        let rSaturationButton = 50
+                        let rLightnessButton = 50
+                        let rHueButton = 50
         
                         //console.log("hsl(" + closeColor(aHue[0][0], 30) + "," + closeColor(rSaturation[0], 10) + "%," + closeColor(rLightness[0], 30) + "%)");
-                        div.style.backgroundColor = "hsl(" + rHueButton + "," + rSaturationButton + "%," + rLightnessButton + "%)"
+                        div.style.backgroundColor = "hsl(" + 50 + "," + 50 + "%," + 50 + "%)"
                         var padding = aSpacing[1] + "px " + aSpacing[2] + "px "
                         div.style.borderRadius = aBorder
                         div.style.padding = padding 
