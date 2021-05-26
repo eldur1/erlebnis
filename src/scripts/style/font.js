@@ -1,5 +1,4 @@
 import { rN, trueOrFalse } from '../utils/fcts'
-import { aColors } from '../style/gradient'
 function font() {
 
     let aRatioFont = [
@@ -114,7 +113,7 @@ function font() {
             }
         }
     } 
-    let bg = document.querySelector('.background');
+/*     let bg = document.querySelector('.background');
     let spanColorPrimary = document.querySelectorAll('.color--primary')
     let spanColorAction = document.querySelectorAll('.color--action')
 
@@ -128,7 +127,7 @@ function font() {
         //console.log(element);
         element.style.color = aColors[2]
         }
-    
+     */
 
 }
 export { font }

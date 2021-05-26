@@ -4,16 +4,17 @@
 // Style import
 import { spacing } from './style/spacing'
 import { border } from './style/border'
-import { gradient } from './style/gradient'
+import { colorChanging } from './style/color'
 import { font } from './style/font' 
 import { darkMode, theme } from './style/theme'
-import { buttons } from 'style/buttons'
+import { buttons } from './style/buttons'
 
 
 // Content import
 import { languages } from './content/lang'
 // Interactions
 import { interactions } from './interactions'
+import { gradient } from './style/gradient'
 
 
 
@@ -24,16 +25,23 @@ function generation() {
     // Content generation
     languages()
 
+
+
+    gradient()
     // Style
     spacing()
     border()
     buttons()
     //
-    gradient()
-    window.setInterval(gradient, 1000)
+
     font()
     darkMode()
 
+
+    // Color refresh
+    window.setInterval(colorChanging, 1000)
+    window.setInterval(gradient, 1000)
+    window.setInterval(buttons, 1000)
 
 
 

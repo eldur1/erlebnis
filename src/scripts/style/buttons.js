@@ -1,13 +1,14 @@
 import { rN } from '../utils/fcts.js'
-import { aColors } from '../style/gradient.js'
-import { aSpacing } from '../style/spacing.js'
-import { aBorder } from '../style/border.js'
+import { colorChanging } from '../style/color'
+import { aSpacing } from '../style/spacing'
+import { aBorder } from '../style/border'
+
+
 
 function buttons() {
-
+    let colorHSL = colorChanging()
     let buttons = document.querySelectorAll('.button')
     let borderType = aBorder
-
     // buttons
     let rBorderRadius = rN(2,8) + "px"
     for (let i = 0; i < buttons.length; i++) {
@@ -19,9 +20,9 @@ function buttons() {
             element.style.borderRadius = borderType
             var padding = aSpacing[1] - 2 + "px " + aSpacing[2] + "px"
             element.style.backgroundColor = "transparent"
-            element.style.color = aColors[2]
+            element.style.color = "hsl(" + colorHSL.hue + ", " + colorHSL.saturation + "%, " + colorHSL.lightness + "%)"
         } else {
-            element.style.backgroundColor = aColors[2]
+            element.style.backgroundColor = "hsl(" + colorHSL.hue + ", " + colorHSL.saturation + "%, " + colorHSL.lightness + "%)"
             element.style.border = 1 + "px" + " solid black "
 
         }

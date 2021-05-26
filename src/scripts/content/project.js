@@ -1,8 +1,6 @@
 // Project link
     import { aSpacing } from '../style/spacing.js'
     import { aBorder } from '../style/border.js' 
-    import { rN } from '../utils/fcts.js'
-    import { rSaturation, rLightness, aHue } from '../style/gradient.js'
     import { paths } from './lang'
     
     function project() {
