@@ -23,7 +23,6 @@ function buttons() {
             element.style.color = "hsl(" + colorHSL.hue + ", " + colorHSL.saturation + "%, " + colorHSL.lightness + "%)"
         } else {
             element.style.backgroundColor = "hsl(" + colorHSL.hue + ", " + colorHSL.saturation + "%, " + colorHSL.lightness + "%)"
-            element.style.border = 1 + "px" + " solid black "
 
         }
         //console.log(padding)

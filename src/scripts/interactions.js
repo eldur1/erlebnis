@@ -17,13 +17,16 @@ export function classSwitch() {
     let section_projet = document.querySelector('.section__projects')
     section_projet.classList.toggle('theme--light')
 
-    let footer__el = document.querySelector('a')
-    footer__el.classList.toggle('theme--light')
+    let aDOM = document.querySelectorAll('a')
+    for (let i = 0; i < aDOM.length; i++) {
+        const element = aDOM[i];
+        element.classList.toggle('theme--light')
+        
+    }
 
     let nav = document.querySelector('nav')
     nav.classList.toggle('theme--light')
 }
-
 
 function interactions() {
     // theme switch

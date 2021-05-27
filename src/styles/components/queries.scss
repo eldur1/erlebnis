@@ -17,6 +17,9 @@
     nav.theme--light {
         color:$c-black;
     }
+    a.theme--light {
+        color:$c-black;
+    }
 
 @media (prefers-color-scheme: light) {
     body {

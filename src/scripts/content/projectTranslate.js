@@ -1,6 +1,5 @@
 // Project link
     import { paths } from './lang'
-    import { isReload } from '../interactions'
     export function projectTranslate() {
         fetch(paths[0])
         .then((response) => {

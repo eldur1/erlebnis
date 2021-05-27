@@ -32,7 +32,6 @@ if(localStorage.getItem('theme') == undefined) {
 theme_btn.textContent = contentTheme    
 
 
-
 export function themeSwitch() {
 
   if(localStorage.getItem('theme') == "light" ) {
