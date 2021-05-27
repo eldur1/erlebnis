@@ -1,38 +1,43 @@
 
-// Tablet
-
-/* @media (min-width:$tablet) {
-    .section {
-        &__hero {
-            transform: translateY(320px);
-        }
+    body.theme--light {
+        background-color: $c-white;
+    }
+    .about-me.theme--light {
+        color: $c-black;
+    }
+    .section__projects.theme--light{
+        color:$c-black;
+    }
+    footer.theme--light {
+        color:$c-black;
+    }
+    .footer__el--link.theme--light {
+        color:$c-white;
+    }
+    nav.theme--light {
+        color:$c-black;
     }
 
-} */
-
-
-
-  
-  @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
     body {
         background-color: $c-white;
-      }
-      .about-me {
+    }
+    .about-me {
         color: $c-black;
-      }
-      .section__projects{
+    }
+    .section__projects{
         color:$c-black;
-      }
-      footer {
-          & a {
+    }
+    footer {
+        & a {
             color:$c-black;
-          }
+        }
         color:$c-black;
     }
     nav {
         color:white;
     }
-  }
+}
 
 
 // Desktop

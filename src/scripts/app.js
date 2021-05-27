@@ -6,12 +6,11 @@ import { spacing } from './style/spacing'
 import { border } from './style/border'
 import { colorChanging } from './style/color'
 import { font } from './style/font' 
-import { darkMode, theme } from './style/theme'
 import { buttons } from './style/buttons'
-
+import { themeSet } from './style/theme'
 
 // Content import
-import { languages } from './content/lang'
+import { languages, setLanguage } from './content/lang'
 // Interactions
 import { interactions } from './interactions'
 import { gradient } from './style/gradient'
@@ -23,9 +22,9 @@ import { gradient } from './style/gradient'
 // Generation of the site
 function generation() {
     // Content generation
+
+
     languages()
-
-
 
     gradient()
     // Style
@@ -35,7 +34,6 @@ function generation() {
     //
 
     font()
-    darkMode()
 
 
     // Color refresh

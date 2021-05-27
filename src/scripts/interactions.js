@@ -1,53 +1,48 @@
 import { gsap, Power3} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { langNavigator, languages } from 'content/lang.js'
-
+import { themeSwitch } from 'style/theme'
 
 export var isReload = {
     state: false
 }
 gsap.registerPlugin(ScrollTrigger);
+
+export function classSwitch() {
+    document.body.classList.toggle('theme--light')
+
+    let footer = document.querySelector('footer')
+    footer.classList.toggle('theme--light')
+
+    let section_projet = document.querySelector('.section__projects')
+    section_projet.classList.toggle('theme--light')
+
+    let footer__el = document.querySelector('a')
+    footer__el.classList.toggle('theme--light')
+
+    let nav = document.querySelector('nav')
+    nav.classList.toggle('theme--light')
+}
+
+
 function interactions() {
 
 
+    // theme switch
+    let theme_btn = document.querySelector('.js-dark-mode')
+    theme_btn.addEventListener('click', () => {
 
-/*     let reload_btn = document.querySelector('.js-reload')
-    reload_btn.addEventListener('click',() => {
-        document.location.reload(true)
-    }); */
+        //localStorage.setItem('theme', 'light') ? localStorage.getItem('theme') == "dark" : localStorage.setItem('theme', 'light')
+        themeSwitch()
+        classSwitch()
+    })
 
-
-
-
-
-    // Set language 
     let lang_btn = document.querySelector('.js-lang')
-    if(localStorage.getItem('language') == undefined) {
-        if(langNavigator.langCode == "fr" ) {
-            lang_btn.textContent = "EN"
-        } else 
-        if(langNavigator.langCode == "en") {
-            lang_btn.textContent = "FR"
-        }
-    } else {
-        var localStorageLanguage = localStorage.getItem('language');
-        if(localStorageLanguage == "fr") {
-            console.log("Francais comme langue détecté")
-            lang_btn.textContent = "EN"
-            langNavigator.langCode = "fr"
-        } else if(localStorageLanguage == "fr"){
-            console.log("Anglais comme langue détecté")
-            lang_btn.textContent = "FR"
-            langNavigator.langCode = "en"
-        }
-    }
-
 
     lang_btn.addEventListener('click', () => {
         // If it's in english > change to english
         if(langNavigator.langCode == "fr") {
             lang_btn.textContent = "FR"
-
             langNavigator.langCode = "en"
             localStorage.setItem('language', 'en')
 
@@ -55,7 +50,6 @@ function interactions() {
         // If it's in english > change to french
         if(langNavigator.langCode == "en") {
             lang_btn.textContent = "EN"
-
             langNavigator.langCode = "fr"
             localStorage.setItem('language', 'fr')
         }
@@ -99,8 +93,6 @@ function interactions() {
         });
 
     }
-    
-   scrollDelay()
 
 }
 

@@ -3,22 +3,35 @@ import { content } from './content'
 import { project } from './project'
 import { isReload } from '../interactions'
 import { projectTranslate } from './projectTranslate'  
-
+import { themeSet } from '../style/theme'
 export var paths = [
     'assets/data/en/projects.json',
     'assets/data/en/generative-content.json',
     'assets/data/en/weather.json' 
 ]
+
+console.log("coucou");
 if(localStorage.getItem('language') == undefined) { 
     var langCode = navigator.language
 } else {
     var langCode = localStorage.getItem('language')
 }
-
 export var langNavigator =  {
     langCode: langCode.substring(0,2)
 }
-
+export function setLanguage() {
+    // Set language 
+    let lang_btn = document.querySelector('.js-lang')
+    var lG = localStorage.getItem('language');
+    if(lG == "fr") {
+        lang_btn.textContent = "EN"
+        langNavigator.langCode = "fr"
+    } else if(lG == "fr"){
+        console.log("Anglais comme langue détecté")
+        lang_btn.textContent = "FR"
+        langNavigator.langCode = "en"
+    }
+}
 
 function languages() {
         // Change paths
@@ -49,9 +62,8 @@ function languages() {
                 } else
                 project()
                 content()
+                themeSet()
             })
-
-
 }
 
 export { languages }
