@@ -9,27 +9,34 @@ export var paths = [
     'assets/data/en/generative-content.json',
     'assets/data/en/weather.json' 
 ]
+var lang_btn = document.querySelector('.js-lang')
 
-console.log("coucou");
 if(localStorage.getItem('language') == undefined) { 
     var langCode = navigator.language
+    let tmpLG = langCode.substring(0,2)
+    localStorage.setItem('language', tmpLG)
 } else {
     var langCode = localStorage.getItem('language')
+    if(langCode == "fr") {
+        lang_btn.textContent = "EN"
+    } else {
+        lang_btn.textContent = "FR"
+    }
 }
+
+
 export var langNavigator =  {
     langCode: langCode.substring(0,2)
 }
 export function setLanguage() {
     // Set language 
-    let lang_btn = document.querySelector('.js-lang')
     var lG = localStorage.getItem('language');
+    console.log(lG);
     if(lG == "fr") {
         lang_btn.textContent = "EN"
-        langNavigator.langCode = "fr"
     } else if(lG == "fr"){
         console.log("Anglais comme langue détecté")
         lang_btn.textContent = "FR"
-        langNavigator.langCode = "en"
     }
 }
 
@@ -62,7 +69,7 @@ function languages() {
                 } else
                 project()
                 content()
-                themeSet()
+                setLanguage()
             })
 }
 

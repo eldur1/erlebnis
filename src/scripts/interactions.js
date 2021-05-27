@@ -26,19 +26,19 @@ export function classSwitch() {
 
 
 function interactions() {
-
-
     // theme switch
     let theme_btn = document.querySelector('.js-dark-mode')
     theme_btn.addEventListener('click', () => {
-
-        //localStorage.setItem('theme', 'light') ? localStorage.getItem('theme') == "dark" : localStorage.setItem('theme', 'light')
         themeSwitch()
         classSwitch()
     })
 
-    let lang_btn = document.querySelector('.js-lang')
 
+
+
+
+    // Lang switch
+    let lang_btn = document.querySelector('.js-lang')
     lang_btn.addEventListener('click', () => {
         // If it's in english > change to english
         if(langNavigator.langCode == "fr") {
