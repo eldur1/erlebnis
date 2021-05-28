@@ -1,4 +1,6 @@
 import { rN, trueOrFalse } from '../utils/fcts'
+import { getRealTime} from '../utils/fcts'
+
 function font() {
 
     let aRatioFont = [
@@ -24,21 +26,16 @@ function font() {
     ]
 
     var aFontFamily = [
-        ['Raleway'],
         ['Inconsolata'],
         ['DM Serif Display'],
         ['Roboto Mono'],
-        ['Abel'],
         ['Inter'],
         ['Cabin'],
         ['Questrial'],
-        ['Catamaran'],
-        ['Cuprum'],
         ['Montserrat'],
-        ['Poppins'],
-        ['KoHo']
     ]
-
+    let time = getRealTime()
+    time.days
     // Font size variables
     const iterator = aTextLevel.keys()
     var baseSizeFont = rN(19,22)
@@ -65,7 +62,7 @@ function font() {
 
 
     // Font family
-    let rFontFamily = rN(0,aFontFamily.length-1)
+    let rFontFamily = time.days-1
     //let rFontFamily = 2
 
     var fontName = aFontFamily[rFontFamily]
