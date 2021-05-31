@@ -1,5 +1,5 @@
 // This files will decide to show the website in french or english
-import { content } from './content'
+import { hello } from './hello'
 import { project } from './project'
 import { isReload } from '../interactions'
 import { projectTranslate } from './projectTranslate'  
@@ -31,7 +31,6 @@ export var langNavigator =  {
 export function setLanguage() {
     // Set language 
     var lG = localStorage.getItem('language');
-    console.log(lG);
     if(lG == "fr") {
         lang_btn.textContent = "EN"
     } else if(lG == "fr"){
@@ -68,7 +67,7 @@ function languages() {
 
                 } else
                 project()
-                content()
+                hello()
                 setLanguage()
             })
 }

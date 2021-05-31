@@ -29,7 +29,7 @@ function generation() {
     gradient()
     // Style
     spacing()
-    border()
+    //border()
     buttons()
     //
 

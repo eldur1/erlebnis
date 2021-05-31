@@ -1,25 +1,9 @@
 
     body.theme--light {
         background-color: $c-white-bg;
-    }
-    .about-me.theme--light {
-        color: $c-black;
-    }
-    .section__projects.theme--light{
         color:$c-black;
     }
-    footer.theme--light {
-        color:$c-black;
-    }
-    .footer__el--link.theme--light {
-        color:$c-white;
-    }
-    nav.theme--light {
-        color:$c-black;
-    }
-    a.theme--light {
-        color:$c-black;
-    }
+
 
 @media (prefers-color-scheme: light) {
     body {

@@ -6,7 +6,7 @@ export var aSpacing = []
 
 export function spacing() {
 
-    var spacingValue = rN(5,8)
+    var spacingValue = 4
     var last = spacingValue
     aSpacing.push(spacingValue)
     for (let i = 0; i < 5; i++) {
@@ -40,4 +40,5 @@ export function spacing() {
             }
         }
     }
+    console.log(aSpacing);
 }

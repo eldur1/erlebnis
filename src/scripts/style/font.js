@@ -95,19 +95,15 @@ function font() {
 
     // Font family
     let fontFamily = time.days-1
-    let currentFont = aFontFamily[fontFamily]
+    var currentFont = aFontFamily[fontFamily]
     document.body.style.fontFamily = currentFont
 
     // Font values
-    var oFont = aFontValues.aFontFamily[currentFont]
-
-
-    //let rFontWeight = rN(1,2)
-
+    var oFont = aFontValues.[currentFont]
     var WebFont = require('webfontloader')
     WebFont.load({
         google: {
-            families: [currentFont]
+            families: [currentFont[0]]
         }
     })
 
@@ -117,7 +113,6 @@ function font() {
         var element  = aTextLevel[key]
         var elementNodelist = element[0]
 
-        // Font size and line height
         // base font
         if(key == 3) {
             for (let i = 0; i < element[0].length; i++) {
@@ -128,10 +123,10 @@ function font() {
         // Titles
         // Will be executed 4 times (h1,h2,h3)
         else {
-            var val = baseSizeFont
-
+            var val = oFont.base
+            console.log(oFont.ratio);
             for(let i = 0; i < key+1 ; i++) {
-                var val = val * currentFont.ratio
+                var val = val * oFont.ratio
             }
                 aComputedRatio.push(val)
             
@@ -142,6 +137,7 @@ function font() {
                 elementNodelist[i].style.lineHeight = oFont.lineHeight.title + "%"
                 
             }
+
         }
     } 
 

@@ -1,6 +1,6 @@
 
 var theme_btn = document.querySelector('.js-dark-mode')
-import { content } from '../content/content'
+import { hello } from '../content/hello'
 import { langNavigator } from '../content/lang'
 import { classSwitch } from '../interactions'
 
