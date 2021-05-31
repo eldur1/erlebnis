@@ -37,9 +37,9 @@ function generation() {
 
 
     // Color refresh
-    window.setInterval(colorChanging, 1000)
+/*     window.setInterval(colorChanging, 1000)
     window.setInterval(gradient, 1000)
-    window.setInterval(buttons, 1000)
+    window.setInterval(buttons, 1000) */
 
 
 
