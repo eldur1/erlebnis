@@ -12,10 +12,10 @@ export function border() {
     let rBorder = rN(0, aBorderValues.length-1)
     let aBorder = aBorderValues[rBorder]
     
-    // Apply border to images & gradient bg
+/*     // Apply border to images & gradient bg
     let avatar = document.querySelector('.avatar')
     avatar.style.borderRadius = aBorder
-
+ */
     let hero_content = document.querySelector('.section__hero')
 
 

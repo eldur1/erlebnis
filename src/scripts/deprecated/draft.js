@@ -643,3 +643,46 @@ let choosenPallet = aPallet[0, aPallet.length-1] */
     */
 
 
+        //var baseSizeFont = rN(19,22)
+    //let ratioValues = aRatioFont[rN(0,aRatioFont.length-1)]
+    //let ratioFont = ratioValues[1]
+    //let ratioFontName = ratioValues[0]
+    //let aComputedRatio = []
+    //var rLineHeight = rN(130,150)
+    //var computedFontSize = baseSizeFont
+
+
+    // Text layout
+/*     let pBump = trueOrFalse()
+    let marginBottomElement = rN(0,50) + "px"
+    let pMaxWidth = rN(30,70) + "ch"
+ */
+
+    // DEBUG
+
+    //console.log(ratioFontName + " : " + ratioFont)
+    //console.log("Base font size : " + baseSizeFont)
+
+    // Loop every type of text (p, h1, h2, h3)
+
+
+    // Font family
+    //let rFontFamily = 2
+
+    /*     let bg = document.querySelector('.background');
+    let spanColorPrimary = document.querySelectorAll('.color--primary')
+    let spanColorAction = document.querySelectorAll('.color--action')
+
+    for (let i = 0; i < spanColorPrimary.length; i++) {
+    let element = spanColorPrimary[i]
+    //console.log(element);
+    element.style.color = aColors[0]
+    }
+    for (let i = 0; i < spanColorAction.length; i++) {
+        let element = spanColorAction[i]
+        //console.log(element);
+        element.style.color = aColors[2]
+        }
+     */
+
+

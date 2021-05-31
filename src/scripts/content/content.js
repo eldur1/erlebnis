@@ -49,12 +49,12 @@ function content() {
 
 
     // Dynamic picture
-
+/* 
     let profilePicture = document.querySelector('.avatar')
 
 
     profilePicture.src = 'assets/images/avatar_' + rPicture + ".jpeg"
-
+ */
 }
 
 export { content } 
