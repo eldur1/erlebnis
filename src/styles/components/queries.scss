@@ -3,6 +3,28 @@
         background-color: $c-white-bg;
         color:$c-black;
     }
+    .theme--light {
+        .social-ul__el {
+            &--instagram a {
+                background-image: url("../assets/icons/instagram.svg");
+            }
+            &--github a {
+                background-image: url("../assets/icons/github.svg");
+            }
+            &--linkedin a {
+                background-image: url("../assets/icons/linkedin.svg");
+            }
+        }
+        .icon {
+            &--reload {
+                background-image: url("../assets/icons/reload.svg");
+            }
+            &--theme {
+                background-image: url("../assets/icons/theme.svg");
+            }
+        }
+
+    }
 
 
 @media (prefers-color-scheme: light) {

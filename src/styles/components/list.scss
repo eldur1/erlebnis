@@ -4,38 +4,51 @@ ul {
     margin-block-end: 0;
     padding-inline-start: 0;
 }
-.icon-ul {
+@mixin icon__ {
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+    color:white;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    white-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s cubic-bezier(0.86, 0, 0.07, 1);
+    vertical-align: middle;
+    fill:$c-white;
+}
+.icon {
+    @include icon__;
+    &--reload {
+        background-image: url("../assets/icons/dark-theme/reload.svg");
+    }
+    &--theme {
+        background-image: url("../assets/icons/dark-theme/theme.svg");
+    }
+}
+.social-ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: block;
+    display: inline-flex;
     &__el {
-        display: inline-block;
-        margin-left: 8px;
-        margin-right: 8px;
         &--github a{
-            background-image: url("../assets/icons/github.svg");
+            background-image: url("../assets/icons/dark-theme/github.svg");
         }
         &--linkedin a{
-            background-image: url("../assets/icons/linkedin.svg");
+            background-image: url("../assets/icons/dark-theme/linkedin.svg");
         }
         &--instagram a{
-            background-image: url("../assets/icons/instagram.svg");
+            background-image: url("../assets/icons/dark-theme/instagram.svg");
 
         }
         & a {
-            width: 25px;
-            height: 25px;
-            display: inline-block;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            white-space: nowrap;
-            text-indent: 100%;
-            overflow: hidden;
-            border-bottom: 2px solid transparent;
-            transition: 0.2s cubic-bezier(0.86, 0, 0.07, 1);
-            vertical-align: middle;
+            @include icon__;
         }
     }
 }
