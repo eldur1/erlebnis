@@ -63,7 +63,7 @@ function languages() {
                 if(isReload.state === true) { 
                     // Only translate
                     projectTranslate()
-                    content()
+                    hello()
 
                 } else
                 project()

@@ -1,7 +1,7 @@
 // Project link
     import { aSpacing } from '../style/spacing.js'
     import { aBorder } from '../style/border.js' 
-    import { paths } from './lang'
+    import { langNavigator, paths } from './lang'
     import { aFontFamily, aFontValues } from '../style/font' 
     import { getRealTime} from '../utils/fcts'
     import { colorChanging } from '../style/color'
@@ -53,9 +53,15 @@
                     summary.classList.add('summary', 'base-font')
 
                     // Button 
+                    console.log(langNavigator.langCode);
+                    
                     let buttonCreateElement = document.createElement('a')
                     let button = div.appendChild(buttonCreateElement)
-                    element.name == "Rethinking UX" ? button.textContent = "Lire l'étude de cas" : button.textContent = "Consulter le site"
+                    if(langNavigator.langCode == "en") {
+                        element.name == "Rethinking UX" ? button.textContent = "Read the case study" : button.textContent = "Go to..."
+                    } else if(langNavigator.langCode == "fr" ){
+                        element.name == "Rethinking UX" ? button.textContent = "Lire l'étude de cas" : button.textContent = "Consulter le site"
+                    }
                     button.target = "_blank"
                     button.rel = "noreferrer"
                     button.style.padding = aSpacing[1] + "px"
@@ -64,7 +70,7 @@
                     if(element.name == "Ordinem") {
                         let buttonCreateElement_case = document.createElement('a')
                         let button_case = div.appendChild(buttonCreateElement_case)
-                        button_case.textContent = "Lire l'étude de cas"
+                       langNavigator.langCode == "en" ? button_case.textContent = "Read the case study" : button_case.textContent = "Lire l'étude de cas"
                         button_case.href = element.case
                         button_case.style.padding = aSpacing[1] + "px"
                     }
