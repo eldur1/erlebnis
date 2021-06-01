@@ -23,6 +23,7 @@ import { gradient } from './style/gradient'
 function generation() {
     // Content generation
 
+    font()
 
     languages()
 
@@ -33,7 +34,6 @@ function generation() {
     buttons()
     //
 
-    font()
 
 
     // Color refresh

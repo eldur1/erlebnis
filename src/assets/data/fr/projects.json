@@ -3,6 +3,7 @@
         "name" : "Ordinem",
         "activity" : "design, development, UI, UX",
         "link" : "http://eliedur.be/projets/tfa/",
+        "case" : "http://eliedur.be/projets/tfa/markdown.html",
         "color" : "#49F4C2",
         "category" : "current",
         "summary" : "Ordinem est une web-app pour les collocations. De l'interface à l'expérience utilisateur en passant par le design et l'animation, j'ai tout fait. C'est parce que j'avais des soucis d'organisations avec mes colloc pour les tâches ménagères quotidiennes que j'ai fait cette application !",
@@ -19,16 +20,6 @@
         "src" : "../assets/images/thumbnails/sea-of-rust.png"
 
     },
-    "Space tour" : {
-        "name" : "Space tour",
-        "activity" : "development",
-        "link" : "http://eliedur.be/projets/space-tour/",
-        "color" : "#13162F",
-        "category" : "current",
-        "summary" : "Decouvrez la gravité tout en s'amusant ! Space tour est un jeu pour apprendre les planètes de notre système ainsi que le principe de gravité. Vous en serez d'avantage sur cet univers sans limite.",
-        "src" : "../assets/images/thumbnails/space-tour.png"
-
-    },
     "Rethinking UX" : {
         "name" : "Rethinking UX",
         "activity" : "UX, UI, Writing",
@@ -37,16 +28,6 @@
         "category" : "old",
         "summary" : "Pendant ma deuxième année, RUX (Rethinking User Experience) est un atelier pour en savoir plus sur les méthodes d'UX. Cette année-là, nous avons eu la chance de repenser l'expérience utilisateur du fameux KIKK Festival.",
         "src" : "../assets/images/thumbnails/rux.png"
-
-    },
-    "Gao Xingjian" : {
-        "name" : "Gao Xingjian",
-        "activity" : "design, development pseudo website",
-        "link" : "http://eliedur.be/projets/gao-xingjian/",
-        "color" : "#101010",
-        "category" : "old",
-        "summary" : "Il s'agit d'un faux site pour Gao Xingjian, un peintre à encre chinois qui fait des peintures abstraites. En plus de ce site, j'ai crée le branding et le packaging d'une fausse exposition.",
-        "src" : "../assets/images/thumbnails/test.jpeg"
 
     }
 }

@@ -1,105 +1,111 @@
-import { rN, trueOrFalse } from '../utils/fcts'
 import { getRealTime} from '../utils/fcts'
 
-function font() {
+export var aFontFamily = [
+    ['Roboto Condensed'],
+    ['Playfair Display'],
+    ['Poppins'],
+    ['IBM Plex Sans'],
+    ['Raleway'],
+    ['DM Serif Display'],
+    ['Inconsolata'],
+]
 
-    const title_h1 = document.querySelectorAll('.title--large')
-    const title_h2 = document.querySelectorAll('.title--big')
-    const title_h3 = document.querySelectorAll('.title--medium')
-    const paragraph = document.querySelectorAll('.base-font')   
+
+export var aFontValues = {
+    "Roboto Condensed": {
+        ratio: "1.414",
+        base: "16",
+        lineHeight: {
+            tagline: "130%",
+            p:"145%",
+            title:"100%"
+        }
+    },
+    "Playfair Display": {
+        ratio: "1.272",
+        base: "20",
+        lineHeight: {
+            tagline: "145%",
+            p:"150%",
+            title:"100%"
+        }
+    },
+    "Poppins": {
+        ratio: "1.333",
+        base: "17",
+        lineHeight: {
+            tagline: "145%",
+            p:"140%",
+            title:"100%"
+        }
+    },
+    "IBM Plex Sans": {
+        ratio: "1.272",
+        base: "17",
+        lineHeight: {
+            tagline: "145%",
+            p:"140%",
+            title:"100%"
+        }
+    },
+    "Raleway": {
+        ratio: "1.236",
+        base: "20",
+        lineHeight: {
+            tagline: "145%",
+            p:"140%",
+            title:"100%"
+        }
+    },
+    "DM Serif Display": {
+        ratio: "1.2",
+        base: "23",
+        lineHeight: {
+            tagline: "130%",
+            p:"145%",
+            title:"100%"
+        }
+    },
+    "Inconsolata": {
+        ratio: "1.414",
+        base: "14",
+        lineHeight: {
+            tagline: "145%",
+            p:"135%",
+            title:"100%"
+        }
+    }
+}
+function font() {
+    const title_large = document.querySelectorAll('.title--large')
+    const title_big = document.querySelectorAll('.title--big')
+    const title_medium = document.querySelectorAll('.title--medium')
+    const title_small = document.querySelectorAll('.title--small')
+    const paragraph = document.querySelectorAll('.base-font')
+
 
     var aTextLevel = [
-        [title_h3],
-        [title_h2],
-        [title_h1],
+        [title_small],
+        [title_medium],
+        [title_big],
+        [title_large],
         [paragraph]
     ]
 
-    var aFontFamily = [
-        ['Roboto Condensed'],
-        ['Playfair Display'],
-        ['Poppins'],
-        ['IBM Plex Sans'],
-        ['Raleway'],
-        ['DM Serif sans'],
-        ['Inconsolata'],
-    ]
-    var aFontValues = {
-        "Roboto Condensed": {
-            ratio: "1.5",
-            base: "17",
-            lineHeight: {
-                tagline: "130%",
-                p:"145%",
-                title:"100%"
-            }
-        },
-        "Playfair Display": {
-            ratio: "1.272",
-            base: "17",
-            lineHeight: {
-                tagline: "145%",
-                p:"150%",
-                title:"100%"
-            }
-        },
-        "Poppins": {
-            ratio: "1.333",
-            base: "17",
-            lineHeight: {
-                tagline: "145%",
-                p:"140%",
-                title:"100%"
-            }
-        },
-        "IBM Plex Sans": {
-            ratio: "1.5625",
-            base: "17",
-            lineHeight: {
-                tagline: "145%",
-                p:"149%",
-                title:"100%"
-            }
-        },
-        "Raleway": {
-            ratio: "1.236",
-            base: "16",
-            lineHeight: {
-                tagline: "145%",
-                p:"140%",
-                title:"100%"
-            }
-        },
-        "DM Serif Display": {
-            ratio: "1.5",
-            base: "17",
-            lineHeight: {
-                tagline: "130%",
-                p:"145%",
-                title:"100%"
-            }
-        },
-        "Roboto Condensed": {
-            ratio: "1.5",
-            base: "17",
-            lineHeight: {
-                tagline: "130%",
-                p:"145%",
-                title:"100%"
-            }
-        },
-    }
+
     // Font size variables
     const iterator = aTextLevel.keys()
     let time = getRealTime()
 
     // Font family
-    let fontFamily = time.days-1
-    var currentFont = aFontFamily[fontFamily]
+    //time.days-1
+    var currentFont = aFontFamily[5]
     document.body.style.fontFamily = currentFont
 
     // Font values
-    var oFont = aFontValues.[currentFont]
+    var oFont = {
+        fonts: aFontValues.[currentFont]
+    }
     var WebFont = require('webfontloader')
     WebFont.load({
         google: {
@@ -114,33 +120,34 @@ function font() {
         var elementNodelist = element[0]
 
         // base font
-        if(key == 3) {
+        if(key == 4) {
             for (let i = 0; i < element[0].length; i++) {
-                elementNodelist[i].style.fontSize = oFont.base + "px"
-                elementNodelist[i].style.lineHeight = oFont.lineHeight.p
+                elementNodelist[i].style.fontSize = oFont.fonts.base + "px"
+                elementNodelist[i].style.lineHeight = oFont.fonts.lineHeight.p
             }
         }
         // Titles
         // Will be executed 4 times (h1,h2,h3)
         else {
-            var val = oFont.base
-            console.log(oFont.ratio);
+            var val = oFont.fonts.base
             for(let i = 0; i < key+1 ; i++) {
-                var val = val * oFont.ratio
+                var val = val * oFont.fonts.ratio
             }
-                aComputedRatio.push(val)
+                aComputedRatio.push(Math.floor(val))
             
             // Size calculator for each title (depend on head level)
             for (let i = 0; i < element[0].length; i++) {
-                elementNodelist[i].style.fontSize = aComputedRatio[key] + "px"
-                elementNodelist[i].style.fontFamily = currentFont
-                elementNodelist[i].style.lineHeight = oFont.lineHeight.title + "%"
-                
+                let el = elementNodelist[i]
+                el.style.fontSize = aComputedRatio[key] + "px"
+                el.style.fontFamily = currentFont
+                if(el.classList.contains('tagline')) {
+                    el.style.lineHeight = oFont.fonts.lineHeight.tagline
+                } else {
+                    el.style.lineHeight = oFont.fonts.lineHeight.title
+                }
             }
-
         }
-    } 
-
+    }
 
 }
 export { font }

@@ -19,16 +19,6 @@
         "src" : "../assets/images/thumbnails/sea-of-rust.png"
 
     },
-    "Space tour" : {
-        "name" : "Space tour",
-        "activity" : "development",
-        "link" : "http://eliedur.be/projets/space-tour/",
-        "color" : "#13162F",
-        "category" : "current",
-        "summary" : "Discover gravity while having fun! Space tour is a game to learn about the planets and the gravity principles. You'll learn more about this limitless universe",
-        "src" : "../assets/images/thumbnails/space-tour.png"
-
-    },
     "Rethinking UX" : {
         "name" : "Rethinking UX",
         "activity" : "UX, UI, Writing",
@@ -37,16 +27,6 @@
         "category" : "old",
         "summary" : "During my second year, RUX (Rethinking User Experience) was a workshop to learn more about UX methods. This year, we had the chance to rethink the user experience of the famous KIKK Festival",
         "src" : "../assets/images/thumbnails/rux.png"
-
-    },
-    "Gao Xingjian" : {
-        "name" : "Gao Xingjian",
-        "activity" : "design, development pseudo website",
-        "link" : "http://eliedur.be/projets/gao-xingjian/",
-        "color" : "#101010",
-        "category" : "old",
-        "summary" : "It is a pseudo website for Gao Xingjian, chinese ink painter who make abstract painting. In addition to the site, I've create the branding and the packaging for a pseudo exhibition.",
-        "src" : "../assets/images/thumbnails/test.jpeg"
 
     }
 }

@@ -59,6 +59,9 @@
             transform:inherit;
         }
     }
+    .hero-content {
+        margin-top:50px;
+    }
     .content {
         max-width: 433px;
         display: inline-block;
@@ -70,6 +73,7 @@
     .nav {
         margin: initial;
         float:right;
+        width: 69%;
     }
 
     body {
@@ -79,28 +83,19 @@
     .delayed-section--img {
         float: right;
     }
-    .avatar {
-        display: inline-block;
-        margin:0 auto;
-        z-index: 4;
-        width: auto;
-        height: auto;
-        max-width: 380px;
-        transform:translateX(40px)
-    }
-    .cta {
-        margin-left:0px;
-        right: inherit;
-    }
+
     .js-case {
         transform: translateX(-160px);
     }
+    .hero-content {
+        margin-left:calc(18% + 100px)
+    }
     .background {
         &--hero {
-            width: 120%;
+            width: 30%;
             top: 0;
             height: 730px;
-            left: -510px;
+            left: 0px;
             max-width: 1650px;
             position: absolute;
         }
