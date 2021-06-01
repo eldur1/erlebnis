@@ -32,7 +32,6 @@ export function classSwitch() {
         
     }
 
-
     let nav = document.querySelector('nav')
     nav.classList.toggle('theme--light')
 }

@@ -3,6 +3,9 @@
         background-color: $c-white-bg;
         color:$c-black;
     }
+    nav.theme--light {
+        color:$c-black;
+    } 
     .theme--light {
         .social-ul__el {
             &--instagram a {
@@ -44,7 +47,7 @@
         color:$c-black;
     }
     nav {
-        color:white;
+        color: $c-white;
     }
 }
 
