@@ -37,35 +37,32 @@ export function classSwitch() {
 }
 
 function interactions() {
-    // Reload
 
-    
-    
+    // Reload
     let btn_reload = document.querySelector('.js-reload')
     let tagline = document.querySelector('.tagline')
     var taglineSeen = []
-    fetch(paths[1])
-    .then((response) => {
-        return response.json()
-    })
-    .then((data) => {
-                var rTagline = rN(0, Object.keys(data.fact).length-1)
-                btn_reload.addEventListener('click', () => {
-                    //console.log(Object.keys(taglineSeen).length >= 15);
-                        while (taglineSeen.includes(rTagline)) {
-                            if(Object.keys(taglineSeen).length > Object.keys(data.fact).length-1) {
-                                rTagline = rN(0, Object.keys(data.fact).length-1)
-                                break;
-                            }
-                            rTagline = rN(0, Object.keys(data.fact).length-1)
-                        }
-                    tagline.textContent = data.fact[rTagline]
-                    taglineSeen.push(rTagline)
-                    console.log(taglineSeen);
-    
-                })
+    btn_reload.addEventListener('click', () => {
+        fetch(paths[1])
+        .then((response) => {
+            return response.json()
+        })
+        .then((data) => {
+            var rTagline = rN(0, Object.keys(data.fact).length-1)
+            //console.log(Object.keys(taglineSeen).length >= 15);
+            while (taglineSeen.includes(rTagline)) {
+                if(Object.keys(taglineSeen).length > Object.keys(data.fact).length-1) {
+                    rTagline = rN(0, Object.keys(data.fact).length-1)
+                    break;
+                }
+                rTagline = rN(0, Object.keys(data.fact).length-1)
+            }
+            tagline.textContent = data.fact[rTagline]
+            taglineSeen.push(rTagline)
+            console.log(taglineSeen);
+            })
+        })
 
-    })
     // theme switch
     let theme_btn = document.querySelector('.js-dark-mode')
     theme_btn.addEventListener('click', () => {
