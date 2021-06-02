@@ -30,12 +30,18 @@ ul {
     &--theme {
         background-image: url("../assets/icons/dark-theme/theme.svg");
     }
+    &--line {
+        background-image: url("../assets/icons/dark-theme/line.svg");
+        width: 60px;
+        
+    }
 }
 .social-ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: inline-flex;
+    transform: translateX(-8px);
     &__el {
         &--github a{
             background-image: url("../assets/icons/dark-theme/github.svg");

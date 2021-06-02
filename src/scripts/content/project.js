@@ -34,7 +34,7 @@
                     let divCreateElement = document.createElement('div')
                     let div = container.appendChild(divCreateElement)
                     div.style.position = "relative"
-                    div.style.marginBottom = aSpacing[3] + "px"
+                    div.style.marginBottom = aSpacing[5] + "px"
                     div.style.marginTop = aSpacing[3] + "px"
 
 
@@ -62,6 +62,7 @@
                     summary.textContent = element.summary
                     summary.style.marginTop = aSpacing[3] + "px"
                     summary.style.marginBottom = aSpacing[3] + "px"
+                    summary.style.fontSize = oFont.base + "px"
 
                     summary.classList.add('summary', 'base-font')
 
@@ -76,15 +77,19 @@
                     }
                     button.target = "_blank"
                     button.rel = "noreferrer"
+                    button.href = element.link
+
                     button.style.marginRight = aSpacing[2] + "px"
                     button.style.padding = aSpacing[1] + "px"
                     button.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"
                     if(element.name == "Ordinem") {
                         let buttonCreateElement_case = document.createElement('a')
                         let button_case = div.appendChild(buttonCreateElement_case)
-                       langNavigator.langCode == "en" ? button_case.textContent = "Read the case study" : button_case.textContent = "Lire l'étude de cas"
-                        button_case.href = element.case
-                        button_case.style.padding = aSpacing[1] + "px"
+                        langNavigator.langCode == "en" ? button_case.textContent = "Read the case study" : button_case.textContent = "Lire l'étude de cas"
+                    button_case.target = "_blank"
+                    button_case.rel = "noreferrer"
+                    button_case.href = element.case
+
                     }
                     // Div
     

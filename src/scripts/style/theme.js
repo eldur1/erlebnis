@@ -2,10 +2,34 @@
 var theme_btn = document.querySelector('.js-dark-mode')
 import { hello } from '../content/hello'
 import { langNavigator } from '../content/lang'
-import { classSwitch } from '../interactions'
 
 
+export function classSwitch() {
+  document.body.classList.toggle('theme--light')
 
+  let footer = document.querySelector('footer')
+  footer.classList.toggle('theme--light')
+
+  let section_projet = document.querySelector('.section__projects')
+  section_projet.classList.toggle('theme--light')
+
+  let aDOM = document.querySelectorAll('a')
+  for (let i = 0; i < aDOM.length; i++) {
+      const element = aDOM[i];
+      element.classList.toggle('theme--light')
+      
+  }
+
+  let icon_DOM = document.querySelectorAll('.icon')
+  for (let i = 0; i < icon_DOM.length; i++) {
+      const element = icon_DOM[i];
+      element.classList.toggle('theme--light')
+      
+  }
+
+  let nav = document.querySelector('nav')
+  nav.classList.toggle('theme--light')
+}
 
 // Set theme at loading
 // If there's no preference of color scheme, check color scheme prefs

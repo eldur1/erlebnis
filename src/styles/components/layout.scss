@@ -8,14 +8,6 @@ body {
   margin:32px 32px 0 32px;
 }
 
-
-.line {
-  padding-bottom: 70px;
-  border-bottom: 2px solid white;
-  &--short {
-    padding-bottom: 26px;
-  }
-}
 .section { 
   &__hero {
     margin-top:48px;
@@ -24,6 +16,12 @@ body {
   &__about {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.work {
+  &__head {
+    display: flex;
     justify-content: space-between;
   }
 }

@@ -3,38 +3,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { langNavigator, languages, paths } from 'content/lang.js'
 import { themeSwitch } from 'style/theme'
 import { rN } from 'utils/fcts'
+import { classSwitch } from 'style/theme'
+
 var theme_btn = document.querySelector('.js-dark-mode')
 export var isReload = {
     state: false
 }
 gsap.registerPlugin(ScrollTrigger);
-
-export function classSwitch() {
-    document.body.classList.toggle('theme--light')
-
-    let footer = document.querySelector('footer')
-    footer.classList.toggle('theme--light')
-
-    let section_projet = document.querySelector('.section__projects')
-    section_projet.classList.toggle('theme--light')
-
-    let aDOM = document.querySelectorAll('a')
-    for (let i = 0; i < aDOM.length; i++) {
-        const element = aDOM[i];
-        element.classList.toggle('theme--light')
-        
-    }
-
-    let icon_DOM = document.querySelectorAll('.icon')
-    for (let i = 0; i < icon_DOM.length; i++) {
-        const element = icon_DOM[i];
-        element.classList.toggle('theme--light')
-        
-    }
-
-    let nav = document.querySelector('nav')
-    nav.classList.toggle('theme--light')
-}
 
 function interactions() {
 

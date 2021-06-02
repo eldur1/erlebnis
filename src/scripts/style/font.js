@@ -84,7 +84,6 @@ function font() {
     const title_small = document.querySelectorAll('.title--small')
     const paragraph = document.querySelectorAll('.base-font')
 
-
     var aTextLevel = [
         [title_small],
         [title_medium],
@@ -94,13 +93,16 @@ function font() {
     ]
 
 
+
+
+
     // Font size variables
     const iterator = aTextLevel.keys()
     let time = getRealTime()
 
     // Font family
     //time.days-1
-    var currentFont = aFontFamily[5]
+    var currentFont = aFontFamily[time.days-1]
     document.body.style.fontFamily = currentFont
 
     // Font values
@@ -113,6 +115,14 @@ function font() {
             families: [currentFont[0]]
         }
     })
+
+    // Small 
+
+    let small = document.querySelector('small')
+    small.style.fontSize = oFont.fonts.base/oFont.fonts.ratio + "px"
+    console.log(oFont.fonts.base / oFont.fonts.ratio);
+
+    // Paragraph + titles
 
     for (const key of iterator) {
         var aText = []
