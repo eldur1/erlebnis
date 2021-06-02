@@ -27,7 +27,7 @@ An attempt to create a dynamic website.
 - ✅ Delta of two values 
 
 ### Color generation : 
-- ✅ Five types of pallet (deprecated)
+- ✅ Color generation with real time parameter
 
 
 ### Font generation :
@@ -47,15 +47,12 @@ An attempt to create a dynamic website.
 
 ### Other
 - ✅ Modular JS files
-- ✅ Design system generation (font, spacing)
 - ✅ GSAP Transition
 - ✅ GSAP scroll delay
 - ✅ Content writing
 - ✅ Fixed refresh button 
 - ✅ Scroll position in refresh
 - ✅ Summary of project
-- ✅ Responsive (mobile, wide screen)
-- ✅ Optimization lighthouse
 - ✅ Image optimization
 - ✅ Language
 - ✅ Local storage language
@@ -63,13 +60,14 @@ An attempt to create a dynamic website.
 - ✅ Local storage theme
 - ✅ Fix EN in nav
 - ✅ Finish thumbnails of projects
+- Responsive (mobile, wide screen)
 - Re-write traductions
 - More languages ?
 - Improve tablet version
 - Desktop 
 - In real time color gradient moving
-
-
+- Fix local storage theme
+- Optimization lighthouse
 
 
 ## Deprecated  (not used)
