@@ -26,7 +26,13 @@ export function classSwitch() {
       element.classList.toggle('theme--light')
       
   }
-
+  let a = document.querySelectorAll('a')
+  for (let i = 0; i < a.length; i++) {
+    const element = a[i];
+    if(element.classList.contains('button--case-study')) {
+      element.classList.toggle('theme--light')
+    }
+  }
   let nav = document.querySelector('nav')
   nav.classList.toggle('theme--light')
 }

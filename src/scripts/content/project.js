@@ -20,7 +20,7 @@
 
             // Get current font
             let time = getRealTime()
-            let currentFont = aFontFamily[time.days-1]
+            let currentFont = aFontFamily[5]
             var oFont = aFontValues.[currentFont]
             var colorHSL = colorChanging()
     
@@ -42,21 +42,26 @@
                     let titleCreateElement = document.createElement('h3')
                     let title = div.appendChild(titleCreateElement)
                     title.classList.add('container-project__title')
-
+                    
                     title.textContent = element.name
-                    title.style.fontSize = aComputedRatio[3] + "px"
+                    title.style.fontSize = (aComputedRatio[3]* oFont.ratio) + "px"
                     
                     // Activity
                     let categoryCreateElement = document.createElement('p')
                     let category = div.appendChild(categoryCreateElement)
                     category.classList.add('container-project__category')
-
+                    
                     category.textContent = element.activity
                     category.style.marginBottom = aSpacing[3] + "px"
+                    
+                    // Background and thumbnail container
+                    let containerImgCreateElement = document.createElement('div')
+                    let containerImg = div.appendChild(containerImgCreateElement)
+                    containerImg.style.position = "relative"
 
                     // Thumbnail
                     let thumbnailCreateElement = document.createElement('img') 
-                    let thumbnail = div.appendChild(thumbnailCreateElement)
+                    let thumbnail = containerImg.appendChild(thumbnailCreateElement)
                     thumbnail.classList.add('container-project__thumb')
 
                     thumbnail.src = element.src
@@ -94,16 +99,17 @@
                     if(element.name == "Ordinem") {
                         let buttonCreateElement_case = document.createElement('a')
                         let button_case = div.appendChild(buttonCreateElement_case)
+                        button_case.classList.add('button--case-study')
                         langNavigator.langCode == "en" ? button_case.textContent = "Read the case study" : button_case.textContent = "Lire l'étude de cas"
                         button_case.target = "_blank"
                         button_case.rel = "noreferrer"
                         button_case.href = element.case
 
                     }
-                    // Div
+                    // background
     
                     let backgroundCreateElement = document.createElement('div')
-                    let background = div.appendChild(backgroundCreateElement)
+                    let background = containerImg.appendChild(backgroundCreateElement)
                     background.classList.add('background--project')
 
                     background.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"

@@ -11,7 +11,6 @@ export var aFontFamily = [
 ]
 export const aComputedRatio = []
 
-
 export var aFontValues = {
     "Roboto Condensed": {
         ratio: "1.414",
@@ -59,8 +58,8 @@ export var aFontValues = {
         }
     },
     "DM Serif Display": {
-        ratio: "1.2",
-        base: "23",
+        ratio: "1.272",
+        base: "20",
         lineHeight: {
             tagline: "130%",
             p:"145%",
@@ -68,7 +67,7 @@ export var aFontValues = {
         }
     },
     "Inconsolata": {
-        ratio: "1.414",
+        ratio: "1.333",
         base: "14",
         lineHeight: {
             tagline: "145%",
@@ -92,17 +91,13 @@ function font() {
         [paragraph]
     ]
 
-
-
-
-
     // Font size variables
     const iterator = aTextLevel.keys()
     let time = getRealTime()
 
     // Font family
     //time.days-1
-    var currentFont = aFontFamily[time.days-1]
+    var currentFont = aFontFamily[5]
     document.body.style.fontFamily = currentFont
 
     // Font values

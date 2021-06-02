@@ -6,6 +6,9 @@
     nav.theme--light {
         color:$c-black;
     } 
+    a.theme--light {
+        color:$c-black;
+    }
     .theme--light {
         .social-ul__el {
             &--instagram a {
@@ -167,14 +170,7 @@
 
 // very large screen
 @media (min-width:$large) {
-    .background {
-        &--hero {
-            width: 210%;
-            transform: translateX(-95%);
-            left: 50%;
-            max-width: initial;
-        }
-    }
+
 }
 
 // tight width 
