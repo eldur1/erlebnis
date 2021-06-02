@@ -258,3 +258,7 @@ $RECYCLE.BIN/
 ### Custom ###
 dist/
 
+src/assets/images/thumbnails/deprecated/why.png
+src/assets/images/thumbnails/deprecated/space-tour.png
+src/assets/images/thumbnails/deprecated/give.png
+src/assets/images/thumbnails/deprecated/c3.png
