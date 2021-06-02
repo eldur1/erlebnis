@@ -48,7 +48,6 @@ An attempt to create a dynamic website.
 ### Other
 - ✅ Modular JS files
 - ✅ Design system generation (font, spacing)
-- Animation on content generation
 - ✅ GSAP Transition
 - ✅ GSAP scroll delay
 - ✅ Content writing
@@ -60,6 +59,16 @@ An attempt to create a dynamic website.
 - ✅ Image optimization
 - ✅ Language
 - ✅ Local storage language
+- ✅ White/ dark mode
+- ✅ Local storage theme
+- ✅ Fix EN in nav
+- ✅ Finish thumbnails of projects
+- Re-write traductions
+- More languages ?
+- Improve tablet version
+- Desktop 
+- In real time color gradient moving
+
 
 
 
@@ -70,19 +79,10 @@ An attempt to create a dynamic website.
 - Background gradient with square
 - Cursor 
 - Layout
-- ✅ Gradient with profile picture
+- Gradient with profile picture
 
 
 
-
-## To do :
-- Finish thumbnails of projects
-- White/ dark mode
-- Re-write traductions
-- Fix EN in nav
-- More languages
-- Improve tablet version
-- Local storage theme
 
 ## Why go dynamic ? 
 

@@ -63,6 +63,8 @@
                     summary.style.marginTop = aSpacing[3] + "px"
                     summary.style.marginBottom = aSpacing[3] + "px"
                     summary.style.fontSize = oFont.base + "px"
+                    summary.style.lineHeight = oFont.lineHeight.p
+
 
                     summary.classList.add('summary', 'base-font')
 
