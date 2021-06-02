@@ -40,5 +40,4 @@ export function spacing() {
             }
         }
     }
-    console.log(aSpacing);
 }

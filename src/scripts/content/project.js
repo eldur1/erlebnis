@@ -5,6 +5,7 @@
     import { aFontFamily, aFontValues } from '../style/font' 
     import { getRealTime} from '../utils/fcts'
     import { colorChanging } from '../style/color'
+    import { aComputedRatio } from '../style/font'
     function project() {
         fetch(paths[0])
         .then((response) => {
@@ -25,18 +26,27 @@
     
             for (const key in data) {
                 if (Object.hasOwnProperty.call(data, key)) {
-                    let divCreateElement = document.createElement('div')
-                    let aCreateElement = document.createElement('h3')
                     let categoryCreateElement = document.createElement('p')
 
                     const element = data[key];
+
+
+                    let divCreateElement = document.createElement('div')
                     let div = container.appendChild(divCreateElement)
-                    let title = div.appendChild(aCreateElement)
-                    let category = div.appendChild(categoryCreateElement)
+                    div.style.position = "relative"
+                    div.style.marginBottom = aSpacing[3] + "px"
+                    div.style.marginTop = aSpacing[3] + "px"
+
 
                     
+                    let titleCreateElement = document.createElement('h3')
+                    let title = div.appendChild(titleCreateElement)
+                    let category = div.appendChild(categoryCreateElement)
+                    
                     title.textContent = element.name
+                    title.style.fontSize = aComputedRatio[3] + "px"
                     category.textContent = element.activity
+                    category.style.marginBottom = aSpacing[3] + "px"
 
         
                     // Thumbnail
@@ -44,16 +54,18 @@
                     let thumbnail = div.appendChild(thumbnailCreateElement)
                     thumbnail.src = element.src
                     thumbnail.style.width = "100%"
+                    thumbnail.style.marginBottom = aSpacing[2] + "px"
 
                     // Summary
                     let summaryCreateElement = document.createElement('p')
                     let summary = div.appendChild(summaryCreateElement)
                     summary.textContent = element.summary
-                    summary.style.marginTop = aSpacing[2] + "px"
+                    summary.style.marginTop = aSpacing[3] + "px"
+                    summary.style.marginBottom = aSpacing[3] + "px"
+
                     summary.classList.add('summary', 'base-font')
 
                     // Button 
-                    console.log(langNavigator.langCode);
                     
                     let buttonCreateElement = document.createElement('a')
                     let button = div.appendChild(buttonCreateElement)
@@ -64,9 +76,9 @@
                     }
                     button.target = "_blank"
                     button.rel = "noreferrer"
+                    button.style.marginRight = aSpacing[2] + "px"
                     button.style.padding = aSpacing[1] + "px"
                     button.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"
-                    console.log(element.name);
                     if(element.name == "Ordinem") {
                         let buttonCreateElement_case = document.createElement('a')
                         let button_case = div.appendChild(buttonCreateElement_case)
@@ -75,17 +87,15 @@
                         button_case.style.padding = aSpacing[1] + "px"
                     }
                     // Div
+    
+                    let backgroundCreateElement = document.createElement('div')
+                    let background = div.appendChild(backgroundCreateElement)
 
-
-
-                        let rSaturationButton = 50
-                        let rLightnessButton = 50
-                        let rHueButton = 50
-        
- /*                        div.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"
-                        var padding = aSpacing[1] + "px " + aSpacing[2] + "px "
-                        div.style.borderRadius = aBorder
-                        div.style.padding = "15px"  */
+                    background.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"
+                    var padding = aSpacing[1] + "px " + aSpacing[2] + "px "
+                    background.style.borderRadius = aBorder
+                    background.style.padding = aSpacing[2]
+                    background.classList.add('background--project')
 
 
 

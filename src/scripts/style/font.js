@@ -9,6 +9,7 @@ export var aFontFamily = [
     ['DM Serif Display'],
     ['Inconsolata'],
 ]
+export const aComputedRatio = []
 
 
 export var aFontValues = {
@@ -113,7 +114,6 @@ function font() {
         }
     })
 
-    var aComputedRatio = []
     for (const key of iterator) {
         var aText = []
         var element  = aTextLevel[key]
@@ -148,6 +148,7 @@ function font() {
             }
         }
     }
+    console.log(aComputedRatio);
 
 }
 export { font }
