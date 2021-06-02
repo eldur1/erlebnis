@@ -26,52 +26,60 @@
     
             for (const key in data) {
                 if (Object.hasOwnProperty.call(data, key)) {
-                    let categoryCreateElement = document.createElement('p')
-
+                    
                     const element = data[key];
-
-
+                    
+                    
                     let divCreateElement = document.createElement('div')
                     let div = container.appendChild(divCreateElement)
+                    div.classList.add('container-project')
+
                     div.style.position = "relative"
                     div.style.marginBottom = aSpacing[5] + "px"
                     div.style.marginTop = aSpacing[3] + "px"
-
-
                     
+                    // Title
                     let titleCreateElement = document.createElement('h3')
                     let title = div.appendChild(titleCreateElement)
-                    let category = div.appendChild(categoryCreateElement)
-                    
+                    title.classList.add('container-project__title')
+
                     title.textContent = element.name
                     title.style.fontSize = aComputedRatio[3] + "px"
+                    
+                    // Activity
+                    let categoryCreateElement = document.createElement('p')
+                    let category = div.appendChild(categoryCreateElement)
+                    category.classList.add('container-project__category')
+
                     category.textContent = element.activity
                     category.style.marginBottom = aSpacing[3] + "px"
 
-        
                     // Thumbnail
                     let thumbnailCreateElement = document.createElement('img') 
                     let thumbnail = div.appendChild(thumbnailCreateElement)
+                    thumbnail.classList.add('container-project__thumb')
+
                     thumbnail.src = element.src
-                    thumbnail.style.width = "100%"
                     thumbnail.style.marginBottom = aSpacing[2] + "px"
 
                     // Summary
                     let summaryCreateElement = document.createElement('p')
                     let summary = div.appendChild(summaryCreateElement)
+                    summary.classList.add('container-project__summary')
+
                     summary.textContent = element.summary
                     summary.style.marginTop = aSpacing[3] + "px"
                     summary.style.marginBottom = aSpacing[3] + "px"
                     summary.style.fontSize = oFont.base + "px"
                     summary.style.lineHeight = oFont.lineHeight.p
-
-
-                    summary.classList.add('summary', 'base-font')
-
+                    
+                    
                     // Button 
                     
                     let buttonCreateElement = document.createElement('a')
                     let button = div.appendChild(buttonCreateElement)
+                    button.classList.add('container-project__button')
+
                     if(langNavigator.langCode == "en") {
                         element.name == "Rethinking UX" ? button.textContent = "Read the case study" : button.textContent = "Go to..."
                     } else if(langNavigator.langCode == "fr" ){
@@ -80,7 +88,6 @@
                     button.target = "_blank"
                     button.rel = "noreferrer"
                     button.href = element.link
-
                     button.style.marginRight = aSpacing[2] + "px"
                     button.style.padding = aSpacing[1] + "px"
                     button.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"
@@ -88,21 +95,21 @@
                         let buttonCreateElement_case = document.createElement('a')
                         let button_case = div.appendChild(buttonCreateElement_case)
                         langNavigator.langCode == "en" ? button_case.textContent = "Read the case study" : button_case.textContent = "Lire l'étude de cas"
-                    button_case.target = "_blank"
-                    button_case.rel = "noreferrer"
-                    button_case.href = element.case
+                        button_case.target = "_blank"
+                        button_case.rel = "noreferrer"
+                        button_case.href = element.case
 
                     }
                     // Div
     
                     let backgroundCreateElement = document.createElement('div')
                     let background = div.appendChild(backgroundCreateElement)
+                    background.classList.add('background--project')
 
                     background.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"
                     var padding = aSpacing[1] + "px " + aSpacing[2] + "px "
                     background.style.borderRadius = aBorder
                     background.style.padding = aSpacing[2]
-                    background.classList.add('background--project')
 
 
 
