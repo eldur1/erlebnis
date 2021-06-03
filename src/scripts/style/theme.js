@@ -13,9 +13,10 @@ export function classSwitch() {
   let section_projet = document.querySelector('.section__projects')
   section_projet.classList.toggle('theme--light')
 
-  let aDOM = document.querySelectorAll('a')
+  let aDOM = document.querySelectorAll('.button--case-study')
   for (let i = 0; i < aDOM.length; i++) {
       const element = aDOM[i];
+      console.log(element);
       element.classList.toggle('theme--light')
       
   }
@@ -25,13 +26,6 @@ export function classSwitch() {
       const element = icon_DOM[i];
       element.classList.toggle('theme--light')
       
-  }
-  let a = document.querySelectorAll('a')
-  for (let i = 0; i < a.length; i++) {
-    const element = a[i];
-    if(element.classList.contains('button--case-study')) {
-      element.classList.toggle('theme--light')
-    }
   }
   let nav = document.querySelector('nav')
   nav.classList.toggle('theme--light')

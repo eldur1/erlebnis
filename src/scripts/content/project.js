@@ -54,19 +54,40 @@ import { distribute } from 'gsap/gsap-core'
                     
                     title.textContent = element.name
                     title.style.fontSize = (aComputedRatio[3]* oFont.ratio) + "px"
+
+
+                    let containerActivityCreateElement = document.createElement('div')
+                    let containerActivity = div.appendChild(containerActivityCreateElement)
+                    containerActivity.classList.add('container-project__category')
                     
+                
+                    // line 
+                    let lineCreateElement = document.createElement('span')
+                    let line = containerActivity.appendChild(lineCreateElement)
+                    line.classList.add('icon', 'icon--line')
+                    line.style.transform = "rotate(90deg)"
+                    line.style.marginLeft = "-22px" 
+                    line.style.display = "block"
+
+
+
                     // Activity
                     let categoryCreateElement = document.createElement('p')
-                    let category = div.appendChild(categoryCreateElement)
-                    category.classList.add('container-project__category')
-                    
+                    let category = containerActivity.appendChild(categoryCreateElement)
+            
                     category.textContent = element.activity
                     category.style.marginBottom = aSpacing[3] + "px"
+                    category.style.fontWeight = "lighter"
+
+
+
+
                     
                     // Background and thumbnail container
                     let containerImgCreateElement = document.createElement('div')
                     let containerImg = div.appendChild(containerImgCreateElement)
                     containerImg.style.position = "relative"
+                    containerImg.style.marginTop = "32px"
 
                     // Thumbnail
                     let thumbnailCreateElement = document.createElement('img') 

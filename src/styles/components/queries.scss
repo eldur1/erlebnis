@@ -9,7 +9,6 @@
     .theme--light {
         .button--case-study {
             color:$c-black;
-
         }
         .social-ul__el {
             &--instagram a {
@@ -56,6 +55,9 @@
     nav {
         color: $c-white;
     }
+    .button--case-study {
+        color:$c-black;
+    }
 }
 
 
@@ -65,7 +67,7 @@
         &__thumb {
             width: 93%;
             margin-bottom: 16px;
-            margin-left:32px;
+            margin-left:52px;
             display: inline-block;
 
         }
@@ -80,6 +82,11 @@
             margin-left: 53px;
         }
         &__category {
+            position: absolute;
+            margin-top: 39px;
+            
+        }
+        &__category p {
             margin-bottom: -206px;
             writing-mode: vertical-lr;
             transform: translateY(23px);
@@ -107,7 +114,6 @@
     .avatar {
         margin-top:100px;
     }
-    
     .nav {
         margin: initial;
         float:right;
@@ -154,7 +160,7 @@
             width: 340px;
             height: 670px;
             right: -238px;
-            top:7px;
+            top:-50px;
         }
 
     }

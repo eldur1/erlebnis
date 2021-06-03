@@ -1,7 +1,7 @@
 {
     "Ordinem" : {
         "name" : "Ordinem",
-        "activity" : "design, development, UI, UX",
+        "activity" : "Design, development, UI, UX",
         "link" : "http://eliedur.be/projets/tfa/",
         "color" : "#49F4C2",
         "category" : "current",
@@ -11,7 +11,7 @@
     },
     "Sea of Rust" : {
         "name" : "Sea of Rust",
-        "activity" : "design, development, UI, UX",
+        "activity" : "Design, development, UI, UX",
         "link" : "https://sea-of-rust.com/",
         "color" : "#b63421",
         "category" : "current",
