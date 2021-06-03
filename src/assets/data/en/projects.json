@@ -6,7 +6,7 @@
         "color" : "#49F4C2",
         "category" : "current",
         "summary" : "Ordinem is a web-app for flat sharing. From UI to UX, design, development, animation, I've made everything. Because we had issues with my roomnates to get daily housework done, I have made this application! ",
-        "src" : "../assets/images/thumbnails/ordinem.png"
+        "src" : "assets/images/thumbnails/ordinem.png"
 
     },
     "Sea of Rust" : {
@@ -16,7 +16,7 @@
         "color" : "#b63421",
         "category" : "current",
         "summary" : "Sea of Rust is the landing page of a Rust server. It was the possibility for me to try the framework VueJs and Tailwind CSS. ",
-        "src" : "../assets/images/thumbnails/sea-of-rust.png"
+        "src" : "assets/images/thumbnails/sea-of-rust.png"
 
     },
     "Rethinking UX" : {
@@ -26,7 +26,7 @@
         "color" : "#961616",
         "category" : "old",
         "summary" : "During my second year, RUX (Rethinking User Experience) was a workshop to learn more about UX methods. This year, we had the chance to rethink the user experience of the famous KIKK Festival",
-        "src" : "../assets/images/thumbnails/rux.png"
+        "src" : "assets/images/thumbnails/rux.png"
 
     }
 }

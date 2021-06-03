@@ -39,12 +39,16 @@ if(localStorage.getItem('theme') == undefined) {
     localStorage.setItem('theme', 'dark')
   } else {
     localStorage.setItem('theme', 'light')
+    classSwitch()
+
   }
 // Display theme of local storage
 } else {
   if(localStorage.getItem('theme') == "light") {
-    classSwitch()
     // If dark theme
+    classSwitch()
+  } else {
+
   }
 }
 

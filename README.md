@@ -60,6 +60,7 @@ An attempt to create a dynamic website.
 - ✅ Local storage theme
 - ✅ Fix EN in nav
 - ✅ Finish thumbnails of projects
+- Fix display when light theme by default
 - Responsive (mobile, wide screen)
 - Re-write traductions
 - More languages ?

@@ -7,14 +7,13 @@
     import { colorChanging } from '../style/color'
     import { aComputedRatio } from '../style/font'
     import { rN } from '../utils/fcts'
-import { distribute } from 'gsap/gsap-core'
+    import { gsap } from 'gsap/gsap-core'
     function project() {
         fetch(paths[0])
         .then((response) => {
             return response.json()
         })
         .then((data) => {
-            // Recover border, spacing
             var count = Object.keys(data).length;
             // For each project, create element
             let container = document.querySelector('.work')
@@ -31,6 +30,7 @@ import { distribute } from 'gsap/gsap-core'
                     
                     const element = data[key];
 
+
                     let innerCreateElement = document.createElement('div')
                     let inner = container.appendChild(innerCreateElement)
                     inner.classList.add('innerContainer')
@@ -38,51 +38,50 @@ import { distribute } from 'gsap/gsap-core'
                     let divCreateElement = document.createElement('div')
                     let div = inner.appendChild(divCreateElement)
                     div.classList.add('container-project', 'js-scroll')
-
-
-
                     div.style.position = "relative"
                     div.style.marginBottom = aSpacing[5] + "px"
                     div.style.marginTop = aSpacing[3] + "px"
-/*                     let dataScrub = document.createAttribute('data-scrub')
-                    div.setAttribute('data-scrub', rN(3,9)/10) */
-                    
-                    // Title
-                    let titleCreateElement = document.createElement('h3')
-                    let title = div.appendChild(titleCreateElement)
-                    title.classList.add('container-project__title')
-                    
-                    title.textContent = element.name
-                    title.style.fontSize = (aComputedRatio[3]* oFont.ratio) + "px"
 
 
-                    let containerActivityCreateElement = document.createElement('div')
-                    let containerActivity = div.appendChild(containerActivityCreateElement)
-                    containerActivity.classList.add('container-project__category')
-                    
-                
+                    function creation(component,container,options) {
+                        let current = document.createElement(component)
+                        container.appendChild(current)
+                        if(options) {
+                            current.className = options.className
+                            current.textContent = options.textContent
+                            current.setAttribute('style', options.style)
+                        }
+                    }  
+                    var title = creation('h3', div, {
+                        className:"container-project__title",
+                        textContent: element.name,
+                        style: `font-size: ${aComputedRatio[3]* oFont.ratio}px`
+                    })
+                    var containerLineActivity = creation('div', div, {
+                        className:"container-project__category",
+                    })
+                    console.log(containerLineActivity);
+/*                     var line = creation('span', containerLineActivity, {
+                        className:"icon icon--line",
+                    })
+                    var activity = creation('p', containerLineActivity, {
+                        className:"container-project__category",
+                        textContent: element.activity,
+                        style: `margin-bottom: ${aSpacing[3]}px`
+                    }) */
+
+/*                 
                     // line 
                     let lineCreateElement = document.createElement('span')
                     let line = containerActivity.appendChild(lineCreateElement)
                     line.classList.add('icon', 'icon--line')
 
-
-
-
                     // Activity
                     let categoryCreateElement = document.createElement('p')
                     let category = containerActivity.appendChild(categoryCreateElement)
-            
                     category.textContent = element.activity
                     category.style.marginBottom = aSpacing[3] + "px"
-                    category.style.fontWeight = "lighter"
-                    category.style.fontStyle = "italic"
-                    category.style.display = "inline-block"
-
-
-
-
-                    
+                     */
                     // Background and thumbnail container
                     let containerImgCreateElement = document.createElement('div')
                     let containerImg = div.appendChild(containerImgCreateElement)
@@ -93,7 +92,6 @@ import { distribute } from 'gsap/gsap-core'
                     let thumbnailCreateElement = document.createElement('img') 
                     let thumbnail = containerImg.appendChild(thumbnailCreateElement)
                     thumbnail.classList.add('container-project__thumb')
-
                     thumbnail.src = element.src
                     thumbnail.style.marginBottom = aSpacing[2] + "px"
 
@@ -101,7 +99,6 @@ import { distribute } from 'gsap/gsap-core'
                     let summaryCreateElement = document.createElement('p')
                     let summary = div.appendChild(summaryCreateElement)
                     summary.classList.add('container-project__summary')
-
                     summary.textContent = element.summary
                     summary.style.marginTop = aSpacing[3] + "px"
                     summary.style.marginBottom = aSpacing[3] + "px"
@@ -122,7 +119,7 @@ import { distribute } from 'gsap/gsap-core'
                     }
                     button.target = "_blank"
                     button.rel = "noreferrer"
-                    button.href = element.link
+                    //button.href = element.link
                     button.style.marginRight = aSpacing[2] + "px"
                     button.style.padding = aSpacing[1] + "px"
                     button.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"
@@ -134,10 +131,10 @@ import { distribute } from 'gsap/gsap-core'
                         button_case.target = "_blank"
                         button_case.rel = "noreferrer"
                         button_case.href = element.case
-
                     }
+
+
                     // background
-    
                     let backgroundCreateElement = document.createElement('div')
                     let background = containerImg.appendChild(backgroundCreateElement)
                     background.classList.add('background--project')
@@ -147,8 +144,50 @@ import { distribute } from 'gsap/gsap-core'
                     background.style.borderRadius = aBorder
                     background.style.padding = aSpacing[2]
 
+                    let main = document.querySelector('main')
+                    let tlArticle = gsap.timeline({ duration:1})
+                    
 
 
+                    button.addEventListener('click', () => {
+                        
+                        let projects = document.querySelectorAll('.container-project')
+                        for (let i = 0; i < projects.length; i++) {
+                            const element = projects[i];
+                            //tlArticle.resume()
+                        }
+                        gsap.to(main, {
+                            autoAlpha:0,
+                            display: "none"
+                        })
+
+                        let articleCreateElement = document.createElement('article')
+                        let article = document.body.appendChild(articleCreateElement)
+
+                        let button_backCreateElement = document.createElement('button')
+                        let button_back = article.appendChild(button_backCreateElement)
+                        button_back.textContent = "back"
+
+                        let title_article = document.createElement('h3')
+/*                         title_article
+                        article.appendChild() */
+                        button_back.addEventListener('click', () => {
+                            for (let i = 0; i < projects.length; i++) {
+                                const element = projects[i];
+                            }
+                            gsap.to(main, {
+                                autoAlpha:1,
+                                duration:1
+                            })
+                            gsap.to(main, {
+                                display: "block",
+                                delay:1
+                            })
+
+                            article.remove()
+                            button_back.remove()
+                        })
+                    })
                 }
             }
         })
@@ -157,4 +196,8 @@ import { distribute } from 'gsap/gsap-core'
         })
     
     }
+
+function projectInteractions() {
+
+}
 export { project }

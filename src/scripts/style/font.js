@@ -115,7 +115,6 @@ function font() {
 
     let small = document.querySelector('small')
     small.style.fontSize = oFont.fonts.base/oFont.fonts.ratio + "px"
-    console.log(oFont.fonts.base / oFont.fonts.ratio);
 
     // Paragraph + titles
 
@@ -153,7 +152,6 @@ function font() {
             }
         }
     }
-    console.log(aComputedRatio);
 
 }
 export { font }

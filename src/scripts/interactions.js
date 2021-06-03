@@ -34,7 +34,6 @@ function interactions() {
             }
             tagline.textContent = data.fact[rTagline]
             taglineSeen.push(rTagline)
-            console.log(taglineSeen);
             })
         })
 

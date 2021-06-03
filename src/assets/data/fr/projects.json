@@ -7,7 +7,7 @@
         "color" : "#49F4C2",
         "category" : "current",
         "summary" : "Ordinem est une web-app pour les collocations. De l'interface à l'expérience utilisateur en passant par le design et l'animation, j'ai tout fait. C'est parce que j'avais des soucis d'organisations avec mes colloc pour les tâches ménagères quotidiennes que j'ai fait cette application !",
-        "src" : "../assets/images/thumbnails/ordinem.png"
+        "src" : "assets/images/thumbnails/ordinem.png"
 
     },
     "Sea of Rust" : {
@@ -17,7 +17,7 @@
         "color" : "#b63421",
         "category" : "current",
         "summary" : "Sea Of Rust est une landing page pour un serveur Rust. Cela a été la possibilité pour moi d'essayer pour la première fois le framwork VueJS et TailwindCSS.",
-        "src" : "../assets/images/thumbnails/sea-of-rust.png"
+        "src" : "assets/images/thumbnails/sea-of-rust.png"
 
     },
     "Rethinking UX" : {
@@ -27,7 +27,7 @@
         "color" : "#961616",
         "category" : "old",
         "summary" : "Pendant ma deuxième année, RUX (Rethinking User Experience) est un atelier pour en savoir plus sur les méthodes d'UX. Cette année-là, nous avons eu la chance de repenser l'expérience utilisateur du fameux KIKK Festival.",
-        "src" : "../assets/images/thumbnails/rux.png"
+        "src" : "assets/images/thumbnails/rux.png"
 
     }
 }

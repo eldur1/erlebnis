@@ -7,7 +7,9 @@ import { themeSet } from '../style/theme'
 export var paths = [
     'assets/data/en/projects.json',
     'assets/data/en/generative-content.json',
-    'assets/data/en/weather.json' 
+    'assets/data/en/weather.json',
+    'assets/data/en/other.json' 
+
 ]
 var lang_btn = document.querySelector('.js-lang')
 
@@ -41,15 +43,18 @@ export function setLanguage() {
 
 function languages() {
         // Change paths
+        let currentLanguage = langNavigator.langCode
+        console.log(currentLanguage);
         paths = [
-            `assets/data/${langNavigator.langCode}/projects.json`,
-            `assets/data/${langNavigator.langCode}/generative-content.json`,
-            `assets/data/${langNavigator.langCode}/weather.json`,
-            `assets/data/${langNavigator.langCode}/other.json`
+            `assets/data/${currentLanguage}/projects.json`,
+            `assets/data/${currentLanguage}/generative-content.json`,
+            `assets/data/${currentLanguage}/weather.json`,
+            `assets/data/${currentLanguage}/other.json`
             ]
             // Translate 'static' content 
             let dynamic_DOM = document.querySelectorAll('.dynamic')
             var aOther = []
+            console.log(paths[3]);
             fetch(paths[3])
             .then((response) => {
                 return response.json()
