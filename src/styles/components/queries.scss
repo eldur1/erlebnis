@@ -86,6 +86,11 @@
             margin-top: 39px;
             
         }
+        .icon--line {
+            transform: rotate(90deg);
+            margin-left: -22px;
+            display: block;
+        }
         &__category p {
             margin-bottom: -206px;
             writing-mode: vertical-lr;
@@ -147,11 +152,6 @@
             display:block;
         }
         &--footer {
-            width: 997px;
-            margin-left:-32px;
-            left:inherit;
-            text-align:center;
-            margin-top:43px;
             p {
                 margin: 0 auto;
             }

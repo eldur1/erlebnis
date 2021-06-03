@@ -65,9 +65,7 @@ import { distribute } from 'gsap/gsap-core'
                     let lineCreateElement = document.createElement('span')
                     let line = containerActivity.appendChild(lineCreateElement)
                     line.classList.add('icon', 'icon--line')
-                    line.style.transform = "rotate(90deg)"
-                    line.style.marginLeft = "-22px" 
-                    line.style.display = "block"
+
 
 
 
@@ -78,6 +76,8 @@ import { distribute } from 'gsap/gsap-core'
                     category.textContent = element.activity
                     category.style.marginBottom = aSpacing[3] + "px"
                     category.style.fontWeight = "lighter"
+                    category.style.fontStyle = "italic"
+                    category.style.display = "inline-block"
 
 
 
