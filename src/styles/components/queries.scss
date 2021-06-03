@@ -6,10 +6,11 @@
     nav.theme--light {
         color:$c-black;
     } 
-    a.theme--light {
-        color:$c-black;
-    }
     .theme--light {
+        .button--case-study {
+            color:$c-black;
+
+        }
         .social-ul__el {
             &--instagram a {
                 background-image: url("../assets/icons/instagram.svg");
@@ -110,7 +111,7 @@
     .nav {
         margin: initial;
         float:right;
-        width: 69%;
+        width: 65%;
     }
 
     body {
@@ -125,7 +126,7 @@
         transform: translateX(-160px);
     }
     .hero-content {
-        margin-left:calc(18% + 100px)
+        margin-left:300px;
     }
     .background {
         &--hero {

@@ -102,7 +102,7 @@ function interactions() {
         });
 
     }
-
+    scrollDelay()
 }
 
 export { interactions }

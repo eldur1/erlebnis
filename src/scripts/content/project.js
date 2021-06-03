@@ -6,6 +6,8 @@
     import { getRealTime} from '../utils/fcts'
     import { colorChanging } from '../style/color'
     import { aComputedRatio } from '../style/font'
+    import { rN } from '../utils/fcts'
+import { distribute } from 'gsap/gsap-core'
     function project() {
         fetch(paths[0])
         .then((response) => {
@@ -28,15 +30,22 @@
                 if (Object.hasOwnProperty.call(data, key)) {
                     
                     const element = data[key];
-                    
+
+                    let innerCreateElement = document.createElement('div')
+                    let inner = container.appendChild(innerCreateElement)
+                    inner.classList.add('innerContainer')
                     
                     let divCreateElement = document.createElement('div')
-                    let div = container.appendChild(divCreateElement)
-                    div.classList.add('container-project')
+                    let div = inner.appendChild(divCreateElement)
+                    div.classList.add('container-project', 'js-scroll')
+
+
 
                     div.style.position = "relative"
                     div.style.marginBottom = aSpacing[5] + "px"
                     div.style.marginTop = aSpacing[3] + "px"
+/*                     let dataScrub = document.createAttribute('data-scrub')
+                    div.setAttribute('data-scrub', rN(3,9)/10) */
                     
                     // Title
                     let titleCreateElement = document.createElement('h3')
