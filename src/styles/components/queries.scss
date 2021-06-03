@@ -7,6 +7,9 @@
         color:$c-black;
     } 
     .theme--light {
+        .footer-ul__el--link a{
+            color:$c-black;
+        }
         .button--case-study {
             color:$c-black;
         }
@@ -68,7 +71,7 @@
             display: block;
         }
         &__category p {
-            margin-bottom: -206px;
+            margin-bottom: -286px;
             writing-mode: vertical-lr;
             transform: translateY(23px);
             display: inline-block;

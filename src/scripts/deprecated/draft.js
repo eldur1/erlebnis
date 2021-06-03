@@ -686,3 +686,44 @@ let choosenPallet = aPallet[0, aPallet.length-1] */
      */
 
 
+        /*                 
+                    // line 
+                    let lineCreateElement = document.createElement('span')
+                    let line = containerActivity.appendChild(lineCreateElement)
+                    line.classList.add('icon', 'icon--line')
+
+                    // Activity
+                    let categoryCreateElement = document.createElement('p')
+                    let category = containerActivity.appendChild(categoryCreateElement)
+                    category.textContent = element.activity
+                    category.style.marginBottom = aSpacing[3] + "px"
+                     */
+
+                    /*                     // Thumbnail
+                    let thumbnailCreateElement = document.createElement('img') 
+                    let thumbnail = containerImg.appendChild(thumbnailCreateElement)
+                    thumbnail.classList.add('container-project__thumb')
+                    thumbnail.src = element.src
+                    thumbnail.style.marginBottom = aSpacing[2] + "px" */
+
+
+                    /*                     // Summary
+                    let summaryCreateElement = document.createElement('p')
+                    let summary = div.appendChild(summaryCreateElement)
+                    summary.classList.add('container-project__summary')
+                    summary.textContent = element.summary
+                    summary.style.marginTop = aSpacing[3] + "px"
+                    summary.style.marginBottom = aSpacing[3] + "px"
+                    summary.style.fontSize = oFont.base + "px"
+                    summary.style.lineHeight = oFont.lineHeight.p */
+
+                    /*                     // background
+                    let backgroundCreateElement = document.createElement('div')
+                    let background = containerImg.appendChild(backgroundCreateElement)
+                    background.classList.add('background--project')
+
+                    background.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"
+                    background.style.borderRadius = aBorder
+                    background.style.padding = aSpacing[2] */
+
+

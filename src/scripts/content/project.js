@@ -24,12 +24,25 @@
             let currentFont = aFontFamily[5]
             var oFont = aFontValues.[currentFont]
             var colorHSL = colorChanging()
+
+
+            function creation(component,container,options) {
+                let current = document.createElement(component)
+                container.appendChild(current)
+                if(options) {
+                    current.className = options.className
+                    current.textContent = options.textContent
+                    current.setAttribute('style', options.style)
+                    current.src = options.src
+                }
+            }  
+
+            
     
             for (const key in data) {
                 if (Object.hasOwnProperty.call(data, key)) {
                     
                     const element = data[key];
-
 
                     let innerCreateElement = document.createElement('div')
                     let inner = container.appendChild(innerCreateElement)
@@ -41,77 +54,51 @@
                     div.style.position = "relative"
                     div.style.marginBottom = aSpacing[5] + "px"
                     div.style.marginTop = aSpacing[3] + "px"
-
-
-                    function creation(component,container,options) {
-                        let current = document.createElement(component)
-                        container.appendChild(current)
-                        if(options) {
-                            current.className = options.className
-                            current.textContent = options.textContent
-                            current.setAttribute('style', options.style)
-                        }
-                    }  
                     var title = creation('h3', div, {
                         className:"container-project__title",
                         textContent: element.name,
                         style: `font-size: ${aComputedRatio[3]* oFont.ratio}px`
                     })
-                    var containerLineActivity = creation('div', div, {
-                        className:"container-project__category",
-                    })
-                    console.log(containerLineActivity);
-/*                     var line = creation('span', containerLineActivity, {
+
+                    let containerLineActivityCreateElement = document.createElement('div')
+                    let containerLineActivity = div.appendChild(containerLineActivityCreateElement)
+                    containerLineActivity.classList.add("container-project__category")
+
+                    var line = creation('span', containerLineActivity, {
                         className:"icon icon--line",
                     })
                     var activity = creation('p', containerLineActivity, {
                         className:"container-project__category",
                         textContent: element.activity,
-                        style: `margin-bottom: ${aSpacing[3]}px`
-                    }) */
+                    })
 
-/*                 
-                    // line 
-                    let lineCreateElement = document.createElement('span')
-                    let line = containerActivity.appendChild(lineCreateElement)
-                    line.classList.add('icon', 'icon--line')
-
-                    // Activity
-                    let categoryCreateElement = document.createElement('p')
-                    let category = containerActivity.appendChild(categoryCreateElement)
-                    category.textContent = element.activity
-                    category.style.marginBottom = aSpacing[3] + "px"
-                     */
                     // Background and thumbnail container
                     let containerImgCreateElement = document.createElement('div')
                     let containerImg = div.appendChild(containerImgCreateElement)
                     containerImg.style.position = "relative"
                     containerImg.style.marginTop = "32px"
 
-                    // Thumbnail
-                    let thumbnailCreateElement = document.createElement('img') 
-                    let thumbnail = containerImg.appendChild(thumbnailCreateElement)
-                    thumbnail.classList.add('container-project__thumb')
-                    thumbnail.src = element.src
-                    thumbnail.style.marginBottom = aSpacing[2] + "px"
+                    var thumbnail = creation('img', containerImg, {
+                        className: "container-project__thumb",
+                        style: `margin-bottom: ${aSpacing[2]}px`,
+                        src: element.src
+                    })
 
-                    // Summary
-                    let summaryCreateElement = document.createElement('p')
-                    let summary = div.appendChild(summaryCreateElement)
-                    summary.classList.add('container-project__summary')
-                    summary.textContent = element.summary
-                    summary.style.marginTop = aSpacing[3] + "px"
-                    summary.style.marginBottom = aSpacing[3] + "px"
-                    summary.style.fontSize = oFont.base + "px"
-                    summary.style.lineHeight = oFont.lineHeight.p
-                    
+                    var summary = creation('p', div, {
+                        className: "container-project__summary",
+                        textContent: element.summary,
+                        style: `margin-top: ${aSpacing[3]}px; margin-bottom: ${aSpacing[3]}px; font-size: ${oFont.base}px; line-height:${oFont.lineHeight.p}`
+                    })
                     
                     // Button 
-                    
+/*                     var button = creation('a', div, {
+                        className: "container-project__button",
+                        style: `margin-right: ${aSpacing[2]}px; padding: ${aSpacing[1]}px; background-color: hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%)`
+                    })
+ */
                     let buttonCreateElement = document.createElement('a')
                     let button = div.appendChild(buttonCreateElement)
                     button.classList.add('container-project__button')
-
                     if(langNavigator.langCode == "en") {
                         element.name == "Rethinking UX" ? button.textContent = "Read the case study" : button.textContent = "Go to..."
                     } else if(langNavigator.langCode == "fr" ){
@@ -122,7 +109,7 @@
                     //button.href = element.link
                     button.style.marginRight = aSpacing[2] + "px"
                     button.style.padding = aSpacing[1] + "px"
-                    button.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"
+                    button.style.backgroundColor = `hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%)`
                     if(element.name == "Ordinem") {
                         let buttonCreateElement_case = document.createElement('a')
                         let button_case = div.appendChild(buttonCreateElement_case)
@@ -132,17 +119,13 @@
                         button_case.rel = "noreferrer"
                         button_case.href = element.case
                     }
+                
+                    
+                    var background = creation('div', div, {
+                        className: 'background--project',
+                        style: `background-color: hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%); padding: ${aSpacing[2]}px`,
 
-
-                    // background
-                    let backgroundCreateElement = document.createElement('div')
-                    let background = containerImg.appendChild(backgroundCreateElement)
-                    background.classList.add('background--project')
-
-                    background.style.backgroundColor = "hsl(" + colorHSL.hue + "," + colorHSL.saturation + "%," + colorHSL.lightness + "%)"
-                    var padding = aSpacing[1] + "px " + aSpacing[2] + "px "
-                    background.style.borderRadius = aBorder
-                    background.style.padding = aSpacing[2]
+                    })
 
                     let main = document.querySelector('main')
                     let tlArticle = gsap.timeline({ duration:1})
