@@ -9,6 +9,7 @@
     import { rN } from '../utils/fcts'
     import { gsap } from 'gsap/gsap-core'
     function project() {
+        console.log(paths[0]);
         fetch(paths[0])
         .then((response) => {
             return response.json()
@@ -95,41 +96,34 @@
                     let buttonCreateElement = document.createElement('a')
                     let button = div.appendChild(buttonCreateElement)
                     button.classList.add('container-project__button')
-                    if(langNavigator.langCode == "en") {
-                        element.name == "Rethinking UX" ? button.textContent = "Read the case study" : button.textContent = "Go to..."
-                    } else if(langNavigator.langCode == "fr" ){
-                        element.name == "Rethinking UX" ? button.textContent = "Lire l'étude de cas" : button.textContent = "Consulter le site"
-                    }
+                    langNavigator.langCode == "en" ? button.textContent = "Learn more..." : button.textContent = "En savoir plus" 
                     button.target = "_blank"
                     button.rel = "noreferrer"
                     
-                    //button.href = element.link
                     button.style.marginRight = aSpacing[2] + "px"
                     button.style.padding = aSpacing[1] + "px"
                     button.style.backgroundColor = `hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%)`
-                    if(element.name == "Ordinem") {
-                        let buttonCreateElement_case = document.createElement('a')
-                        let button_case = div.appendChild(buttonCreateElement_case)
-                        button_case.classList.add('button--case-study')
-                        langNavigator.langCode == "en" ? button_case.textContent = "Read the case study" : button_case.textContent = "Lire l'étude de cas"
-                        button_case.target = "_blank"
-                        button_case.rel = "noreferrer"
-                        button_case.href = element.case
-                    }
-                
-
-                    let main = document.querySelector('main')
-                    let nav = document.querySelector('nav')
-                    let tlArticle = gsap.timeline({ duration:1})
                     
-
+                    //button.href = element.link
+                    let button_websiteCreateElement = document.createElement('a')
+                    let button_website = div.appendChild(button_websiteCreateElement)
+                    button_website.classList.add('container-project__button', 'container-project__button--website')
+                    button_website.href = element.link
+                    button_website.target = "_blank"
+                    button_website.rel = "noreferrer"
+                    langNavigator.langCode == "en" ? button_website.textContent = "Go to..." : button_website.textContent = "Voir le site"
+                    button_website.style.marginRight = aSpacing[2] + "px"
+                    button_website.style.padding = aSpacing[1] + "px"
 
                     button.addEventListener('click', () => {
-                        
+                        let main = document.querySelector('main')
+                        let nav = document.querySelector('nav')
                         let projects = document.querySelectorAll('.container-project')
+
+
+
                         for (let i = 0; i < projects.length; i++) {
                             const element = projects[i];
-                            //tlArticle.resume()
                         }
                         gsap.to(main, {
                             autoAlpha:0,
@@ -156,19 +150,24 @@
                         })
 
                         let p1 = creation('p', article, {
-                            className: 'base-font',
-                            style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px; font-size: ${oFont.base}px`,
+                            className: 'base-font article__p',
+                            style: `margin-bottom: ${aSpacing[3]}px;
+                                    margin-top: ${aSpacing[3]}px; 
+                                    font-size: ${oFont.base}px; 
+                                    line-height: ${oFont.lineHeight.p};`,
                             textContent: element.case_content.p
                         })
                         let img1 = creation('img', article, {
                             src: element.case_content.img,
                             style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px;`,
-
                             className: "article__img"
                         })
                         let p2 = creation('p', article, {
-                            className: 'base-font',
-                            style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px; font-size: ${oFont.base}px`,
+                            className: 'base-font article__p',
+                            style: `margin-bottom: ${aSpacing[3]}px;
+                                    margin-top: ${aSpacing[3]}px;
+                                    font-size:${oFont.base}px; 
+                                    line-height: ${oFont.lineHeight.p};`,
                             textContent: element.case_content.p2
                         })
                         let img2 = creation('img', article, {
@@ -177,8 +176,11 @@
                             className: "article__img"
                         })
                         let p3 = creation('p', article, {
-                            className: 'base-font',
-                            style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px; font-size: ${oFont.base}px;`,
+                            className: 'base-font article__p',
+                            style: `margin-bottom: ${aSpacing[3]}px;
+                                    margin-top: ${aSpacing[3]}px; 
+                                    font-size: ${oFont.base}px;
+                                    line-height: ${oFont.lineHeight.p};`,
                             textContent: element.case_content.p3
                         })
                         let img3 = creation('img', article, {
@@ -186,6 +188,34 @@
                             style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px;`,
                             className: "article__img"
                         })
+
+
+/*                         let buttonCreateElement = document.createElement('a')
+                        let button = div.appendChild(buttonCreateElement)
+                        button.classList.add('container-project__button')
+                        if(langNavigator.langCode == "en") {
+                            element.name == "Rethinking UX" ? button.textContent = "Read the case study" : button.textContent = "Go to..."
+                        } else if(langNavigator.langCode == "fr" ){
+                            element.name == "Rethinking UX" ? button.textContent = "Lire l'étude de cas" : button.textContent = "Consulter le site"
+                        }
+                        button.target = "_blank"
+                        button.rel = "noreferrer"
+                        
+                        //button.href = element.link
+                        button.style.marginRight = aSpacing[2] + "px"
+                        button.style.padding = aSpacing[1] + "px"
+                        button.style.backgroundColor = `hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%)`
+                        if(element.name == "Ordinem") {
+                            let buttonCreateElement_case = document.createElement('a')
+                            let button_case = div.appendChild(buttonCreateElement_case)
+                            button_case.classList.add('button--case-study')
+                            langNavigator.langCode == "en" ? button_case.textContent = "Read the case study" : button_case.textContent = "Lire l'étude de cas"
+                            button_case.target = "_blank"
+                            button_case.rel = "noreferrer"
+                            button_case.href = element.case
+                        } */
+
+                        
 
                         let buttonBackCreateElement = document.createElement('button')
                         let button_back = article.appendChild(buttonBackCreateElement)

@@ -733,4 +733,12 @@ let choosenPallet = aPallet[0, aPallet.length-1] */
                     })
  */
 
+                    /*                     console.log(caseContent);
+                    caseContent[count-1].textContent = element.case_content.p
+                    caseContent[count-1].textContent = element.case_content.p2
+                    caseContent[count-1].textContent = element.case_content.p3
+                    //console.log(caseContent[count-1]);
+                    article__p[key] = element.case_content.p1
+                    article__p[key].textContent = element.case_content.p2
+                    p1.textContent = element.case_content.p3 */
 
