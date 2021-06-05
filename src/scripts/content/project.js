@@ -69,6 +69,7 @@
                     var activity = creation('p', containerLineActivity, {
                         className:"container-project__category",
                         textContent: element.activity,
+                        style: "display: inline-block;"
                     })
 
                     // Background and thumbnail container
@@ -88,7 +89,7 @@
                         textContent: element.summary,
                         style: `margin-top: ${aSpacing[3]}px; margin-bottom: ${aSpacing[3]}px; font-size: ${oFont.base}px; line-height:${oFont.lineHeight.p}`
                     })
-                    var background = creation('div', div, {
+                    var background = creation('div', containerImg, {
                         className: 'background--project',
                         style: `background-color: hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%); padding: ${aSpacing[2]}px`,
                     })

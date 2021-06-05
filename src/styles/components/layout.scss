@@ -61,9 +61,9 @@ body {
     height: 8px;
   }
   &--project {
-    width: calc(100% + 64px);
+    width: calc(100% + 32px);
     margin-left: -32px;
-    height: calc(100% - 44px);
+    height: calc(100% - 82px);
     position: absolute;
     top: 60px;
     z-index: -4;
@@ -88,12 +88,10 @@ body {
 
 
 .article {
-  max-width: 600px;
-  position: absolute;
-  left:50%;
-  margin-left:-300px;
+  width:calc(100% - 32px);
+  padding: 16px;
   &__img {
-    max-width: 600px;
+    width: 100%;
   }
   &__button_back {
     position: fixed;
