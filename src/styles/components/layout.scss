@@ -82,3 +82,26 @@ body {
   display: inline-block;
 
 }
+
+
+// Article of projects 
+
+
+.article {
+  max-width: 600px;
+  position: absolute;
+  left:50%;
+  margin-left:-300px;
+  &__img {
+    max-width: 600px;
+  }
+  &__button_back {
+    position: fixed;
+    left:50%;
+    bottom:50px;
+    border:none;
+    color:white;
+    display: none;
+    opacity: 0;
+  }
+}

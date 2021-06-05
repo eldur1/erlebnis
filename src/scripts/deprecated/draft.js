@@ -726,4 +726,11 @@ let choosenPallet = aPallet[0, aPallet.length-1] */
                     background.style.borderRadius = aBorder
                     background.style.padding = aSpacing[2] */
 
+                                        // Button 
+/*                     var button = creation('a', div, {
+                        className: "container-project__button",
+                        style: `margin-right: ${aSpacing[2]}px; padding: ${aSpacing[1]}px; background-color: hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%)`
+                    })
+ */
+
 

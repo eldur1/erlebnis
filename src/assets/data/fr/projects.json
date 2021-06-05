@@ -5,29 +5,47 @@
         "link" : "http://eliedur.be/projets/tfa/",
         "case" : "http://eliedur.be/projets/tfa/markdown.html",
         "color" : "#49F4C2",
-        "category" : "current",
         "summary" : "Ordinem est une web-app pour les collocations. De l'interface à l'expérience utilisateur en passant par le design et l'animation, j'ai tout fait. C'est parce que j'avais des soucis d'organisations avec mes colloc pour les tâches ménagères quotidiennes que j'ai fait cette application !",
-        "src" : "assets/images/thumbnails/ordinem.png"
-
+        "src" : "assets/images/thumbnails/ordinem.png",
+        "case_content": {
+            "p": "L’idée de faire une application web m’est venue car à ce moment-là, je vivais en collocation. Il existait un problème bien présent dans mon quotidien, celui de s’organiser à faire des tâches. Entre les oublis de ma part, ceux des autres, c’était une vraie frustration de vivre cela au quotidien. Durant mes recherches j’ai pu m’apercevoir qu’il ne s’agissait pas d’un cas isolé. Je n’étais pas le seul.",
+            "img": "assets/images/case/ordinem/sondage.jpg",
+            "p2": "Il existe un problème, maintenant pour le solutionner, il faut réfléchir aux causes de ce problème. Qu’est-ce qui mène à oublier de faire une tâche ? Comment s’en rappeler ? Durant ce projet, j’ai axé ma réflexion sous deux angles, mon avis personnel de la situation, comment je le perçois. Ainsi que l’avis des autres à travers un sondage qui me permets d’entrevoir des potentiels solutions. Ce fût un projet très enrichissant car j’ai pu apprendre diverses choses à ce propos, comme l’effet du témoin.",
+            "img2": "assets/images/case/ordinem/schema.jpeg",
+            "p3": "Pourquoi faire une application dédiée à cela et non bêtement utiliser son calendrier ? Une application calendrier manque cruellement de fonctionnalités pour ce genre de situation. Ce que j’ai tenté de faire dans cette application, c’est d’apporter une réelle plus-value comparé à une application calendrier. Par exemple, il existe différent types de poubelles, on voudrait savoir quel type de poubelle il faut sortir. Ensuite, la possibilité de faire une alerte chacun à son tour permets très simplement de tous participer équitablement aux tâches sans passer du temps à se rappeler qui a fait quoi.",
+            "img3": "assets/images/case/ordinem/appli.png"
+        }
     },
     "Sea of Rust" : {
         "name" : "Sea of Rust",
         "activity" : "Design, development, UI, UX",
         "link" : "https://sea-of-rust.com/",
         "color" : "#b63421",
-        "category" : "current",
         "summary" : "Sea Of Rust est une landing page pour un serveur Rust. Cela a été la possibilité pour moi d'essayer pour la première fois le framwork VueJS et TailwindCSS.",
-        "src" : "assets/images/thumbnails/sea-of-rust.png"
-
+        "src" : "assets/images/thumbnails/sea-of-rust.png",
+        "case_content": {
+            "p": "Le web n’est ma seule passion. Depuis plusieurs années, mon autre passion est le jeu vidéo. Le jeu Rust est l’un des jeux qui m’a marqué durant mon adolescence. Avec plusieurs amis, nous avons eu l’idée de créer un serveur Rust communautaire. ",
+            "img": "assets/images/case/sea-of-rust/rust.jpg",
+            "p2": "Pour présenter le serveur, ses fonctionnalités, ses caractéristiques, je me suis comme défi de faire un site avec un framework que je n’avais jamais utilisé, VueJS. Je n’ai pas seulement eu le défi d’essayer un framework mais un workflow totalement différent pour l’intégration du site. Afin d’avoir un support en site facile et accessible, j’ai utilisé Vercel avec Github. Pour la gestion des roots et me faciliter la tâche, j’ai utilisé NuxtJS. Enfin, pour ce qui est du style, ce fut aussi une première pour moi d’utiliser Tailwind CSS. Cerise sur le gateau, dans une volonté de d’utiliser les dernières technologies, cela a aussi été l’occasion de prendre connaissance de Vue3 et de composition API. Pour quelqu’un qui n’avait jamais été Vue. Il m’a d’abord fallu comprendre ce qui était pre-existant pour comprendre composition API.",
+            "img2": "assets/images/case/sea-of-rust/nuxt.jpeg",
+            "p3": "Travailler un workflow totalement différent fut d’un côté libérateur car beaucoup de simplicité en découle avec des outils comme Nuxt, Tailwind. D’un autre côté, ce sont des technologies qui me sont nouvelles. Lorsque quelque chose ne fonctionne pas, il faut beaucoup plus de temps à le régler. Heureusement, j’ai eu des personnes plus expérimentées pour me guider. ",
+            "img3": "assets/images/case/sea-of-rust/nuxt.jpeg"
+        }
     },
     "Rethinking UX" : {
         "name" : "Rethinking UX",
         "activity" : "UX, UI, Writing",
         "link" : "http://eliedur.be/projets/rethinking-ux/",
         "color" : "#961616",
-        "category" : "old",
         "summary" : "Pendant ma deuxième année, RUX (Rethinking User Experience) est un atelier pour en savoir plus sur les méthodes d'UX. Cette année-là, nous avons eu la chance de repenser l'expérience utilisateur du fameux KIKK Festival.",
-        "src" : "assets/images/thumbnails/rux.png"
-
+        "src" : "assets/images/thumbnails/rux.png",
+        "case_content": {
+            "p": "Ce projet a été l’occasion pour moi d’en apprendre plus sur l’expérience utilisateur lorsqu’on conçoit pour le web. Cette année, le KIKK Festival nous a été proposé comme élément de recherche et de réflexion.",
+            "img": "assets/images/case/rux/kikk.jpeg",
+            "p2": "Dans un premier temps, nous avons eu une série de cours sur les diverses méthodologies utilisées dans le domain. Audit, groupe de discussion, top task, user journey, tests utilisateurs, toutes ces pratiques qui m’étaient encore totalement inconnue avant cet atelier. ",
+            "img2": "assets/images/case/rux/user_journey.jpeg",
+            "p3": "J’ai appris qu’il y avait d’autres champs de compétences que le code et/ou le design. J’ai pu découvrir que l’humain, la manière dont nous fonctionnons était quelque chose d’étudié de près quand il s’agit de concevoir une interface, un site. Cet atelier fut une très bonne entrée en matière qui me permettra plus tard d’appliquer cela dans un projet concret, Ordinem.",
+            "img3": "assets/images/case/rux/groupe.jpeg"
+        }
     }
 }
