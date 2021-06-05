@@ -42,6 +42,18 @@
 
 // Desktop
 @media (min-width:$desktop) {
+    .icon {
+        &--reload {
+            position: absolute;
+            transform: translateX(-20px);
+        }
+    }
+    .tagline {
+        display: inline-block;
+        width: 474px;
+        min-height: 290px;
+        margin-right: 91px;
+    }
     .container-project {
         &__thumb {
             width: 93%;
@@ -83,6 +95,7 @@
         &__hero {
             display: flex;
             width: 100%;
+            height: 85vh;
             justify-content: space-between;
             transform:inherit;
         }
@@ -121,7 +134,7 @@
         &--hero {
             width: 30%;
             top: 0;
-            height: 730px;
+            height: 100%;
             left: 0px;
             max-width: 1650px;
             position: absolute;

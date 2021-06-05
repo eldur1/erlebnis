@@ -99,6 +99,7 @@
                     langNavigator.langCode == "en" ? button.textContent = "Learn more..." : button.textContent = "En savoir plus" 
                     button.target = "_blank"
                     button.rel = "noreferrer"
+                    button.style.cursor = "pointer"
                     
                     button.style.marginRight = aSpacing[2] + "px"
                     button.style.padding = aSpacing[1] + "px"
