@@ -120,152 +120,132 @@
                         let main = document.querySelector('main')
                         let nav = document.querySelector('nav')
                         let projects = document.querySelectorAll('.container-project')
-
-
-
-                        for (let i = 0; i < projects.length; i++) {
-                            const element = projects[i];
-                        }
-                        gsap.to(main, {
-                            autoAlpha:0,
-                            duration:1,
-                            display: "none"
+                        console.log(paths[0]);
+                        fetch(paths[0])
+                        .then((response) => {
+                            return response.json()
                         })
-                        gsap.to(nav, {
-                            autoAlpha:0,
-                            duration:1,
-                            display: "none"
-                        })
-                        
-                        let articleCreate = document.createElement('article')
-                        let article = document.body.appendChild(articleCreate)
-                        article.classList.add('article')
-                        setTimeout(() => {
-                            window.scrollTo(0,0)
-                        }, 900);
-                    
-                        let title_article = creation('h3', article, {
-                            className:"container-project__title",
-                            textContent: element.name,
-                            style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px; font-size: ${aComputedRatio[3]* oFont.ratio}px`
-                        })
-
-                        let p1 = creation('p', article, {
-                            className: 'base-font article__p',
-                            style: `margin-bottom: ${aSpacing[3]}px;
-                                    margin-top: ${aSpacing[3]}px; 
-                                    font-size: ${oFont.base}px; 
-                                    line-height: ${oFont.lineHeight.p};`,
-                            textContent: element.case_content.p
-                        })
-                        let img1 = creation('img', article, {
-                            src: element.case_content.img,
-                            style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px;`,
-                            className: "article__img"
-                        })
-                        let p2 = creation('p', article, {
-                            className: 'base-font article__p',
-                            style: `margin-bottom: ${aSpacing[3]}px;
-                                    margin-top: ${aSpacing[3]}px;
-                                    font-size:${oFont.base}px; 
-                                    line-height: ${oFont.lineHeight.p};`,
-                            textContent: element.case_content.p2
-                        })
-                        let img2 = creation('img', article, {
-                            src: element.case_content.img2,
-                            style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px;`,
-                            className: "article__img"
-                        })
-                        let p3 = creation('p', article, {
-                            className: 'base-font article__p',
-                            style: `margin-bottom: ${aSpacing[3]}px;
-                                    margin-top: ${aSpacing[3]}px; 
-                                    font-size: ${oFont.base}px;
-                                    line-height: ${oFont.lineHeight.p};`,
-                            textContent: element.case_content.p3
-                        })
-                        let img3 = creation('img', article, {
-                            src: element.case_content.img3,
-                            style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px;`,
-                            className: "article__img"
-                        })
-
-
-/*                         let buttonCreateElement = document.createElement('a')
-                        let button = div.appendChild(buttonCreateElement)
-                        button.classList.add('container-project__button')
-                        if(langNavigator.langCode == "en") {
-                            element.name == "Rethinking UX" ? button.textContent = "Read the case study" : button.textContent = "Go to..."
-                        } else if(langNavigator.langCode == "fr" ){
-                            element.name == "Rethinking UX" ? button.textContent = "Lire l'étude de cas" : button.textContent = "Consulter le site"
-                        }
-                        button.target = "_blank"
-                        button.rel = "noreferrer"
-                        
-                        //button.href = element.link
-                        button.style.marginRight = aSpacing[2] + "px"
-                        button.style.padding = aSpacing[1] + "px"
-                        button.style.backgroundColor = `hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%)`
-                        if(element.name == "Ordinem") {
-                            let buttonCreateElement_case = document.createElement('a')
-                            let button_case = div.appendChild(buttonCreateElement_case)
-                            button_case.classList.add('button--case-study')
-                            langNavigator.langCode == "en" ? button_case.textContent = "Read the case study" : button_case.textContent = "Lire l'étude de cas"
-                            button_case.target = "_blank"
-                            button_case.rel = "noreferrer"
-                            button_case.href = element.case
-                        } */
-
-                        
-
-                        let buttonBackCreateElement = document.createElement('button')
-                        let button_back = article.appendChild(buttonBackCreateElement)
-                        button_back.textContent = "Back"
-                        button_back.classList.add('article__button_back')
-                        button_back.style.padding = aSpacing[1]+ "px"
-                        button_back.style.backgroundColor = `hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%)`
-                        
-                        gsap.to(button_back, { 
-                            display:"block",
-                            opacity:1,
-                            delay:1
-                        })
-
-                        button_back.addEventListener('click', () => {
+                        .then((data) => {
+                            const element2 = data[key];
+                            
                             for (let i = 0; i < projects.length; i++) {
                                 const element = projects[i];
                             }
                             gsap.to(main, {
-                                autoAlpha:1,
-                                duration:1
-                            })
-                            gsap.to(main, {
-                                display: "block",
-                                delay:1
-                            })
-
-                            gsap.to(nav, {
-                                autoAlpha:1,
-                                duration:1
+                                autoAlpha:0,
+                                duration:1,
+                                display: "none"
                             })
                             gsap.to(nav, {
-                                display: "flex",
-                                delay:1
-                            })
-
-                            gsap.to(article, {
                                 autoAlpha:0,
-                                duration:1
+                                duration:1,
+                                display: "none"
                             })
-                            gsap.to(button_back, {
-                                autoAlpha:0,
-                                duration:1
-                            })
+                            
+                            let articleCreate = document.createElement('article')
+                            let article = document.body.appendChild(articleCreate)
+                            article.classList.add('article')
                             setTimeout(() => {
-                                article.remove()
-                                button_back.remove()
-                            }, 1000);
+                                window.scrollTo(0,0)
+                            }, 900);
+                        
+                            let title_article = creation('h3', article, {
+                                className:"container-project__title",
+                                textContent: element2.name,
+                                style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px; font-size: ${aComputedRatio[3]* oFont.ratio}px`
+                            })
+    
+                            let p1 = creation('p', article, {
+                                className: 'base-font article__p',
+                                style: `margin-bottom: ${aSpacing[3]}px;
+                                        margin-top: ${aSpacing[3]}px; 
+                                        font-size: ${oFont.base}px; 
+                                        line-height: ${oFont.lineHeight.p};`,
+                                textContent: element2.case_content.p
+                            })
+                            let img1 = creation('img', article, {
+                                src: element2.case_content.img,
+                                style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px;`,
+                                className: "article__img"
+                            })
+                            let p2 = creation('p', article, {
+                                className: 'base-font article__p',
+                                style: `margin-bottom: ${aSpacing[3]}px;
+                                        margin-top: ${aSpacing[3]}px;
+                                        font-size:${oFont.base}px; 
+                                        line-height: ${oFont.lineHeight.p};`,
+                                textContent: element2.case_content.p2
+                            })
+                            let img2 = creation('img', article, {
+                                src: element2.case_content.img2,
+                                style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px;`,
+                                className: "article__img"
+                            })
+                            let p3 = creation('p', article, {
+                                className: 'base-font article__p',
+                                style: `margin-bottom: ${aSpacing[3]}px;
+                                        margin-top: ${aSpacing[3]}px; 
+                                        font-size: ${oFont.base}px;
+                                        line-height: ${oFont.lineHeight.p};`,
+                                textContent: element2.case_content.p3
+                            })
+                            let img3 = creation('img', article, {
+                                src: element.case_content.img3,
+                                style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px;`,
+                                className: "article__img"
+                            })
+    
+                            let buttonBackCreateElement = document.createElement('button')
+                            let button_back = article.appendChild(buttonBackCreateElement)
+                            button_back.textContent = "Back"
+                            button_back.classList.add('article__button_back')
+                            button_back.style.padding = aSpacing[1]+ "px"
+                            button_back.style.backgroundColor = `hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%)`
+                            
+                            gsap.to(button_back, { 
+                                display:"block",
+                                opacity:1,
+                                delay:1
+                            })
+    
+                            button_back.addEventListener('click', () => {
+                                for (let i = 0; i < projects.length; i++) {
+                                    const element = projects[i];
+                                }
+                                gsap.to(main, {
+                                    autoAlpha:1,
+                                    duration:1
+                                })
+                                gsap.to(main, {
+                                    display: "block",
+                                    delay:1
+                                })
+    
+                                gsap.to(nav, {
+                                    autoAlpha:1,
+                                    duration:1
+                                })
+                                gsap.to(nav, {
+                                    display: "flex",
+                                    delay:1
+                                })
+    
+                                gsap.to(article, {
+                                    autoAlpha:0,
+                                    duration:1
+                                })
+                                gsap.to(button_back, {
+                                    autoAlpha:0,
+                                    duration:1
+                                })
+                                setTimeout(() => {
+                                    article.remove()
+                                    button_back.remove()
+                                }, 1000);
+    
+                        })
 
+                        
                         })
                     })
                 }

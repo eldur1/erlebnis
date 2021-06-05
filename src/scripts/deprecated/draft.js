@@ -742,3 +742,28 @@ let choosenPallet = aPallet[0, aPallet.length-1] */
                     article__p[key].textContent = element.case_content.p2
                     p1.textContent = element.case_content.p3 */
 
+                      /*                         let buttonCreateElement = document.createElement('a')
+                            let button = div.appendChild(buttonCreateElement)
+                            button.classList.add('container-project__button')
+                            if(langNavigator.langCode == "en") {
+                                element.name == "Rethinking UX" ? button.textContent = "Read the case study" : button.textContent = "Go to..."
+                            } else if(langNavigator.langCode == "fr" ){
+                                element.name == "Rethinking UX" ? button.textContent = "Lire l'étude de cas" : button.textContent = "Consulter le site"
+                            }
+                            button.target = "_blank"
+                            button.rel = "noreferrer"
+                            
+                            //button.href = element.link
+                            button.style.marginRight = aSpacing[2] + "px"
+                            button.style.padding = aSpacing[1] + "px"
+                            button.style.backgroundColor = `hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%)`
+                            if(element.name == "Ordinem") {
+                                let buttonCreateElement_case = document.createElement('a')
+                                let button_case = div.appendChild(buttonCreateElement_case)
+                                button_case.classList.add('button--case-study')
+                                langNavigator.langCode == "en" ? button_case.textContent = "Read the case study" : button_case.textContent = "Lire l'étude de cas"
+                                button_case.target = "_blank"
+                                button_case.rel = "noreferrer"
+                                button_case.href = element.case
+                            } */
+
