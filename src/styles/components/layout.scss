@@ -96,7 +96,8 @@ body {
   &__button_back {
     position: fixed;
     left:50%;
-    bottom:50px;
+    bottom:32px;
+    margin-left:-25px;
     border:none;
     color:white;
     display: none;

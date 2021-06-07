@@ -5,15 +5,16 @@
         "link" : "http://eliedur.be/projets/tfa/",
         "color" : "#49F4C2",
         "category" : "current",
+        "alt" : "3 phones with Ordinem launched on",
         "summary" : "Ordinem is a web-app for flat sharing. From UI to UX, design, development, animation, I've made everything. Because we had issues with my roomnates to get daily housework done, I have made this application! ",
-        "src" : "assets/images/thumbnails/ordinem.png",
+        "src" : "assets/images/thumbnails/ordinem.jpg",
         "case_content": {
             "p": "The idea of making a web application came to me because at that time, I was living in a shared flat. There was a problem very present in my daily life, that of getting organized to do tasks. Between the oversights on my part and those of others, it was a real frustration to experience this on a daily basis. During my research I noticed that this was not an isolated case. I was not the only one.",
             "img": "assets/images/case/ordinem/sondage.jpg",
             "p2": "There is a problem, now to solve it you have to think about the causes of this problem. What leads to forgetting to do a task? How to remember it? During this project, I focused my thinking on two angles, my personal opinion of the situation, how I perceive it. As well as the opinion of others through a survey that allows me to see potential solutions. It was a very rewarding project because I was able to learn various things about it, such as the baton effect.",
             "img2": "assets/images/case/ordinem/schema.jpeg",
             "p3": "Why make an application dedicated to this and not stupidly use its calendar? A calendar application is sorely lacking in functionality for this kind of situation. What I have tried to do in this application is to provide real added value compared to a calendar application. For example, there are different types of garbage cans, we would like to know what type of garbage to take out. Then, the possibility of making an alert each in turn very simply allows everyone to participate equitably in the tasks without spending time remembering who did what.",
-            "img3": "assets/images/case/ordinem/appli.png"
+            "img3": "assets/images/case/ordinem/appli.jpg"
         }
 
     },
@@ -23,8 +24,9 @@
         "link" : "https://sea-of-rust.com/",
         "color" : "#b63421",
         "category" : "current",
+        "alt" : "Screenshot of Sea Of Rust website",
         "summary" : "Sea of Rust is the landing page of a Rust server. It was the possibility for me to try the framework VueJs and Tailwind CSS. ",
-        "src" : "assets/images/thumbnails/sea-of-rust.png",
+        "src" : "assets/images/thumbnails/sea-of-rust.jpg",
         "case_content": {
             "p": "Le web n’est ma seule passion. Depuis plusieurs années, mon autre passion est le jeu vidéo. Le jeu Rust est l’un des jeux qui m’a marqué durant mon adolescence. Avec plusieurs amis, nous avons eu l’idée de créer un serveur Rust communautaire. ",
             "img": "assets/images/case/sea-of-rust/rust.jpg",
@@ -41,6 +43,7 @@
         "link" : "http://eliedur.be/projets/rethinking-ux/",
         "color" : "#961616",
         "category" : "old",
+        "alt" : "Screenshot of the case study",
         "summary" : "During my second year, RUX (Rethinking User Experience) was a workshop to learn more about UX methods. This year, we had the chance to rethink the user experience of the famous KIKK Festival",
         "src" : "assets/images/thumbnails/rux.png",
         "case_content": {
