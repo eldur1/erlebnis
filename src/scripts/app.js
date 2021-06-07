@@ -27,7 +27,6 @@ function generation() {
     font()
 
     languages()
-    weather_id()
     gradient()
     // Style
     spacing()

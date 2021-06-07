@@ -24,7 +24,7 @@
         "color" : "#b63421",
         "alt" :  "Capture d'écran du site Sea of Rust",
         "summary" : "Sea Of Rust est une landing page pour un serveur Rust. Cela a été la possibilité pour moi d'essayer pour la première fois le framwork VueJS et TailwindCSS.",
-        "src" : "assets/images/thumbnails/sea-of-rust.png",
+        "src" : "assets/images/thumbnails/sea-of-rust.jpg",
         "case_content": {
             "p": "Le web n’est ma seule passion. Depuis plusieurs années, mon autre passion est le jeu vidéo. Le jeu Rust est l’un des jeux qui m’a marqué durant mon adolescence. Avec plusieurs amis, nous avons eu l’idée de créer un serveur Rust communautaire. ",
             "img": "assets/images/case/sea-of-rust/rust.jpg",
@@ -41,7 +41,7 @@
         "color" : "#961616",
         "alt" : "Capture d'écran de l'étude de cas",
         "summary" : "Pendant ma deuxième année, RUX (Rethinking User Experience) est un atelier pour en savoir plus sur les méthodes d'UX. Cette année-là, nous avons eu la chance de repenser l'expérience utilisateur du fameux KIKK Festival.",
-        "src" : "assets/images/thumbnails/rux.jpg   ",
+        "src" : "assets/images/thumbnails/rux.jpg",
         "case_content": {
             "p": "Ce projet a été l’occasion pour moi d’en apprendre plus sur l’expérience utilisateur lorsqu’on conçoit pour le web. Cette année, le KIKK Festival nous a été proposé comme élément de recherche et de réflexion.",
             "img": "assets/images/case/rux/kikk.jpeg",
