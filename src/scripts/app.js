@@ -14,6 +14,7 @@ import { languages, setLanguage } from './content/lang'
 // Interactions
 import { interactions } from './interactions'
 import { gradient } from './style/gradient'
+import { weather_id } from './deprecated/weather'
 
 
 
@@ -26,7 +27,7 @@ function generation() {
     font()
 
     languages()
-
+    weather_id()
     gradient()
     // Style
     spacing()

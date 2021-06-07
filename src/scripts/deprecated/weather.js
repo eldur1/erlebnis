@@ -1,9 +1,12 @@
 //import { response } from "express";
 import { gradient } from '../style/gradient';
-import { paths } from '../content/lang'
+import { langNavigator, paths } from '../content/lang'
 var closestPlace = []
 function weather_id() {
   navigator.geolocation.getCurrentPosition(success, error, options);
+  let weather_DOM = document.querySelector('.weather')
+
+  weather_DOM.textContent = ""
 
   var options = {
     enableHighAccuracy: true,
@@ -32,7 +35,6 @@ function weather_id() {
       .then((data) => {
         var weatherJSON = data.consolidated_weather[0];
         var wS = weatherJSON.weather_state_abbr
-        gradient()
         let i = 0;
         switch(wS) {
           case 'sn' : i = 0; break
@@ -46,15 +48,16 @@ function weather_id() {
           case 'lc' : i = 8; break
           case 'c' : i = 9; break
         }
-        let weather_DOM = document.querySelector('.weather')
         let weather_src = paths[2]
+
         fetch(weather_src)
         .then((response) => {
           return response.json()
         })
         .then((data) => {
           let sentence = data.sentences[i]
-          weather_DOM.textContent = sentence
+          langNavigator.langCode == "en" ? weather_DOM.textContent =  "and " + sentence :  weather_DOM.textContent =  "et " + sentence
+          
         })
       })
 

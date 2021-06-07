@@ -4,6 +4,7 @@ import { project } from './project'
 import { isReload } from '../interactions'
 import { projectTranslate } from './projectTranslate'  
 import { themeSet } from '../style/theme'
+import { weather_id } from '../deprecated/weather'
 export var paths = [
     'assets/data/en/projects.json',
     'assets/data/en/generative-content.json',
@@ -73,6 +74,7 @@ function languages() {
                 } else
                 project()
                 hello()
+                weather_id()
                 setLanguage()
             })
 }
