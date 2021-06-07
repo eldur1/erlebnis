@@ -45,7 +45,6 @@ export function setLanguage() {
 function languages() {
         // Change paths
         let currentLanguage = langNavigator.langCode
-        console.log(currentLanguage);
         paths = [
             `assets/data/${currentLanguage}/projects.json`,
             `assets/data/${currentLanguage}/generative-content.json`,
@@ -55,7 +54,6 @@ function languages() {
             // Translate 'static' content 
             let dynamic_DOM = document.querySelectorAll('.dynamic')
             var aOther = []
-            console.log(paths[3]);
             fetch(paths[3])
             .then((response) => {
                 return response.json()
@@ -74,7 +72,6 @@ function languages() {
                 } else
                 project()
                 hello()
-                weather_id()
                 setLanguage()
             })
 }

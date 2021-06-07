@@ -9,7 +9,6 @@
     import { rN } from '../utils/fcts'
     import { gsap } from 'gsap/gsap-core'
     function project() {
-        console.log(paths[0]);
         fetch(paths[0])
         .then((response) => {
             return response.json()
