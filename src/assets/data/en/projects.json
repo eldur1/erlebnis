@@ -33,7 +33,7 @@
             "p2": "To present the server, its functionalities, its characteristics, I challenged myself to make a site with a framework that I had never used, VueJS. I not only had the challenge of trying out a framework but a whole different workflow for the site integration. In order to have easy and accessible on-site support, I used Vercel with Github. To manage the roots and make my job easier, I used NuxtJS. Finally, styling wise, this was also a first for me to use Tailwind CSS. The icing on the cake, in a desire to use the latest technologies, it was also an opportunity to learn about Vue3 and API composition. For someone who had never been Seen. First I had to understand what was pre-existing to understand API composition.",
             "img2": "assets/images/case/sea-of-rust/nuxt.jpeg",
             "p3": "Working a totally different workflow was on the liberating side because a lot of simplicity ensues with tools like Nuxt, Tailwind. On the other hand, these are technologies that are new to me. When something doesn't work, it takes a lot longer to fix it. Fortunately, I had more experienced people to guide me. ",
-            "img3": "assets/images/case/sea-of-rust/nuxt.jpeg"
+            "img3": "assets/images/case/sea-of-rust/website.png"
         }
 
     },
