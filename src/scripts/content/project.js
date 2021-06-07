@@ -78,11 +78,12 @@
                     containerImg.style.position = "relative"
                     containerImg.style.marginTop = "32px"
 
-                    var thumbnail = creation('img', containerImg, {
-                        className: "container-project__thumb",
-                        style: `margin-bottom: ${aSpacing[2]}px`,
-                        src: element.src
-                    })
+                    var thumbnailCreate = document.createElement('img')
+                    var thumbnail = containerImg.appendChild(thumbnailCreate)
+                    thumbnail.classList.add('container-project__thumb')
+                    thumbnail.style.marginBottom = aSpacing[2] + "px"
+                    thumbnail.src = element.src
+                    thumbnail.alt = element.alt
 
                     var summary = creation('p', div, {
                         className: "container-project__summary",
@@ -142,7 +143,34 @@
                                 duration:1,
                                 display: "none"
                             })
+                            let currentBg = containerImg.children[1]
+                            gsap.to(currentBg, {
+                                height:"0px",
+                                duration:0.7
+                            })
+                            let currentImg = containerImg.children[0]
+                            gsap.to(currentImg, {
+                                x:-100,
+                                duration:0.7
+                            })
+                            let summaryy = div.children[3]
+                            gsap.to(summaryy, {
+                                x:-100,
+                                duration:0.7
+                            })
                             
+                            let title = div.children[0]
+                            gsap.to(title, {
+                                y:-100,
+                                opacity:0,
+                                duration:0.3
+                            })
+                            let category = div.children[1]
+                            gsap.to(category, {
+                                opacity:0,
+                                duration:0.2
+                            })
+
                             let articleCreate = document.createElement('article')
                             let article = document.body.appendChild(articleCreate)
                             article.classList.add('article')
@@ -239,6 +267,37 @@
                                     autoAlpha:0,
                                     duration:1
                                 })
+                                let currentBg = containerImg.children[1]
+                                gsap.to(currentBg, {
+                                    height:"670px",
+                                    duration:0.3
+                                })
+                                let currentImg = containerImg.children[0]
+                                gsap.to(currentImg, {
+                                    x:0,
+                                    duration:0.3
+                                })
+                                let summaryy = div.children[3]
+                                gsap.to(summaryy, {
+                                    x:0,
+                                    duration:0.3
+                                })
+                                
+                                let title = div.children[0]
+                                gsap.to(title, {
+                                    y:0,
+                                    opacity:1,
+                                    duration:0.3
+                                })
+                                let category = div.children[1]
+                                gsap.to(category, {
+                                    opacity:1,
+                                    duration:0.2
+                                })
+
+
+
+
                                 setTimeout(() => {
                                     article.remove()
                                     button_back.remove()
