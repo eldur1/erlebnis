@@ -28,11 +28,11 @@
         "summary" : "Sea of Rust is the landing page of a Rust server. It was the possibility for me to try the framework VueJs and Tailwind CSS. ",
         "src" : "assets/images/thumbnails/sea-of-rust.jpg",
         "case_content": {
-            "p": "Le web n’est ma seule passion. Depuis plusieurs années, mon autre passion est le jeu vidéo. Le jeu Rust est l’un des jeux qui m’a marqué durant mon adolescence. Avec plusieurs amis, nous avons eu l’idée de créer un serveur Rust communautaire. ",
+            "p": "The web is not my only passion. For several years now, my other passion has been video games. The Rust game was one of the games that marked me during my teenage years. With several friends, we came up with the idea of creating a community Rust server. ",
             "img": "assets/images/case/sea-of-rust/rust.jpg",
-            "p2": "Pour présenter le serveur, ses fonctionnalités, ses caractéristiques, je me suis comme défi de faire un site avec un framework que je n’avais jamais utilisé, VueJS. Je n’ai pas seulement eu le défi d’essayer un framework mais un workflow totalement différent pour l’intégration du site. Afin d’avoir un support en site facile et accessible, j’ai utilisé Vercel avec Github. Pour la gestion des roots et me faciliter la tâche, j’ai utilisé NuxtJS. Enfin, pour ce qui est du style, ce fut aussi une première pour moi d’utiliser Tailwind CSS. Cerise sur le gateau, dans une volonté de d’utiliser les dernières technologies, cela a aussi été l’occasion de prendre connaissance de Vue3 et de composition API. Pour quelqu’un qui n’avait jamais été Vue. Il m’a d’abord fallu comprendre ce qui était pre-existant pour comprendre composition API.",
+            "p2": "To present the server, its functionalities, its characteristics, I challenged myself to make a site with a framework that I had never used, VueJS. I not only had the challenge of trying out a framework but a whole different workflow for the site integration. In order to have easy and accessible on-site support, I used Vercel with Github. To manage the roots and make my job easier, I used NuxtJS. Finally, styling wise, this was also a first for me to use Tailwind CSS. The icing on the cake, in a desire to use the latest technologies, it was also an opportunity to learn about Vue3 and API composition. For someone who had never been Seen. First I had to understand what was pre-existing to understand API composition.",
             "img2": "assets/images/case/sea-of-rust/nuxt.jpeg",
-            "p3": "Travailler un workflow totalement différent fut d’un côté libérateur car beaucoup de simplicité en découle avec des outils comme Nuxt, Tailwind. D’un autre côté, ce sont des technologies qui me sont nouvelles. Lorsque quelque chose ne fonctionne pas, il faut beaucoup plus de temps à le régler. Heureusement, j’ai eu des personnes plus expérimentées pour me guider. ",
+            "p3": "Working a totally different workflow was on the liberating side because a lot of simplicity ensues with tools like Nuxt, Tailwind. On the other hand, these are technologies that are new to me. When something doesn't work, it takes a lot longer to fix it. Fortunately, I had more experienced people to guide me. ",
             "img3": "assets/images/case/sea-of-rust/nuxt.jpeg"
         }
 
@@ -47,11 +47,11 @@
         "summary" : "During my second year, RUX (Rethinking User Experience) was a workshop to learn more about UX methods. This year, we had the chance to rethink the user experience of the famous KIKK Festival",
         "src" : "assets/images/thumbnails/rux.png",
         "case_content": {
-            "p": "Ce projet a été l’occasion pour moi d’en apprendre plus sur l’expérience utilisateur lorsqu’on conçoit pour le web. Cette année, le KIKK Festival nous a été proposé comme élément de recherche et de réflexion.",
+            "p": "This project was an opportunity for me to learn more about the user experience when designing for the web. This year, the KIKK Festival was offered to us as an element of research and reflection.",
             "img": "assets/images/case/rux/kikk.jpeg",
-            "p2": "Dans un premier temps, nous avons eu une série de cours sur les diverses méthodologies utilisées dans le domain. Audit, groupe de discussion, top task, user journey, tests utilisateurs, toutes ces pratiques qui m’étaient encore totalement inconnue avant cet atelier. ",
+            "p2": "First, we had a series of courses on the various methodologies used in the field. Audit, discussion group, top task, user journey, user tests, all of these practices that were completely unknown to me before this workshop. ",
             "img2": "assets/images/case/rux/user_journey.jpeg",
-            "p3": "J’ai appris qu’il y avait d’autres champs de compétences que le code et/ou le design. J’ai pu découvrir que l’humain, la manière dont nous fonctionnons était quelque chose d’étudié de près quand il s’agit de concevoir une interface, un site. Cet atelier fut une très bonne entrée en matière qui me permettra plus tard d’appliquer cela dans un projet concret, Ordinem.",
+            "p3": "I learned that there are other skill areas besides code and / or design. I was able to discover that the human, the way we operate, is something carefully studied when it comes to designing an interface, a site. This workshop was a very good introduction that will allow me later to apply this in a concrete project, Ordinem.",
             "img3": "assets/images/case/rux/groupe.jpeg"
         }
 
