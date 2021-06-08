@@ -1,13 +1,13 @@
 import { getRealTime} from '../utils/fcts'
 
 export var aFontFamily = [
-    ['Roboto Condensed'],
-    ['Playfair Display'],
-    ['Poppins'],
-    ['IBM Plex Sans'],
     ['Raleway'],
-    ['DM Serif Display'],
     ['Inconsolata'],
+    ['Playfair Display'],
+    ['DM Serif Display'],
+    ['IBM Plex Sans'],
+    ['Poppins'],
+    ['Roboto Condensed'],
 ]
 export const aComputedRatio = []
 
@@ -97,7 +97,7 @@ function font() {
 
     // Font family
     //time.days-1
-    var currentFont = aFontFamily[5]
+    var currentFont = aFontFamily[time.days-1]
     document.body.style.fontFamily = currentFont
 
     // Font values

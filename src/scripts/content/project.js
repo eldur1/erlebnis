@@ -267,10 +267,18 @@
                                     duration:1
                                 })
                                 let currentBg = containerImg.children[1]
-                                gsap.to(currentBg, {
-                                    height:"670px",
-                                    duration:0.3
-                                })
+                                if (window.matchMedia("(min-width: 600px)").matches) {
+                                    gsap.to(currentBg, {
+                                        height:"670px",
+                                        duration:0.3
+                                    })
+                                  } else {
+                                    gsap.to(currentBg, {
+                                        height:"calc(100% - 82px)",
+                                        duration:0.3
+                                    })
+                                  }
+
                                 let currentImg = containerImg.children[0]
                                 gsap.to(currentImg, {
                                     x:0,
