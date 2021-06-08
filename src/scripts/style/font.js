@@ -4,8 +4,8 @@ export var aFontFamily = [
     ['Raleway'],
     ['Inconsolata'],
     ['Playfair Display'],
-    ['DM Serif Display'],
     ['IBM Plex Sans'],
+    ['DM Serif Display'],
     ['Poppins'],
     ['Roboto Condensed'],
 ]
