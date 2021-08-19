@@ -302,9 +302,6 @@
                                     duration:0.2
                                 })
 
-
-
-
                                 setTimeout(() => {
                                     article.remove()
                                     button_back.remove()

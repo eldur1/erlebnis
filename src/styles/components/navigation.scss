@@ -6,6 +6,15 @@ a {
     color: white;
     text-decoration: underline;
 }
+.container-project {
+    &__button {
+        text-decoration: none;
+        &--website {
+            text-decoration: underline;
+        }
+    }
+    
+}
 
 .nav {
     display: flex;

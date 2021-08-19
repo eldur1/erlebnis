@@ -81,6 +81,9 @@
         &__button {
             margin-right: 16px;
             margin-left: 53px;
+            &--website {
+                margin-left: 0px;
+            }
         }
         &__category {
             position: absolute;
