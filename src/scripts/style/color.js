@@ -16,7 +16,8 @@ function colorChanging() {
     }
     // Lightness change between 60 and 30 every second
     function lightnessComputing() {
-        var lightness = 60 - (time.seconds/2)
+        var lightness = 50 - (time.seconds/2)
+        console.log(lightness);
         return lightness
     }
     let hueComputed = hueComputing()
