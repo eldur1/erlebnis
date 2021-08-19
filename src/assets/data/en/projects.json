@@ -37,6 +37,24 @@
         }
 
     },
+    "Tricount" : {
+        "name" : "Tricount redesign",
+        "activity" : "Design, UI, UX",
+        "link" : "https://dribbble.com/shots/16123547-tricount-redesign",
+        "color" : "#ea4c89",
+        "category" : "current",
+        "alt" : "Redesign the UI and the UX of the money sharing tricount application",
+        "summary" : "I recently downloaded tricount for a trip. While using it, I was thinking that there was rom for improvement. Then, I decided to redesign the application. ",
+        "src" : "assets/images/thumbnails/tricount.jpeg",
+        "case_content": {
+            "p": "Specially when designing application, design system is a must. The original application was missing consistency so I created a design system.",
+            "img": "assets/images/case/tricount/designsystem.jpg",
+            "p2": "Design system is the first key to a succesful design but we also need components and styles. Theses ones allow me to quickly iterate the design. For instance, the component used at the top right is totaly responsive depending on the screen.",
+            "img2": "assets/images/case/tricount/component.jpg",
+            "p3": "The final thing to do is of course the prototype ! It's fully functional and work on every device.",
+            "img3": "assets/images/case/tricount/prototype.jpg"
+        }
+    },
     "Sea of Rust" : {
         "name" : "Sea of Rust",
         "activity" : "Design, development, UI, UX",

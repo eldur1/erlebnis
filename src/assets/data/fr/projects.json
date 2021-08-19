@@ -34,7 +34,24 @@
             "p3": "Ce troisième jour fût le plus dur selon moi. Une 'landing page' a besoin d'être attirante, alléchante. Pour créer une belle 'landing page', tout doit être parfait, même les petits détails. Le second défi fût de trouver une marque. Quand on design, les contraintes sont là pour nous guider. Si votre marque n'existe pas, dans quel direction aller ?",
             "img3": "assets/images/case/dailyui/dailyui.jpg"
         }
-
+    },
+    "Tricount" : {
+        "name" : "Tricount",
+        "activity" : "Design, UI, UX",
+        "link" : "https://dribbble.com/shots/16123547-tricount-redesign",
+        "color" : "#ea4c89",
+        "category" : "current",
+        "alt" : "Redesign de l'interface et de l'expérience utilisateur de l'application de portefeuille partagé Tricount.",
+        "summary" : "J'ai récemment téléchargé l'application tricount pour un voyage. En l'utilisant, je me suis rendu compte qu'il y avait moyen de l'améliorer, j'ai donc fait un redesign.",
+        "src" : "assets/images/thumbnails/tricount.jpeg",
+        "case_content": {
+            "p": "Particulièrement quand il s'agit d'application, un design system est un must. L'application n'en avait pas et manquait de consistance. Pour régler cela, j'ai constitué un design system.",
+            "img": "assets/images/case/tricount/designsystem.jpg",
+            "p2": "Un design system est la première clé pour un design à succès mais il faut d'autres choses : composants et styles. Ils permettent de rapidement itérer le design. Par exemple, le composant utilisé en haut à droite est totalement responsive et s'adapte en fonction de l'écran.",
+            "img2": "assets/images/case/tricount/component.jpg",
+            "p3": "La dernière chose à faire est évidemment le prototype ! Il est entièrement fonctionnel et fonctionne sur tous les supports.",
+            "img3": "assets/images/case/tricount/prototype.jpg"
+        }
     },
     "Sea of Rust" : {
         "name" : "Sea of Rust",
