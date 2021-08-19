@@ -17,6 +17,25 @@
             "img3": "assets/images/case/ordinem/appli.jpg"
         }
     },
+    "Daily UI" : {
+        "name" : "Daily UI",
+        "activity" : "Design, UI, UX",
+        "link" : "https://dribbble.com/eliedur/collections/5084723-Daily-UI",
+        "color" : "#ea4c89",
+        "category" : "current",
+        "alt" : "Landing page de Norway Lights",
+        "summary" : "J'avais besoin de régularité, pour cela j'ai décidé de participer à #DailyUI",
+        "src" : "assets/images/thumbnails/dailyui.jpg",
+        "case_content": {
+            "p": "Pour le premier jour de Daily UI, j'ai décidé de créer une page de connexion pour une application de chargeur de voiture électrique. J'ai essayé de rester le plus simple possible pour ce design.",
+            "img": "assets/images/case/dailyui/dailyui1.jpeg",
+            "p2": "Le premier jour était en format mobile, j'ai donc préféré faire le design du jour deux en format desktop. Dans cet exercice, j'ai appris que l'espace blanc n'était pas toujours facile à gérer. Pour ne pas avoir trop de vite, j'ai rempli le blanc avec une illustration abstraite. ",
+            "img2": "assets/images/case/dailyui/dailyui2.jpg",
+            "p3": "Ce troisième jour fût le plus dur selon moi. Une 'landing page' a besoin d'être attirante, alléchante. Pour créer une belle 'landing page', tout doit être parfait, même les petits détails. Le second défi fût de trouver une marque. Quand on design, les contraintes sont là pour nous guider. Si votre marque n'existe pas, dans quel direction aller ?",
+            "img3": "assets/images/case/dailyui/dailyui.jpg"
+        }
+
+    },
     "Sea of Rust" : {
         "name" : "Sea of Rust",
         "activity" : "Design, development, UI, UX",

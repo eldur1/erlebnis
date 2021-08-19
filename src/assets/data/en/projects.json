@@ -18,6 +18,25 @@
         }
 
     },
+    "Daily UI" : {
+        "name" : "Daily UI",
+        "activity" : "Design, UI, UX",
+        "link" : "https://dribbble.com/eliedur/collections/5084723-Daily-UI",
+        "color" : "#ea4c89",
+        "category" : "current",
+        "alt" : "Landing page of Norway lights",
+        "summary" : "Because I need some kind of regularity in my work I decided to follow the daily ui training.",
+        "src" : "assets/images/thumbnails/dailyui.jpg",
+        "case_content": {
+            "p": "For the first Daily UI, I decided to create a login page for a car charger application. I tried to stay simple as possible.",
+            "img": "assets/images/case/dailyui/dailyui1.jpeg",
+            "p2": "Because the first Daily UI was in design for a mobile application, I decided to create a layout for a web page. In this exercice I learned that space isn't always easy to manage. I had a hard time with white space. For that, I managed to fill it with a simple and abstract illustration.",
+            "img2": "assets/images/case/dailyui/dailyui2.jpg",
+            "p3": "The third exercice was the hardest in my opinion. Landing page need to be appealing, attractive. To create a clean design, everything need to be perfect, even small details. The second challenge was to find a brand. When you're about to design, a lot of constraint are there to guide you. If your brand don't really exist, in which direction should you go ? ",
+            "img3": "assets/images/case/dailyui/dailyui.jpg"
+        }
+
+    },
     "Sea of Rust" : {
         "name" : "Sea of Rust",
         "activity" : "Design, development, UI, UX",
