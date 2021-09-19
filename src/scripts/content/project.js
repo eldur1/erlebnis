@@ -55,7 +55,7 @@
                     var title = creation('h3', div, {
                         className:"container-project__title",
                         textContent: element.name,
-                        style: `font-size: ${aComputedRatio[3]* oFont.ratio}px; font-weight: bold`
+                        style: `font-size: ${aComputedRatio[3]* oFont.ratio}px; font-weight: bold; margin-bottom:64px`
                     })
 
                     let containerLineActivityCreateElement = document.createElement('div')
@@ -101,9 +101,9 @@
                     button.target = "_blank"
                     button.rel = "noreferrer"
                     button.style.cursor = "pointer"
-                    
+                    button.style.textShadow = "0px 0px 2px #000000";
                     button.style.marginRight = aSpacing[2] + "px"
-                    button.style.padding = aSpacing[1] + "px"
+                    button.style.padding = "12px"
                     button.style.backgroundColor = `hsl(${colorHSL.hue},${colorHSL.saturation}%, ${colorHSL.lightness}%)`
                     
                     //button.href = element.link
@@ -115,7 +115,7 @@
                     button_website.rel = "noreferrer"
                     langNavigator.langCode == "en" ? button_website.textContent = "Go to..." : button_website.textContent = "Voir le site"
                     button_website.style.marginRight = aSpacing[2] + "px"
-                    button_website.style.padding = aSpacing[1] + "px"
+                    button_website.style.padding = "12px"
 
                     button.addEventListener('click', () => {
                         let main = document.querySelector('main')
