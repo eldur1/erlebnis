@@ -8,9 +8,9 @@ ul {
     display: inline-block;
     margin-left: 8px;
     margin-right: 8px;
+    width: 32px;
+    height: 32px;
     color:white;
-    width: 24px;
-    height: 24px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -24,8 +24,11 @@ ul {
 }
 .icon {
     @include icon__;
+    width: 32px;
+    height: 32px;
     &--reload {
         background-image: url("../assets/icons/dark-theme/reload.svg");
+        margin-left: 0px;
     }
     &--theme {
         background-image: url("../assets/icons/dark-theme/theme.svg");
