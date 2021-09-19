@@ -61,7 +61,7 @@
     .tagline {
         display: inline-block;
         width: 474px;
-        min-height: 290px;
+        min-height: auto;
         margin-right: 91px;
     }
     .container-project {
@@ -100,7 +100,6 @@
             writing-mode: vertical-lr;
             transform: translateY(23px);
             display: inline-block;
-            font-weight: lighter;
             font-style: italic;
         }
     }

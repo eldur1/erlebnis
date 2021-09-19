@@ -10,10 +10,14 @@
             var count = Object.keys(data).length
             var summary = document.querySelectorAll('.container-project__summary')
             var caseContent = document.querySelectorAll('.article__p')
+            var nArticle = count;
             for (const key in data) {
                 if (Object.hasOwnProperty.call(data, key)) {
-                    const element = data[key];
-                    summary[count-1].textContent = element.summary
+                    
+                    const element = data[key]
+                    
+                    let countSummary = nArticle-count;
+                    summary[countSummary].textContent = element.summary
                     count--;
 
                 }

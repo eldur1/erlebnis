@@ -55,7 +55,7 @@
                     var title = creation('h3', div, {
                         className:"container-project__title",
                         textContent: element.name,
-                        style: `font-size: ${aComputedRatio[3]* oFont.ratio}px`
+                        style: `font-size: ${aComputedRatio[3]* oFont.ratio}px; font-weight: bold`
                     })
 
                     let containerLineActivityCreateElement = document.createElement('div')
@@ -179,8 +179,11 @@
                         
                             let title_article = creation('h3', article, {
                                 className:"container-project__title",
-                                textContent: element2.name,
-                                style: `margin-bottom: ${aSpacing[3]}px; margin-top: ${aSpacing[3]}px; font-size: ${aComputedRatio[3]* oFont.ratio}px`
+                                style: `font-weight: bold; 
+                                        margin-bottom: ${aSpacing[3]}px; 
+                                        margin-top: ${aSpacing[3]}px; 
+                                        font-size: ${aComputedRatio[3]* oFont.ratio}px`,
+                                textContent: element2.name
                             })
     
                             let p1 = creation('p', article, {

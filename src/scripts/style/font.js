@@ -94,22 +94,28 @@ function font() {
     // Font size variables
     const iterator = aTextLevel.keys()
     let time = getRealTime()
-
     // Font family
     //time.days-1
-    var currentFont = aFontFamily[time.days-1]
+    var currentFont = aFontFamily[time.days]
     document.body.style.fontFamily = currentFont
 
     // Font values
+    let days = time.days
+    console.log(days);
     var oFont = {
         fonts: aFontValues.[currentFont]
     }
+    console.log(oFont);
+
     var WebFont = require('webfontloader')
+
     WebFont.load({
         google: {
-            families: [currentFont[0]]
+            families: ["Roboto"]
         }
     })
+
+
 
     // Small 
 
